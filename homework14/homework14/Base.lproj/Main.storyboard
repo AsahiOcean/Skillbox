@@ -1,24 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jX4-Sd-hSu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--NavigationController-->
+        <scene sceneID="mts-9n-hHC">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" title="NavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jX4-Sd-hSu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0DK-wm-7Wp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="30P-0n-5h2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KqV-8G-Vcc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-693" y="138"/>
+        </scene>
+        <!--UserDefaultsViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="UserDefaultsViewController" title="UserDefaultsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="UserDefaultsViewController" customModule="homework14" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="UserDefaults" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="Name" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="w2l-KD-WT0">
+                                <rect key="frame" x="62" y="383" width="290" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sXq-SN-YD1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                <connections>
+                                    <action selector="NameEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="I3R-9V-wRK"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="2Ab-QP-0Sj">
+                                <rect key="frame" x="62" y="463" width="290" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="y1i-kD-1EA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="family-name"/>
+                                <connections>
+                                    <action selector="SurnameEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="mPS-Zk-QtB"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URe-fP-J1X">
+                                <rect key="frame" x="62" y="523" width="290" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="6Fe-hP-hBt"/>
+                                </constraints>
+                                <state key="normal" title="Clear Name &amp; Surname"/>
+                                <connections>
+                                    <action selector="NameCleaner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Gk-lv-64e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzI-0u-ult">
+                                <rect key="frame" x="14" y="637" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="29d-AF-Aff"/>
+                                    <constraint firstAttribute="width" constant="200" id="HFP-ff-nHU"/>
+                                </constraints>
+                                <state key="normal" title="CoreData" image="coredata"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWW-ES-hhN">
+                                <rect key="frame" x="214" y="637" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="BLQ-N0-j9P"/>
+                                    <constraint firstAttribute="height" constant="200" id="Uf7-6X-0Ms"/>
+                                </constraints>
+                                <state key="normal" title="Realm" image="realm"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xWW-ES-hhN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5qi-o7-i9w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xWW-ES-hhN" secondAttribute="bottom" constant="25" id="9PD-VC-60D"/>
+                            <constraint firstItem="w2l-KD-WT0" firstAttribute="leading" secondItem="2Ab-QP-0Sj" secondAttribute="leading" id="9pa-Rr-jM7"/>
+                            <constraint firstItem="w2l-KD-WT0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="7:10" id="O8j-mS-fWy"/>
+                            <constraint firstItem="2Ab-QP-0Sj" firstAttribute="top" secondItem="w2l-KD-WT0" secondAttribute="bottom" constant="30" id="RKD-HA-7Es"/>
+                            <constraint firstItem="URe-fP-J1X" firstAttribute="width" secondItem="2Ab-QP-0Sj" secondAttribute="width" id="V43-T8-hf7"/>
+                            <constraint firstItem="w2l-KD-WT0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="ZvL-fM-MbZ"/>
+                            <constraint firstItem="w2l-KD-WT0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="azM-PC-75i"/>
+                            <constraint firstItem="URe-fP-J1X" firstAttribute="top" secondItem="2Ab-QP-0Sj" secondAttribute="bottom" constant="10" id="bOy-ip-dvD"/>
+                            <constraint firstItem="xWW-ES-hhN" firstAttribute="leading" secondItem="rzI-0u-ult" secondAttribute="trailing" id="fwJ-Hy-BG6"/>
+                            <constraint firstItem="xWW-ES-hhN" firstAttribute="leading" secondItem="rzI-0u-ult" secondAttribute="trailing" id="nVC-4g-oIP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Ab-QP-0Sj" secondAttribute="trailing" symbolic="YES" id="ruw-vs-j60"/>
+                            <constraint firstItem="xWW-ES-hhN" firstAttribute="centerY" secondItem="rzI-0u-ult" secondAttribute="centerY" id="swt-Yd-drv"/>
+                            <constraint firstItem="URe-fP-J1X" firstAttribute="centerX" secondItem="2Ab-QP-0Sj" secondAttribute="centerX" id="tNu-W5-JY8"/>
+                            <constraint firstItem="2Ab-QP-0Sj" firstAttribute="width" secondItem="w2l-KD-WT0" secondAttribute="width" id="wTQ-v6-LHS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="UserDefaults" id="eRx-xQ-6sd">
+                        <barButtonItem key="leftBarButtonItem" title="Exit" style="plain" id="zdT-vM-Coz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kF4-Wr-5QP">
+                                <rect key="frame" x="20" y="4" width="92" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="0.68627450980000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Exit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l69-NG-75G"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Name" destination="w2l-KD-WT0" id="dI5-d2-jlu"/>
+                        <outlet property="Surname" destination="2Ab-QP-0Sj" id="Hi2-MK-Qg0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coredata" width="300" height="300"/>
+        <image name="realm" width="300" height="300"/>
+    </resources>
 </document>
