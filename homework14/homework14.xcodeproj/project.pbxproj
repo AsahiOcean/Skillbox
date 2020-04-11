@@ -27,6 +27,10 @@
 		FAA6540524421991006B302D /* CoreDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540424421991006B302D /* CoreDataCell.swift */; };
 		FAA65407244219BA006B302D /* ViewCoreDataForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA65406244219BA006B302D /* ViewCoreDataForm.swift */; };
 		FAA6540924421D68006B302D /* AddFormCoreData.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA6540824421D68006B302D /* AddFormCoreData.xib */; };
+		FAA6540C2442298A006B302D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540B2442298A006B302D /* WeatherViewController.swift */; };
+		FAA6540E24422EF1006B302D /* Weatherman.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540D24422EF1006B302D /* Weatherman.swift */; };
+		FAA6541024422FE9006B302D /* WeatherDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540F24422FE9006B302D /* WeatherDecoder.swift */; };
+		FAA654122442302D006B302D /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA654112442302D006B302D /* WeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		FAA6540424421991006B302D /* CoreDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCell.swift; sourceTree = "<group>"; };
 		FAA65406244219BA006B302D /* ViewCoreDataForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoreDataForm.swift; sourceTree = "<group>"; };
 		FAA6540824421D68006B302D /* AddFormCoreData.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFormCoreData.xib; sourceTree = "<group>"; };
+		FAA6540B2442298A006B302D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		FAA6540D24422EF1006B302D /* Weatherman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weatherman.swift; sourceTree = "<group>"; };
+		FAA6540F24422FE9006B302D /* WeatherDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDecoder.swift; sourceTree = "<group>"; };
+		FAA654112442302D006B302D /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 		FAA653D22441179D006B302D /* homework14 */ = {
 			isa = PBXGroup;
 			children = (
+				FAA6540A24422922006B302D /* Weather */,
 				FAA65401244218BF006B302D /* CoreData */,
 				FAA653F3244203DA006B302D /* Realm */,
 				FAA653D32441179D006B302D /* AppDelegate.swift */,
@@ -152,6 +161,17 @@
 				FAA6540824421D68006B302D /* AddFormCoreData.xib */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FAA6540A24422922006B302D /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				FAA6540B2442298A006B302D /* WeatherViewController.swift */,
+				FAA6540D24422EF1006B302D /* Weatherman.swift */,
+				FAA6540F24422FE9006B302D /* WeatherDecoder.swift */,
+				FAA654112442302D006B302D /* WeatherCell.swift */,
+			);
+			path = Weather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,11 +292,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA653F824420481006B302D /* TodoObject.swift in Sources */,
+				FAA6540C2442298A006B302D /* WeatherViewController.swift in Sources */,
+				FAA654122442302D006B302D /* WeatherCell.swift in Sources */,
 				FAA653FA24420585006B302D /* RealmCell.swift in Sources */,
 				FAA653FE24420602006B302D /* RealmClass.swift in Sources */,
+				FAA6541024422FE9006B302D /* WeatherDecoder.swift in Sources */,
 				FAA653F5244203F8006B302D /* RealmViewController.swift in Sources */,
 				FAA653DE2441179D006B302D /* homework14.xcdatamodeld in Sources */,
 				FAA65407244219BA006B302D /* ViewCoreDataForm.swift in Sources */,
+				FAA6540E24422EF1006B302D /* Weatherman.swift in Sources */,
 				FAA653EE244121EE006B302D /* UserDefaultsViewControllerExtensions.swift in Sources */,
 				FAA653D82441179D006B302D /* UserDefaultsViewController.swift in Sources */,
 				FAA653D42441179D006B302D /* AppDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jX4-Sd-hSu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s2y-Qr-egH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -262,6 +262,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRh-YX-uHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1218.840579710145" y="566.51785714285711"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="AZN-CT-fPP">
+            <objects>
+                <viewController storyboardIdentifier="Weather" title="Weather" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s2y-Qr-egH" customClass="WeatherViewController" customModule="homework14" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XlN-Ks-gen">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raL-yr-Q1w">
+                                <rect key="frame" x="0.0" y="44" width="414" height="298.5"/>
+                                <color key="backgroundColor" white="0.84999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="50"/>
+                                <state key="normal" title="TempButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joB-ST-Stl">
+                                <rect key="frame" x="0.0" y="267.5" width="414" height="75"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="6P3-if-0jh"/>
+                                </constraints>
+                                <state key="normal" title="CityButton"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rMb-FL-0ai">
+                                <rect key="frame" x="0.0" y="342.5" width="414" height="519.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WeatherCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherCell" id="uOs-Wr-F5h" customClass="WeatherCell" customModule="homework14" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uOs-Wr-F5h" id="sJg-DD-rxr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="raL-yr-Q1w" firstAttribute="top" secondItem="Qt9-ha-T3K" secondAttribute="top" id="CBe-CR-5U9"/>
+                            <constraint firstItem="Qt9-ha-T3K" firstAttribute="trailing" secondItem="rMb-FL-0ai" secondAttribute="trailing" id="D20-Zo-L6g"/>
+                            <constraint firstItem="joB-ST-Stl" firstAttribute="bottom" secondItem="rMb-FL-0ai" secondAttribute="top" id="Kfs-RC-xsS"/>
+                            <constraint firstItem="rMb-FL-0ai" firstAttribute="leading" secondItem="Qt9-ha-T3K" secondAttribute="leading" id="Lub-al-dYH"/>
+                            <constraint firstItem="raL-yr-Q1w" firstAttribute="leading" secondItem="Qt9-ha-T3K" secondAttribute="leading" id="Rgh-kp-xcn"/>
+                            <constraint firstItem="Qt9-ha-T3K" firstAttribute="trailing" secondItem="raL-yr-Q1w" secondAttribute="trailing" id="Suu-xw-jyu"/>
+                            <constraint firstItem="joB-ST-Stl" firstAttribute="leading" secondItem="Qt9-ha-T3K" secondAttribute="leading" id="WUl-ji-EMc"/>
+                            <constraint firstItem="raL-yr-Q1w" firstAttribute="height" secondItem="XlN-Ks-gen" secondAttribute="height" multiplier="1:3" id="chz-d7-DQV"/>
+                            <constraint firstItem="Qt9-ha-T3K" firstAttribute="trailing" secondItem="joB-ST-Stl" secondAttribute="trailing" id="mwD-i3-zTu"/>
+                            <constraint firstItem="Qt9-ha-T3K" firstAttribute="bottom" secondItem="rMb-FL-0ai" secondAttribute="bottom" id="qmT-gM-lcg"/>
+                            <constraint firstItem="raL-yr-Q1w" firstAttribute="bottom" secondItem="joB-ST-Stl" secondAttribute="bottom" id="zdl-DN-Bz6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qt9-ha-T3K"/>
+                    </view>
+                    <connections>
+                        <outlet property="CityButton" destination="joB-ST-Stl" id="jAI-bA-PU6"/>
+                        <outlet property="TempButton" destination="raL-yr-Q1w" id="KYF-aG-4Ls"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glI-x3-C0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2189" y="187"/>
         </scene>
         <!--CoreData-->
         <scene sceneID="YkZ-G6-hao">
