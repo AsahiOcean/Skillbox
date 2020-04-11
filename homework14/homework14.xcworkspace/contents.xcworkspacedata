@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:homework14/CoreData/Tasks+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:homework14/CoreData/Tasks+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:homework14.xcodeproj">
    </FileRef>
    <FileRef
