@@ -169,18 +169,99 @@
         <!--Realm-->
         <scene sceneID="kY9-M0-dHR">
             <objects>
-                <viewController storyboardIdentifier="Realm" title="Realm" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IaM-In-gaU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Realm" title="Realm" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IaM-In-gaU" customClass="RealmViewController" customModule="homework14" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4v-6R-rvV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yob-ks-yNZ" userLabel="tableView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RealmCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RealmCell" id="7fh-et-uLX" userLabel="RealmCell" customClass="RealmCell" customModule="homework14" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="RealmView" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7fh-et-uLX" id="Nij-g6-tse">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fS1-FO-aSf">
+                                                    <rect key="frame" x="0.0" y="25" width="414" height="75"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="DateTime" text="Date &amp; Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsK-fS-aY6">
+                                                    <rect key="frame" x="309" y="11" width="95" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name &amp; Surname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mD-1R-iCp">
+                                                    <rect key="frame" x="5" y="11" width="137" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1mD-1R-iCp" firstAttribute="leading" secondItem="Nij-g6-tse" secondAttribute="leadingMargin" constant="-15" id="7sq-eK-15c"/>
+                                                <constraint firstItem="NsK-fS-aY6" firstAttribute="top" secondItem="1mD-1R-iCp" secondAttribute="top" id="RxT-kT-XgA"/>
+                                                <constraint firstItem="1mD-1R-iCp" firstAttribute="firstBaseline" secondItem="NsK-fS-aY6" secondAttribute="baseline" id="Sld-QX-4ia"/>
+                                                <constraint firstItem="NsK-fS-aY6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1mD-1R-iCp" secondAttribute="trailing" constant="8" symbolic="YES" id="W6o-s7-2UN"/>
+                                                <constraint firstItem="1mD-1R-iCp" firstAttribute="top" secondItem="Nij-g6-tse" secondAttribute="topMargin" id="b5Y-uf-MkD"/>
+                                                <constraint firstItem="fS1-FO-aSf" firstAttribute="height" secondItem="Nij-g6-tse" secondAttribute="height" multiplier="0.75" id="erB-yg-m0C"/>
+                                                <constraint firstAttribute="bottom" secondItem="fS1-FO-aSf" secondAttribute="bottom" id="k2t-bo-CVX"/>
+                                                <constraint firstItem="fS1-FO-aSf" firstAttribute="width" secondItem="Nij-g6-tse" secondAttribute="width" id="meS-lf-RG5"/>
+                                                <constraint firstItem="fS1-FO-aSf" firstAttribute="leading" secondItem="Nij-g6-tse" secondAttribute="leading" id="nr1-RT-jtA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NsK-fS-aY6" secondAttribute="trailing" constant="-10" id="whb-iR-Wxm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="DateTime" destination="NsK-fS-aY6" id="kq8-XW-sCg"/>
+                                            <outlet property="NameSurname" destination="1mD-1R-iCp" id="Yhj-EQ-naV"/>
+                                            <outlet property="TaskText" destination="fS1-FO-aSf" id="Onx-BN-EFc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="IaM-In-gaU" id="1LO-qq-feh"/>
+                                    <outlet property="delegate" destination="IaM-In-gaU" id="3T4-Ey-ifZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pcS-l8-4Gy" firstAttribute="bottom" secondItem="Yob-ks-yNZ" secondAttribute="bottom" id="7hU-Ne-gJ5"/>
+                            <constraint firstItem="Yob-ks-yNZ" firstAttribute="leading" secondItem="pcS-l8-4Gy" secondAttribute="leading" id="QIE-3Y-ca5"/>
+                            <constraint firstItem="pcS-l8-4Gy" firstAttribute="trailing" secondItem="Yob-ks-yNZ" secondAttribute="trailing" id="RMr-lS-Doc"/>
+                            <constraint firstItem="Yob-ks-yNZ" firstAttribute="top" secondItem="pcS-l8-4Gy" secondAttribute="top" id="jOW-YW-Gyk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pcS-l8-4Gy"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Realm" id="wuB-no-sqD"/>
+                    <navigationItem key="navigationItem" title="Realm" id="wuB-no-sqD">
+                        <barButtonItem key="rightBarButtonItem" title="AddTask" style="plain" id="Q2G-Nd-pJk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" restorationIdentifier="AddTask" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qWo-iJ-bxo">
+                                <rect key="frame" x="302" y="4" width="92" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Add Task"/>
+                                <connections>
+                                    <action selector="AddTaskButtonTouch:" destination="IaM-In-gaU" eventType="touchUpInside" id="VSY-8J-5ou"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="AddTaskButton" destination="qWo-iJ-bxo" id="oBN-Ea-Tw1"/>
+                        <outlet property="tableView" destination="Yob-ks-yNZ" id="SW1-iL-dHg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRh-YX-uHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="567"/>
+            <point key="canvasLocation" x="1218.840579710145" y="566.51785714285711"/>
         </scene>
         <!--CoreData-->
         <scene sceneID="YkZ-G6-hao">
@@ -192,7 +273,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ibC-hK-MsA"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ngc-O4-g0b"/>
+                    <navigationItem key="navigationItem" title="CoreData" id="ngc-O4-g0b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5w-av-NvE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

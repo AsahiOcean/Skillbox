@@ -18,6 +18,12 @@
 		FAA653EB24412045006B302D /* UserDataPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653EA24412045006B302D /* UserDataPersistance.swift */; };
 		FAA653EE244121EE006B302D /* UserDefaultsViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653ED244121EE006B302D /* UserDefaultsViewControllerExtensions.swift */; };
 		FAA653F5244203F8006B302D /* RealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653F4244203F8006B302D /* RealmViewController.swift */; };
+		FAA653F824420481006B302D /* TodoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653F724420481006B302D /* TodoObject.swift */; };
+		FAA653FA24420585006B302D /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653F924420585006B302D /* RealmCell.swift */; };
+		FAA653FC244205D3006B302D /* AddFormConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653FB244205D3006B302D /* AddFormConfig.swift */; };
+		FAA653FE24420602006B302D /* RealmClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653FD24420602006B302D /* RealmClass.swift */; };
+		FAA65400244208C4006B302D /* AddForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA653FF244208C4006B302D /* AddForm.xib */; };
+		FAA65403244218D5006B302D /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA65402244218D5006B302D /* CoreDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		FAA653EA24412045006B302D /* UserDataPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataPersistance.swift; sourceTree = "<group>"; };
 		FAA653ED244121EE006B302D /* UserDefaultsViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsViewControllerExtensions.swift; sourceTree = "<group>"; };
 		FAA653F4244203F8006B302D /* RealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewController.swift; sourceTree = "<group>"; };
+		FAA653F724420481006B302D /* TodoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoObject.swift; sourceTree = "<group>"; };
+		FAA653F924420585006B302D /* RealmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCell.swift; sourceTree = "<group>"; };
+		FAA653FB244205D3006B302D /* AddFormConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormConfig.swift; sourceTree = "<group>"; };
+		FAA653FD24420602006B302D /* RealmClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmClass.swift; sourceTree = "<group>"; };
+		FAA653FF244208C4006B302D /* AddForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddForm.xib; sourceTree = "<group>"; };
+		FAA65402244218D5006B302D /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,7 @@
 		FAA653D22441179D006B302D /* homework14 */ = {
 			isa = PBXGroup;
 			children = (
+				FAA65401244218BF006B302D /* CoreData */,
 				FAA653F3244203DA006B302D /* Realm */,
 				FAA653D32441179D006B302D /* AppDelegate.swift */,
 				FAA653D52441179D006B302D /* SceneDelegate.swift */,
@@ -115,8 +128,21 @@
 			isa = PBXGroup;
 			children = (
 				FAA653F4244203F8006B302D /* RealmViewController.swift */,
+				FAA653F724420481006B302D /* TodoObject.swift */,
+				FAA653F924420585006B302D /* RealmCell.swift */,
+				FAA653FB244205D3006B302D /* AddFormConfig.swift */,
+				FAA653FD24420602006B302D /* RealmClass.swift */,
+				FAA653FF244208C4006B302D /* AddForm.xib */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		FAA65401244218BF006B302D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FAA65402244218D5006B302D /* CoreDataViewController.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA653E32441179E006B302D /* LaunchScreen.storyboard in Resources */,
+				FAA65400244208C4006B302D /* AddForm.xib in Resources */,
 				FAA653E02441179E006B302D /* Assets.xcassets in Resources */,
 				FAA653DB2441179D006B302D /* Main.storyboard in Resources */,
 			);
@@ -234,11 +261,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA653F824420481006B302D /* TodoObject.swift in Sources */,
+				FAA653FA24420585006B302D /* RealmCell.swift in Sources */,
+				FAA653FE24420602006B302D /* RealmClass.swift in Sources */,
 				FAA653F5244203F8006B302D /* RealmViewController.swift in Sources */,
 				FAA653DE2441179D006B302D /* homework14.xcdatamodeld in Sources */,
 				FAA653EE244121EE006B302D /* UserDefaultsViewControllerExtensions.swift in Sources */,
 				FAA653D82441179D006B302D /* UserDefaultsViewController.swift in Sources */,
 				FAA653D42441179D006B302D /* AppDelegate.swift in Sources */,
+				FAA653FC244205D3006B302D /* AddFormConfig.swift in Sources */,
+				FAA65403244218D5006B302D /* CoreDataViewController.swift in Sources */,
 				FAA653EB24412045006B302D /* UserDataPersistance.swift in Sources */,
 				FAA653D62441179D006B302D /* SceneDelegate.swift in Sources */,
 			);
