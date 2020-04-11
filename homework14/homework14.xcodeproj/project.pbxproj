@@ -29,8 +29,9 @@
 		FAA6540924421D68006B302D /* AddFormCoreData.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA6540824421D68006B302D /* AddFormCoreData.xib */; };
 		FAA6540C2442298A006B302D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540B2442298A006B302D /* WeatherViewController.swift */; };
 		FAA6540E24422EF1006B302D /* Weatherman.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540D24422EF1006B302D /* Weatherman.swift */; };
-		FAA6541024422FE9006B302D /* WeatherDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540F24422FE9006B302D /* WeatherDecoder.swift */; };
+		FAA6541024422FE9006B302D /* WeatherDictDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540F24422FE9006B302D /* WeatherDictDecoder.swift */; };
 		FAA654122442302D006B302D /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA654112442302D006B302D /* WeatherCell.swift */; };
+		FAA65414244242B8006B302D /* ExtensionWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA65413244242B8006B302D /* ExtensionWeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,8 +61,9 @@
 		FAA6540824421D68006B302D /* AddFormCoreData.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFormCoreData.xib; sourceTree = "<group>"; };
 		FAA6540B2442298A006B302D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		FAA6540D24422EF1006B302D /* Weatherman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weatherman.swift; sourceTree = "<group>"; };
-		FAA6540F24422FE9006B302D /* WeatherDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDecoder.swift; sourceTree = "<group>"; };
+		FAA6540F24422FE9006B302D /* WeatherDictDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDictDecoder.swift; sourceTree = "<group>"; };
 		FAA654112442302D006B302D /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		FAA65413244242B8006B302D /* ExtensionWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionWeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +170,9 @@
 			children = (
 				FAA6540B2442298A006B302D /* WeatherViewController.swift */,
 				FAA6540D24422EF1006B302D /* Weatherman.swift */,
-				FAA6540F24422FE9006B302D /* WeatherDecoder.swift */,
+				FAA6540F24422FE9006B302D /* WeatherDictDecoder.swift */,
 				FAA654112442302D006B302D /* WeatherCell.swift */,
+				FAA65413244242B8006B302D /* ExtensionWeatherViewController.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -296,7 +299,7 @@
 				FAA654122442302D006B302D /* WeatherCell.swift in Sources */,
 				FAA653FA24420585006B302D /* RealmCell.swift in Sources */,
 				FAA653FE24420602006B302D /* RealmClass.swift in Sources */,
-				FAA6541024422FE9006B302D /* WeatherDecoder.swift in Sources */,
+				FAA6541024422FE9006B302D /* WeatherDictDecoder.swift in Sources */,
 				FAA653F5244203F8006B302D /* RealmViewController.swift in Sources */,
 				FAA653DE2441179D006B302D /* homework14.xcdatamodeld in Sources */,
 				FAA65407244219BA006B302D /* ViewCoreDataForm.swift in Sources */,
@@ -307,6 +310,7 @@
 				FAA653FC244205D3006B302D /* AddFormConfig.swift in Sources */,
 				FAA6540524421991006B302D /* CoreDataCell.swift in Sources */,
 				FAA65403244218D5006B302D /* CoreDataViewController.swift in Sources */,
+				FAA65414244242B8006B302D /* ExtensionWeatherViewController.swift in Sources */,
 				FAA653EB24412045006B302D /* UserDataPersistance.swift in Sources */,
 				FAA653D62441179D006B302D /* SceneDelegate.swift in Sources */,
 			);
