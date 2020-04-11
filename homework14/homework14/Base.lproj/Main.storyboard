@@ -63,40 +63,76 @@
                                     <action selector="NameCleaner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Gk-lv-64e"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzI-0u-ult">
-                                <rect key="frame" x="14" y="637" width="200" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDx-E3-kGd" userLabel="Gag">
+                                <rect key="frame" x="157" y="141" width="100" height="135"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trump1" translatesAutoresizingMaskIntoConstraints="NO" id="sSA-zU-kPc">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="135"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="29d-AF-Aff"/>
-                                    <constraint firstAttribute="width" constant="200" id="HFP-ff-nHU"/>
+                                    <constraint firstItem="sSA-zU-kPc" firstAttribute="top" secondItem="ZDx-E3-kGd" secondAttribute="top" id="N5K-mi-HMi"/>
+                                    <constraint firstAttribute="bottom" secondItem="sSA-zU-kPc" secondAttribute="bottom" id="ZOv-zm-LyD"/>
+                                    <constraint firstItem="sSA-zU-kPc" firstAttribute="leading" secondItem="ZDx-E3-kGd" secondAttribute="leading" id="dXE-hZ-6Ff"/>
+                                    <constraint firstAttribute="trailing" secondItem="sSA-zU-kPc" secondAttribute="trailing" id="qzs-tM-ZtT"/>
                                 </constraints>
-                                <state key="normal" title="CoreData" image="coredata"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ДОБРО ПОЖАЛОВАТЬ!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTv-Ii-HYy">
+                                <rect key="frame" x="20" y="307" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="RealmSection" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lG-Ap-ZOy" userLabel="RealmSection">
+                                <rect key="frame" x="214" y="662" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="RealmTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfW-Ie-zWI"/>
+                                    <segue destination="IaM-In-gaU" kind="show" id="g7z-fz-Eoc"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWW-ES-hhN">
-                                <rect key="frame" x="214" y="637" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="BLQ-N0-j9P"/>
-                                    <constraint firstAttribute="height" constant="200" id="Uf7-6X-0Ms"/>
-                                </constraints>
-                                <state key="normal" title="Realm" image="realm"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="RealmImage" image="realm" translatesAutoresizingMaskIntoConstraints="NO" id="uQu-vG-nBg" userLabel="RealmImage">
+                                <rect key="frame" x="214" y="662" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="CoreDataImage" image="coredata" translatesAutoresizingMaskIntoConstraints="NO" id="TBm-1U-0te" userLabel="CoreDataImage">
+                                <rect key="frame" x="0.0" y="662" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="CoreDataSection" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQ6-uU-FBN" userLabel="CoreDataSection">
+                                <rect key="frame" x="0.0" y="662" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="CoreDataTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gx5-LP-XR9"/>
+                                    <segue destination="lGI-U5-TKL" kind="show" id="BDy-0e-iRu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xWW-ES-hhN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5qi-o7-i9w"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xWW-ES-hhN" secondAttribute="bottom" constant="25" id="9PD-VC-60D"/>
+                            <constraint firstAttribute="bottom" secondItem="ZDx-E3-kGd" secondAttribute="bottom" constant="620" id="2Le-3L-SRi"/>
                             <constraint firstItem="w2l-KD-WT0" firstAttribute="leading" secondItem="2Ab-QP-0Sj" secondAttribute="leading" id="9pa-Rr-jM7"/>
+                            <constraint firstItem="ZDx-E3-kGd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="CQl-MS-wiJ"/>
+                            <constraint firstItem="iTv-Ii-HYy" firstAttribute="top" secondItem="ZDx-E3-kGd" secondAttribute="bottom" constant="31" id="Jsb-Kc-Fin"/>
                             <constraint firstItem="w2l-KD-WT0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="7:10" id="O8j-mS-fWy"/>
                             <constraint firstItem="2Ab-QP-0Sj" firstAttribute="top" secondItem="w2l-KD-WT0" secondAttribute="bottom" constant="30" id="RKD-HA-7Es"/>
+                            <constraint firstItem="ZDx-E3-kGd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="TGA-zm-O0I"/>
                             <constraint firstItem="URe-fP-J1X" firstAttribute="width" secondItem="2Ab-QP-0Sj" secondAttribute="width" id="V43-T8-hf7"/>
                             <constraint firstItem="w2l-KD-WT0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="ZvL-fM-MbZ"/>
                             <constraint firstItem="w2l-KD-WT0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="azM-PC-75i"/>
                             <constraint firstItem="URe-fP-J1X" firstAttribute="top" secondItem="2Ab-QP-0Sj" secondAttribute="bottom" constant="10" id="bOy-ip-dvD"/>
-                            <constraint firstItem="xWW-ES-hhN" firstAttribute="leading" secondItem="rzI-0u-ult" secondAttribute="trailing" id="fwJ-Hy-BG6"/>
-                            <constraint firstItem="xWW-ES-hhN" firstAttribute="leading" secondItem="rzI-0u-ult" secondAttribute="trailing" id="nVC-4g-oIP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZDx-E3-kGd" secondAttribute="trailing" constant="157" id="cfQ-k8-1Ab"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Ab-QP-0Sj" secondAttribute="trailing" symbolic="YES" id="ruw-vs-j60"/>
-                            <constraint firstItem="xWW-ES-hhN" firstAttribute="centerY" secondItem="rzI-0u-ult" secondAttribute="centerY" id="swt-Yd-drv"/>
                             <constraint firstItem="URe-fP-J1X" firstAttribute="centerX" secondItem="2Ab-QP-0Sj" secondAttribute="centerX" id="tNu-W5-JY8"/>
+                            <constraint firstItem="iTv-Ii-HYy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="v0S-L4-r4Z"/>
                             <constraint firstItem="2Ab-QP-0Sj" firstAttribute="width" secondItem="w2l-KD-WT0" secondAttribute="width" id="wTQ-v6-LHS"/>
+                            <constraint firstItem="iTv-Ii-HYy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xkH-9k-rt9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -116,17 +152,56 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="CoreDataImage" destination="TBm-1U-0te" id="QDh-tG-Je2"/>
+                        <outlet property="CoreDataSection" destination="EQ6-uU-FBN" id="IKQ-aY-8Zr"/>
+                        <outlet property="GagView" destination="ZDx-E3-kGd" id="Fxt-w0-mlB"/>
                         <outlet property="Name" destination="w2l-KD-WT0" id="dI5-d2-jlu"/>
+                        <outlet property="RealmImage" destination="uQu-vG-nBg" id="Kfu-xz-6n7"/>
+                        <outlet property="RealmSection" destination="1lG-Ap-ZOy" id="3YP-8e-fzy"/>
                         <outlet property="Surname" destination="2Ab-QP-0Sj" id="Hi2-MK-Qg0"/>
+                        <outlet property="Welcome" destination="iTv-Ii-HYy" id="YIA-9I-Ttv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="138"/>
         </scene>
+        <!--Realm-->
+        <scene sceneID="kY9-M0-dHR">
+            <objects>
+                <viewController storyboardIdentifier="Realm" title="Realm" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IaM-In-gaU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F4v-6R-rvV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pcS-l8-4Gy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Realm" id="wuB-no-sqD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tRh-YX-uHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="567"/>
+        </scene>
+        <!--CoreData-->
+        <scene sceneID="YkZ-G6-hao">
+            <objects>
+                <viewController storyboardIdentifier="CoreData" title="CoreData" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lGI-U5-TKL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jO0-Tu-PUH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ibC-hK-MsA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ngc-O4-g0b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5w-av-NvE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="-232"/>
+        </scene>
     </scenes>
     <resources>
         <image name="coredata" width="300" height="300"/>
         <image name="realm" width="300" height="300"/>
+        <image name="trump1" width="100" height="135"/>
     </resources>
 </document>
