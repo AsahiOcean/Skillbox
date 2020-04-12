@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import CoreData
 import RealmSwift
 
 protocol WeathermanDelegate {
@@ -15,7 +16,6 @@ protocol WeathermanDelegate {
 }
 
 class Weatherman {
-    
     var delegate: WeathermanDelegate?
 
     func WeatherRequest(cityname: String) {
@@ -32,47 +32,19 @@ class Weatherman {
     task.resume()
     }
 }
-
 class AlamofireRequest {
     fileprivate let apikey = "017887b8d63f02125d64d58c45b93a18"
     fileprivate let link = "http://api.openweathermap.org/data/2.5/forecast?q="
     fileprivate let appid = "&appid="
-    fileprivate let general = WeatherViewController()
-    
-    var CityName = ""
-    
-    func AlamofireWeatherRequest(completition: @escaping ([WeatherDictDecoder]) -> Void) {
-        let url = URL(string: link + CityName + appid + apikey)!
-        AF.request(url).responseJSON { response in
-            if let data = response.data,
-                let json = try? JSONSerialization.jsonObject(with:
-                    data, options: .allowFragments),
-                    let jsonDict = json as? NSDictionary,
-                        let list = jsonDict["list"] as? [NSDictionary] {
-                            var unites: [WeatherDictDecoder] = []
-                            var object: WeatherDictDecoder
-                                for data in list{
-                                    object = WeatherDictDecoder(data: data)!
-                                    unites.append(object)
-                                }
-                        }
-                }
-        }
-}
 
-class backupWeather {
-    fileprivate let apikey = "017887b8d63f02125d64d58c45b93a18"
-    fileprivate let link = "http://api.openweathermap.org/data/2.5/forecast?q="
-    fileprivate let appid = "&appid="
-    
     var CityName = ""
-    
-    func AlamofireWeatherRequest(completition: @escaping ([WeatherDictDecoder]) -> Void) {
-        let url = URL(string: link + CityName + appid + apikey)!
-        AF.request(url).responseJSON { response in
-            if let data = response.data,
-                let json = try? JSONSerialization.jsonObject(with:
-                    data, options: .allowFragments),
+    var weathers = [WeatherEntity]()
+
+         func AlamofireWeatherRequest(completition: @escaping ([WeatherDictDecoder]) -> Void) {
+            let url = URL(string: link + CityName + appid + apikey)!
+            AF.request(url).responseJSON { response in
+                if let data = response.data,
+                    let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
                     let jsonDict = json as? NSDictionary,
                         let list = jsonDict["list"] as? [NSDictionary] {
                             var unites: [WeatherDictDecoder] = []
@@ -81,7 +53,40 @@ class backupWeather {
                                     object = WeatherDictDecoder(data: data)!
                                     unites.append(object)
                                 }
-                        }
-                }
-        }
-}
+                                print("Alamofire Size Data: \(data)") // check data Alamofire
+                                DispatchQueue.main.async {
+                                    completition(unites)
+                                    getData()
+                                }
+
+                                func getData() {
+                                    let context = ( UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                                    var request = NSFetchRequest<NSFetchRequestResult>()
+                                    request = WeatherEntity.fetchRequest()
+                                    request.returnsObjectsAsFaults = false
+                                    do {
+                                        let arrayOfData = try context.fetch(request)
+                                            let backup = WeatherEntity(context: context)
+                                                backup.weatherdata = response.data
+                                            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+//                                        let utf8db = backup.weatherdata
+//                                        let utf8 = String(data: utf8db!, encoding: .utf8)
+//                                        print(utf8!)
+                                            print(arrayOfData.count)
+                                    } catch {
+                                        print("ошибка контейнера")
+                                    }
+                                }
+//                                    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//                                    let backup = WeatherEntity(context: context)
+//                                    backup.weatherdata = response.data
+////                                    let utf8db = backup.weatherdata
+////                                    let utf8 = String(data: utf8db!, encoding: .utf8)
+////                                    print(utf8!)
+//                                    self.weathers.append(backup)
+//                                    (UIApplication.shared.delegate as! AppDelegate).saveContext()
+//                                    print(backup.weatherdata!.base64EncodedData())
+                            }
+                    }
+            }
+    }

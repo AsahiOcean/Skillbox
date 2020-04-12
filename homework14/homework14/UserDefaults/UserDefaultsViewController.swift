@@ -43,10 +43,6 @@ class UserDefaultsViewController: UIViewController {
         disableAnimationImage()
     }
     
-    @IBAction func Weather(_ sender: Any) {
-        disableAnimationImage()
-    }
-    
     @IBAction func Exit(_ sender: Any) {
         exit(0)
     }

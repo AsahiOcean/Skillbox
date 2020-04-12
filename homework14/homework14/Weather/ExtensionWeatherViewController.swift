@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension WeatherViewController {
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return unites.count
     }
@@ -19,13 +19,13 @@ extension WeatherViewController {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell") as! WeatherCell
             let WeatherData = unites[indexPath.row]
-
+            
 // Unix время
             let date = Date(timeIntervalSince1970: TimeInterval(WeatherData.dt!))
             let dateFormatter = DateFormatter()
             dateFormatter.timeZone = TimeZone(abbreviation: (TimeZone.current.abbreviation() ?? "GMT"))
             dateFormatter.locale = NSLocale.current
-            dateFormatter.dateFormat = "dd.MM.YYYY \n HH:mm"
+            dateFormatter.dateFormat = "dd.MM.YYYY\nHH:mm"
             let strTime = dateFormatter.string(from: date)
 
 // Температура (конвертация)
@@ -44,13 +44,13 @@ extension WeatherViewController {
                 let result = (Int(converter))
                 return String(result)
             }
-
-// MARK: - Вывод в таблицу
+// MARK: - Вывод
             cell.Date.text = strTime
-            cell.Temp.text = "\(celsius)ºC"
+            cell.temperature.text = "\(celsius)ºC"
+            
             return cell
         }
-    
+
 func Output(WeatherJSON: NSDictionary) {
         DispatchQueue.main.async {
 // MARK: - Город

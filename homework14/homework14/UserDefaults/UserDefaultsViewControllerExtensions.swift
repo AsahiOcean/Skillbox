@@ -46,7 +46,7 @@ extension UserDefaultsViewController {
 //            self.GagView.alpha = 1
             DispatchQueue.main.async {
                 UIView.animate(
-                    withDuration: 0.25,
+                    withDuration: 0.2,
                     delay: 0,
                     options: [.repeat, .autoreverse, .curveEaseInOut],
                     animations: {
@@ -60,7 +60,6 @@ extension UserDefaultsViewController {
         } else {
         print("Приложение запущено \(Date())")
         UserDataPersistance.sharing.FirstRunData = "false"
-            
         DispatchQueue.main.async {
         self.Welcome.text = "ДОБРО ПОЖАЛОВАТЬ!!!"
         self.RealmImage.frame.origin.x += super.view.frame.width
@@ -119,8 +118,8 @@ extension UserDefaultsViewController {
             });
         
         UIView.animate(
-            withDuration: 0.25,
-            delay: 2.5,
+            withDuration: 0.2,
+            delay: 2.75,
             options: [.repeat, .autoreverse, .curveEaseInOut],
             animations: {
         self.GagView.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 5)
