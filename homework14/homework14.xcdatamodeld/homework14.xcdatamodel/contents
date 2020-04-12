@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Tasks" representedClassName="Tasks" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WeatherCD" representedClassName="WeatherCD" syncable="YES" codeGenerationType="class">
+        <attribute name="json" optional="YES" attributeType="Binary"/>
+    </entity>
+    <elements>
+        <element name="Tasks" positionX="-45" positionY="0" width="128" height="88"/>
+        <element name="WeatherCD" positionX="0" positionY="72" width="128" height="58"/>
+    </elements>
+</model>

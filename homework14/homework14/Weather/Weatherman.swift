@@ -8,12 +8,14 @@
 
 import Foundation
 import Alamofire
+import RealmSwift
 
 protocol WeathermanDelegate {
     func Output(WeatherJSON: NSDictionary)
 }
 
 class Weatherman {
+    
     var delegate: WeathermanDelegate?
 
     func WeatherRequest(cityname: String) {
@@ -30,17 +32,21 @@ class Weatherman {
     task.resume()
     }
 }
+
 class AlamofireRequest {
     fileprivate let apikey = "017887b8d63f02125d64d58c45b93a18"
     fileprivate let link = "http://api.openweathermap.org/data/2.5/forecast?q="
     fileprivate let appid = "&appid="
-
+    fileprivate let general = WeatherViewController()
+    
     var CityName = ""
-         func AlamofireWeatherRequest(completition: @escaping ([WeatherDictDecoder]) -> Void) {
-            let url = URL(string: link + CityName + appid + apikey)!
-            AF.request(url).responseJSON { response in
-                if let data = response.data,
-                    let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
+    
+    func AlamofireWeatherRequest(completition: @escaping ([WeatherDictDecoder]) -> Void) {
+        let url = URL(string: link + CityName + appid + apikey)!
+        AF.request(url).responseJSON { response in
+            if let data = response.data,
+                let json = try? JSONSerialization.jsonObject(with:
+                    data, options: .allowFragments),
                     let jsonDict = json as? NSDictionary,
                         let list = jsonDict["list"] as? [NSDictionary] {
                             var unites: [WeatherDictDecoder] = []
@@ -49,8 +55,31 @@ class AlamofireRequest {
                                     object = WeatherDictDecoder(data: data)!
                                     unites.append(object)
                                 }
-                                DispatchQueue.main.async {
-                                    completition(unites)
+                        }
+                }
+        }
+}
+
+class backupWeather {
+    fileprivate let apikey = "017887b8d63f02125d64d58c45b93a18"
+    fileprivate let link = "http://api.openweathermap.org/data/2.5/forecast?q="
+    fileprivate let appid = "&appid="
+    
+    var CityName = ""
+    
+    func AlamofireWeatherRequest(completition: @escaping ([WeatherDictDecoder]) -> Void) {
+        let url = URL(string: link + CityName + appid + apikey)!
+        AF.request(url).responseJSON { response in
+            if let data = response.data,
+                let json = try? JSONSerialization.jsonObject(with:
+                    data, options: .allowFragments),
+                    let jsonDict = json as? NSDictionary,
+                        let list = jsonDict["list"] as? [NSDictionary] {
+                            var unites: [WeatherDictDecoder] = []
+                            var object: WeatherDictDecoder
+                                for data in list{
+                                    object = WeatherDictDecoder(data: data)!
+                                    unites.append(object)
                                 }
                         }
                 }

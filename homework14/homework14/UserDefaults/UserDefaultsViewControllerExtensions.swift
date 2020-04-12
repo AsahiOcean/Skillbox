@@ -60,6 +60,7 @@ extension UserDefaultsViewController {
         } else {
         print("Приложение запущено \(Date())")
         UserDataPersistance.sharing.FirstRunData = "false"
+            
         DispatchQueue.main.async {
         self.Welcome.text = "ДОБРО ПОЖАЛОВАТЬ!!!"
         self.RealmImage.frame.origin.x += super.view.frame.width

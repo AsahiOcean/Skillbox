@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		556260A9CAE036EEBABD1FBD /* Pods_homework14.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DB7918E0EDDB21894299F3 /* Pods_homework14.framework */; };
+		FAA653D42441179D006B302D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653D32441179D006B302D /* AppDelegate.swift */; };
+		FAA653D62441179D006B302D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653D52441179D006B302D /* SceneDelegate.swift */; };
+		FAA653D82441179D006B302D /* UserDefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653D72441179D006B302D /* UserDefaultsViewController.swift */; };
+		FAA653DB2441179D006B302D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA653D92441179D006B302D /* Main.storyboard */; };
+		FAA653DE2441179D006B302D /* homework14.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA653DC2441179D006B302D /* homework14.xcdatamodeld */; };
+		FAA653E02441179E006B302D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA653DF2441179E006B302D /* Assets.xcassets */; };
+		FAA653E32441179E006B302D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA653E12441179E006B302D /* LaunchScreen.storyboard */; };
+		FAA653EB24412045006B302D /* UserDataPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653EA24412045006B302D /* UserDataPersistance.swift */; };
+		FAA653EE244121EE006B302D /* UserDefaultsViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653ED244121EE006B302D /* UserDefaultsViewControllerExtensions.swift */; };
+		FAA653F5244203F8006B302D /* RealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653F4244203F8006B302D /* RealmViewController.swift */; };
+		FAA653F824420481006B302D /* TodoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653F724420481006B302D /* TodoObject.swift */; };
+		FAA653FA24420585006B302D /* RealmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653F924420585006B302D /* RealmCell.swift */; };
+		FAA653FC244205D3006B302D /* AddFormConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653FB244205D3006B302D /* AddFormConfig.swift */; };
+		FAA653FE24420602006B302D /* RealmClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA653FD24420602006B302D /* RealmClass.swift */; };
+		FAA65400244208C4006B302D /* AddForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA653FF244208C4006B302D /* AddForm.xib */; };
+		FAA65403244218D5006B302D /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA65402244218D5006B302D /* CoreDataViewController.swift */; };
+		FAA6540524421991006B302D /* CoreDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540424421991006B302D /* CoreDataCell.swift */; };
+		FAA65407244219BA006B302D /* ViewCoreDataForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA65406244219BA006B302D /* ViewCoreDataForm.swift */; };
+		FAA6540924421D68006B302D /* AddFormCoreData.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA6540824421D68006B302D /* AddFormCoreData.xib */; };
+		FAA6540C2442298A006B302D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540B2442298A006B302D /* WeatherViewController.swift */; };
+		FAA6540E24422EF1006B302D /* Weatherman.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540D24422EF1006B302D /* Weatherman.swift */; };
+		FAA6541024422FE9006B302D /* WeatherDictDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA6540F24422FE9006B302D /* WeatherDictDecoder.swift */; };
+		FAA654122442302D006B302D /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA654112442302D006B302D /* WeatherCell.swift */; };
+		FAA65414244242B8006B302D /* ExtensionWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA65413244242B8006B302D /* ExtensionWeatherViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02BDC90FBB3FF050908CFC75 /* Pods-homework14.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homework14.debug.xcconfig"; path = "Target Support Files/Pods-homework14/Pods-homework14.debug.xcconfig"; sourceTree = "<group>"; };
+		3C72847B56D259C55440F4A4 /* Pods-homework14.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homework14.release.xcconfig"; path = "Target Support Files/Pods-homework14/Pods-homework14.release.xcconfig"; sourceTree = "<group>"; };
+		70DB7918E0EDDB21894299F3 /* Pods_homework14.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_homework14.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA653D02441179D006B302D /* homework14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework14.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA653D32441179D006B302D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAA653D52441179D006B302D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FAA653D72441179D006B302D /* UserDefaultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsViewController.swift; sourceTree = "<group>"; };
+		FAA653DA2441179D006B302D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAA653DD2441179D006B302D /* homework14.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = homework14.xcdatamodel; sourceTree = "<group>"; };
+		FAA653DF2441179E006B302D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA653E22441179E006B302D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAA653E42441179E006B302D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA653EA24412045006B302D /* UserDataPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataPersistance.swift; sourceTree = "<group>"; };
+		FAA653ED244121EE006B302D /* UserDefaultsViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsViewControllerExtensions.swift; sourceTree = "<group>"; };
+		FAA653F4244203F8006B302D /* RealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewController.swift; sourceTree = "<group>"; };
+		FAA653F724420481006B302D /* TodoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoObject.swift; sourceTree = "<group>"; };
+		FAA653F924420585006B302D /* RealmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCell.swift; sourceTree = "<group>"; };
+		FAA653FB244205D3006B302D /* AddFormConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormConfig.swift; sourceTree = "<group>"; };
+		FAA653FD24420602006B302D /* RealmClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmClass.swift; sourceTree = "<group>"; };
+		FAA653FF244208C4006B302D /* AddForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddForm.xib; sourceTree = "<group>"; };
+		FAA65402244218D5006B302D /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
+		FAA6540424421991006B302D /* CoreDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCell.swift; sourceTree = "<group>"; };
+		FAA65406244219BA006B302D /* ViewCoreDataForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoreDataForm.swift; sourceTree = "<group>"; };
+		FAA6540824421D68006B302D /* AddFormCoreData.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFormCoreData.xib; sourceTree = "<group>"; };
+		FAA6540B2442298A006B302D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		FAA6540D24422EF1006B302D /* Weatherman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weatherman.swift; sourceTree = "<group>"; };
+		FAA6540F24422FE9006B302D /* WeatherDictDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDictDecoder.swift; sourceTree = "<group>"; };
+		FAA654112442302D006B302D /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		FAA65413244242B8006B302D /* ExtensionWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionWeatherViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAA653CD2441179D006B302D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				556260A9CAE036EEBABD1FBD /* Pods_homework14.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B1141D8415806DDA3BA86D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02BDC90FBB3FF050908CFC75 /* Pods-homework14.debug.xcconfig */,
+				3C72847B56D259C55440F4A4 /* Pods-homework14.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		889DB003AB6ACF83C0006C60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70DB7918E0EDDB21894299F3 /* Pods_homework14.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAA653C72441179D006B302D = {
+			isa = PBXGroup;
+			children = (
+				FAA653D22441179D006B302D /* homework14 */,
+				FAA653D12441179D006B302D /* Products */,
+				3B1141D8415806DDA3BA86D1 /* Pods */,
+				889DB003AB6ACF83C0006C60 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAA653D12441179D006B302D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAA653D02441179D006B302D /* homework14.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAA653D22441179D006B302D /* homework14 */ = {
+			isa = PBXGroup;
+			children = (
+				FAA6540A24422922006B302D /* Weather */,
+				FAA65401244218BF006B302D /* CoreData */,
+				FAA653F3244203DA006B302D /* Realm */,
+				FAA653D32441179D006B302D /* AppDelegate.swift */,
+				FAA653D52441179D006B302D /* SceneDelegate.swift */,
+				FAA653EC24412051006B302D /* UserDefaults */,
+				FAA653D92441179D006B302D /* Main.storyboard */,
+				FAA653DF2441179E006B302D /* Assets.xcassets */,
+				FAA653E12441179E006B302D /* LaunchScreen.storyboard */,
+				FAA653E42441179E006B302D /* Info.plist */,
+				FAA653DC2441179D006B302D /* homework14.xcdatamodeld */,
+			);
+			path = homework14;
+			sourceTree = "<group>";
+		};
+		FAA653EC24412051006B302D /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				FAA653D72441179D006B302D /* UserDefaultsViewController.swift */,
+				FAA653EA24412045006B302D /* UserDataPersistance.swift */,
+				FAA653ED244121EE006B302D /* UserDefaultsViewControllerExtensions.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		FAA653F3244203DA006B302D /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				FAA653F4244203F8006B302D /* RealmViewController.swift */,
+				FAA653F724420481006B302D /* TodoObject.swift */,
+				FAA653F924420585006B302D /* RealmCell.swift */,
+				FAA653FB244205D3006B302D /* AddFormConfig.swift */,
+				FAA653FD24420602006B302D /* RealmClass.swift */,
+				FAA653FF244208C4006B302D /* AddForm.xib */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		FAA65401244218BF006B302D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FAA65402244218D5006B302D /* CoreDataViewController.swift */,
+				FAA6540424421991006B302D /* CoreDataCell.swift */,
+				FAA65406244219BA006B302D /* ViewCoreDataForm.swift */,
+				FAA6540824421D68006B302D /* AddFormCoreData.xib */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FAA6540A24422922006B302D /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				FAA6540B2442298A006B302D /* WeatherViewController.swift */,
+				FAA6540D24422EF1006B302D /* Weatherman.swift */,
+				FAA6540F24422FE9006B302D /* WeatherDictDecoder.swift */,
+				FAA654112442302D006B302D /* WeatherCell.swift */,
+				FAA65413244242B8006B302D /* ExtensionWeatherViewController.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAA653CF2441179D006B302D /* homework14 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA653E72441179E006B302D /* Build configuration list for PBXNativeTarget "homework14" */;
+			buildPhases = (
+				F51B41D7663461F3C00D4BFB /* [CP] Check Pods Manifest.lock */,
+				FAA653CC2441179D006B302D /* Sources */,
+				FAA653CD2441179D006B302D /* Frameworks */,
+				FAA653CE2441179D006B302D /* Resources */,
+				4E7ED1E2C125AEAE0DB1E033 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = homework14;
+			productName = homework14;
+			productReference = FAA653D02441179D006B302D /* homework14.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAA653C82441179D006B302D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Sergey Fedotov";
+				TargetAttributes = {
+					FAA653CF2441179D006B302D = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = FAA653CB2441179D006B302D /* Build configuration list for PBXProject "homework14" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAA653C72441179D006B302D;
+			productRefGroup = FAA653D12441179D006B302D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAA653CF2441179D006B302D /* homework14 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAA653CE2441179D006B302D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA653E32441179E006B302D /* LaunchScreen.storyboard in Resources */,
+				FAA65400244208C4006B302D /* AddForm.xib in Resources */,
+				FAA6540924421D68006B302D /* AddFormCoreData.xib in Resources */,
+				FAA653E02441179E006B302D /* Assets.xcassets in Resources */,
+				FAA653DB2441179D006B302D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E7ED1E2C125AEAE0DB1E033 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-homework14/Pods-homework14-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-homework14/Pods-homework14-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-homework14/Pods-homework14-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F51B41D7663461F3C00D4BFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-homework14-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAA653CC2441179D006B302D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA653F824420481006B302D /* TodoObject.swift in Sources */,
+				FAA6540C2442298A006B302D /* WeatherViewController.swift in Sources */,
+				FAA654122442302D006B302D /* WeatherCell.swift in Sources */,
+				FAA653FA24420585006B302D /* RealmCell.swift in Sources */,
+				FAA653FE24420602006B302D /* RealmClass.swift in Sources */,
+				FAA6541024422FE9006B302D /* WeatherDictDecoder.swift in Sources */,
+				FAA653F5244203F8006B302D /* RealmViewController.swift in Sources */,
+				FAA653DE2441179D006B302D /* homework14.xcdatamodeld in Sources */,
+				FAA65407244219BA006B302D /* ViewCoreDataForm.swift in Sources */,
+				FAA6540E24422EF1006B302D /* Weatherman.swift in Sources */,
+				FAA653EE244121EE006B302D /* UserDefaultsViewControllerExtensions.swift in Sources */,
+				FAA653D82441179D006B302D /* UserDefaultsViewController.swift in Sources */,
+				FAA653D42441179D006B302D /* AppDelegate.swift in Sources */,
+				FAA653FC244205D3006B302D /* AddFormConfig.swift in Sources */,
+				FAA6540524421991006B302D /* CoreDataCell.swift in Sources */,
+				FAA65403244218D5006B302D /* CoreDataViewController.swift in Sources */,
+				FAA65414244242B8006B302D /* ExtensionWeatherViewController.swift in Sources */,
+				FAA653EB24412045006B302D /* UserDataPersistance.swift in Sources */,
+				FAA653D62441179D006B302D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAA653D92441179D006B302D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA653DA2441179D006B302D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAA653E12441179E006B302D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA653E22441179E006B302D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAA653E52441179E006B302D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAA653E62441179E006B302D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAA653E82441179E006B302D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02BDC90FBB3FF050908CFC75 /* Pods-homework14.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KXDT64LHVB;
+				INFOPLIST_FILE = homework14/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.homework14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAA653E92441179E006B302D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C72847B56D259C55440F4A4 /* Pods-homework14.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KXDT64LHVB;
+				INFOPLIST_FILE = homework14/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.homework14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAA653CB2441179D006B302D /* Build configuration list for PBXProject "homework14" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA653E52441179E006B302D /* Debug */,
+				FAA653E62441179E006B302D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA653E72441179E006B302D /* Build configuration list for PBXNativeTarget "homework14" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA653E82441179E006B302D /* Debug */,
+				FAA653E92441179E006B302D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAA653DC2441179D006B302D /* homework14.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAA653DD2441179D006B302D /* homework14.xcdatamodel */,
+			);
+			currentVersion = FAA653DD2441179D006B302D /* homework14.xcdatamodel */;
+			path = homework14.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FAA653C82441179D006B302D /* Project object */;
+}

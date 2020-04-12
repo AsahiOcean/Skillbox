@@ -19,7 +19,10 @@ class WeatherViewController: UIViewController, WeathermanDelegate, UITableViewDa
     @IBOutlet weak var PressureAtmospheric: UILabel!
     @IBOutlet weak var HumidityUnit: UILabel!
     @IBOutlet weak var tableView: UITableView!
-        
+    
+    @IBAction func backupCheck(_ sender: Any) {
+    }
+    
     let meteo = Weatherman()
     var city = "Moscow"
     
@@ -32,13 +35,14 @@ class WeatherViewController: UIViewController, WeathermanDelegate, UITableViewDa
         tableView.delegate = self
         meteo.delegate = self
         meteo.WeatherRequest(cityname: city)
-    
+                
         let Meteo = AlamofireRequest()
         Meteo.CityName = city
         Meteo.AlamofireWeatherRequest{unites in
             DispatchQueue.main.async{
                 self.unites = unites
-                    self.tableView.reloadData()}
+                    self.tableView.reloadData()
+            }
         }
     }
 }

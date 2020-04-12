@@ -418,7 +418,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qt9-ha-T3K"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Xrf-UH-ZoA"/>
+                    <navigationItem key="navigationItem" id="Xrf-UH-ZoA">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="WQV-T9-Dz0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xFL-Tb-9sE">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <connections>
+                                <action selector="backupCheck:" destination="s2y-Qr-egH" id="M1m-SB-cMj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="CityButton" destination="joB-ST-Stl" id="jAI-bA-PU6"/>
                         <outlet property="CloudDescription" destination="f3c-HH-vl7" id="Eqz-kv-1uu"/>
