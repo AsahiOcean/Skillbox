@@ -10,28 +10,17 @@ import Foundation
 import UIKit
 
 extension WeatherViewController {
-    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return dates.count
-//    }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return unites.count
     }
-    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if (dates.count < section || dates.count == 0 || weatherInfos[dates[section]] == nil) { return "" }
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd.MM.yy"
-//        return dateFormatter.string(from: weatherInfos[dates[section]]![0].date)
-//    }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell") as! WeatherCell
             let WeatherData = unites[indexPath.row]
 
-    // Unix время
+// Unix время
             let date = Date(timeIntervalSince1970: TimeInterval(WeatherData.dt!))
             let dateFormatter = DateFormatter()
             dateFormatter.timeZone = TimeZone(abbreviation: (TimeZone.current.abbreviation() ?? "GMT"))
@@ -39,7 +28,7 @@ extension WeatherViewController {
             dateFormatter.dateFormat = "dd.MM.YYYY \n HH:mm"
             let strTime = dateFormatter.string(from: date)
 
-    // Температура (конвертация)
+// Температура (конвертация)
             func CelsiusFunc() -> Double {
                 let Temp = WeatherData.main["temp"]!
                 let result = (Temp as! Double) - Double(273.15)
@@ -47,7 +36,7 @@ extension WeatherViewController {
             }
             let celsius = CelsiusFunc()
             
-    // Давление
+// Давление
             func PressureFunc() -> String {
                 let Hectopascal = "\(WeatherData.main["pressure"]!)"
                 let mmHg = 0.7500637554192
@@ -55,14 +44,10 @@ extension WeatherViewController {
                 let result = (Int(converter))
                 return String(result)
             }
-    // Вывод
+
+// MARK: - Вывод в таблицу
             cell.Date.text = strTime
-//            cell.OsadkiLabel.text = "\(WeatherData.weather[0]["description"] ?? "Выгляните в окно")"
-//            cell.WindLabel.text = "➳ \(WeatherData.wind["speed"]!)м/с"
-//            cell.HumidityLabel.text = "\(WeatherData.main["humidity"]!)"
-//            cell.PressureLabel.text = "\(PressureFunc()) ммрт"
-            cell.textLabel?.text = "t: \(celsius)ºC"
-            
+            cell.Temp.text = "\(celsius)ºC"
             return cell
         }
     

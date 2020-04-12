@@ -46,7 +46,7 @@ extension UserDefaultsViewController {
 //            self.GagView.alpha = 1
             DispatchQueue.main.async {
                 UIView.animate(
-                    withDuration: 0.2,
+                    withDuration: 0.25,
                     delay: 0,
                     options: [.repeat, .autoreverse, .curveEaseInOut],
                     animations: {
@@ -118,8 +118,8 @@ extension UserDefaultsViewController {
             });
         
         UIView.animate(
-            withDuration: 0.2,
-            delay: 2.75,
+            withDuration: 0.25,
+            delay: 2.5,
             options: [.repeat, .autoreverse, .curveEaseInOut],
             animations: {
         self.GagView.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 5)

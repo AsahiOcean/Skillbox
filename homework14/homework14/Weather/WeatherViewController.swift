@@ -32,12 +32,13 @@ class WeatherViewController: UIViewController, WeathermanDelegate, UITableViewDa
         tableView.delegate = self
         meteo.delegate = self
         meteo.WeatherRequest(cityname: city)
-    let Meteo = AlamofireRequest()
-    Meteo.CityName = city
-    Meteo.AlamofireWeatherRequest{unites in
-        DispatchQueue.main.async{
-        self.unites = unites
-            self.tableView.reloadData()}
-    }
+    
+        let Meteo = AlamofireRequest()
+        Meteo.CityName = city
+        Meteo.AlamofireWeatherRequest{unites in
+            DispatchQueue.main.async{
+                self.unites = unites
+                    self.tableView.reloadData()}
+        }
     }
 }
