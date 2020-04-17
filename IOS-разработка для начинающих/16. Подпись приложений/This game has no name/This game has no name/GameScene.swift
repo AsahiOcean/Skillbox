@@ -14,16 +14,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var playerSpinnyNode: SKShapeNode?
     
     private var GamerHalo: SKShapeNode?
-    private var GamerHalo2: SKShapeNode?
-    private var GamerHalo3: SKShapeNode?
-    private var GamerHalo4: SKShapeNode?
-    
-    private var ObjectRedHalo: SKShapeNode?
-    private var ObjectGreenHalo: SKShapeNode?
-    private var ObjectBlueHalo: SKShapeNode?
-    
-    private var audio: SKAudioNode?
-            
+
     private var death: SKNode?
     private var gamer: SKSpriteNode!
     
