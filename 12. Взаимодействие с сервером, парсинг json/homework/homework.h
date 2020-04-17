@@ -1,11 +1,3 @@
-//
-//  homework.h
-//  homework
-//
-//  Created by Serg Fedotov on 29.03.2020.
-//  Copyright © 2020 Sergey Fedotov. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for homework.
