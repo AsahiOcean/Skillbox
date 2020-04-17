@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA4E322E244A175600DF016D /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA4E322D244A175600DF016D /* music.mp3 */; };
 		FAD7E28B24471E490011C0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7E28A24471E490011C0A4 /* AppDelegate.swift */; };
 		FAD7E28D24471E490011C0A4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FAD7E28C24471E490011C0A4 /* GameScene.sks */; };
 		FAD7E28F24471E490011C0A4 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = FAD7E28E24471E490011C0A4 /* Actions.sks */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA4E322D244A175600DF016D /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music.mp3; path = ../../../../../../Downloads/music.mp3; sourceTree = "<group>"; };
 		FAD7E28724471E490011C0A4 /* This game has no name.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "This game has no name.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD7E28A24471E490011C0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD7E28C24471E490011C0A4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 				FAD7E28E24471E490011C0A4 /* Actions.sks */,
 				FAD7E29024471E490011C0A4 /* GameScene.swift */,
 				FAD7E29224471E490011C0A4 /* GameViewController.swift */,
-				FA4E322D244A175600DF016D /* music.mp3 */,
 				FAD7E29424471E490011C0A4 /* Main.storyboard */,
 				FAD7E29724471E4B0011C0A4 /* Assets.xcassets */,
 				FAD7E29924471E4B0011C0A4 /* LaunchScreen.storyboard */,
@@ -136,7 +133,6 @@
 			files = (
 				FAD7E29624471E490011C0A4 /* Main.storyboard in Resources */,
 				FAD7E28D24471E490011C0A4 /* GameScene.sks in Resources */,
-				FA4E322E244A175600DF016D /* music.mp3 in Resources */,
 				FAD7E29824471E4B0011C0A4 /* Assets.xcassets in Resources */,
 				FAD7E29B24471E4B0011C0A4 /* LaunchScreen.storyboard in Resources */,
 				FAD7E28F24471E490011C0A4 /* Actions.sks in Resources */,

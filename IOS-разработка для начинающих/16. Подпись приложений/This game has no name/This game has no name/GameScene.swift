@@ -13,7 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var pointslabel: SKLabelNode?
     private var playerSpinnyNode: SKShapeNode?
     
-    private var GamerHalo1: SKShapeNode?
+    private var GamerHalo: SKShapeNode?
     private var GamerHalo2: SKShapeNode?
     private var GamerHalo3: SKShapeNode?
     private var GamerHalo4: SKShapeNode?
@@ -78,11 +78,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         func random2(min: CGFloat, max: CGFloat) -> CGFloat { return random1() * (max - min) + min }
         run(SKAction.repeatForever(SKAction.sequence( [SKAction.run(CreateRightObject), SKAction.wait(forDuration: 1)])))
         run(SKAction.repeatForever(SKAction.sequence( [SKAction.run(CreateLeftObject), SKAction.wait(forDuration: 1)])))
-        run(SKAction.repeatForever(SKAction.sequence( [SKAction.run(HaloGamer1), SKAction.wait(forDuration: 0.25)])))
-        run(SKAction.repeatForever(SKAction.sequence( [SKAction.run(HaloGamer2), SKAction.wait(forDuration: 0.25)])))
-        run(SKAction.repeatForever(SKAction.sequence( [SKAction.run(HaloGamer3), SKAction.wait(forDuration: 0.25)])))
-        run(SKAction.repeatForever(SKAction.sequence( [SKAction.run(HaloGamer4), SKAction.wait(forDuration: 0.25)])))
-        run(SKAction.repeatForever(SKAction.sequence( [SKAction.run(Surprise), SKAction.wait(forDuration: 0.25)])))
+        run(SKAction.repeatForever(SKAction.sequence( [SKAction.run(FuncGamerHalo), SKAction.wait(forDuration: 0.25)])))
+//        run(SKAction.repeatForever(SKAction.sequence( [SKAction.run(Surprise), SKAction.wait(forDuration: 0.25)])))
     }
     
 // MARK: -- CreateRightObject
@@ -208,102 +205,63 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             gamer.physicsBody!.applyImpulse(CGVector(dx: 0, dy: -5))
         }
     }
-
     // MARK: -- HALO
-    func HaloGamer1() {
-        if points > 20 {
-        let delay = TimeInterval(0.25)
+    func CreateGamerHalo(delay: TimeInterval, wScale: CGFloat, hScale: CGFloat, ColorHalo: CGColor, X: Int, Y: Int) {
         let w = (self.size.width + self.size.height) * 0.05
-            self.GamerHalo1 = SKShapeNode.init(rectOf: CGSize.init(width: w * 1.05, height: w * 1.05), cornerRadius: w / 2.5)
-        if let playerSpinnyNode = self.GamerHalo1 {
-            playerSpinnyNode.lineWidth = 2.5
-            playerSpinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: delay))) // время оборота
-            playerSpinnyNode.run(SKAction.sequence([
-            SKAction.wait(forDuration: delay * 6),
-            SKAction.fadeOut(withDuration: delay * 6),
+        self.GamerHalo = SKShapeNode.init(rectOf: CGSize.init(width: w * wScale, height: w * hScale), cornerRadius: w / 2.5)
+        if let playerSpinnyNode = self.GamerHalo {
+            playerSpinnyNode.lineWidth = 2.25
+            playerSpinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: delay)))
+            playerSpinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: delay),SKAction.fadeOut(withDuration: delay),
             SKAction.removeFromParent()]))
         }
-        if let halo = self.GamerHalo1?.copy() as! SKShapeNode? {
-            halo.position = CGPoint(x: gamer.frame.midX, y: gamer.frame.midY)
-            halo.run(SKAction.move(by: CGVector(dx: self.frame.minX - halo.frame.width, dy: self.frame.midY), duration: delay * 10))
-            halo.strokeColor = SKColor.init(cgColor: #colorLiteral(red: 0.9608287215, green: 0.2057597637, blue: 0.02833223902, alpha: 1))
+        if let halo = self.GamerHalo?.copy() as! SKShapeNode? {
+            halo.strokeColor = SKColor.init(cgColor: ColorHalo)
+                halo.position = gamer.position
                 self.addChild(halo)
-            }
+                halo.run(SKAction.move(by: CGVector(dx: X, dy: Y), duration: delay))
         }
     }
-    
-    func HaloGamer2() {
-        if points >= 15 && points <= 20 {
-        let delay = TimeInterval(0.5)
-        let w = (self.size.width + self.size.height) * 0.05
-            self.GamerHalo2 = SKShapeNode.init(rectOf: CGSize.init(width: w * 1.10, height: w * 1.10), cornerRadius: w / 2.66)
-        if let playerSpinnyNode = self.GamerHalo2 {
-            playerSpinnyNode.lineWidth = 2.5
-            playerSpinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: delay)))
-            playerSpinnyNode.run(SKAction.sequence([
-            SKAction.wait(forDuration: delay * 2),
-            SKAction.fadeOut(withDuration: delay * 2),
-            SKAction.removeFromParent()]))
-        }
-            if let halo = self.GamerHalo2?.copy() as! SKShapeNode? {
-                halo.run(SKAction.move(by: CGVector(dx: self.frame.minX - halo.frame.width, dy: self.frame.midY), duration: delay * 4))
-                halo.position = CGPoint(x: gamer.frame.midX, y: gamer.frame.midY)
-                halo.strokeColor = SKColor.init(cgColor: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1))
-                  self.addChild(halo)
-            }
-        }
-    }
-    func HaloGamer3() {
-        if points >= 10 && points <= 15 {
-        let delay = TimeInterval(0.75)
-        let w = (self.size.width + self.size.height) * 0.05
-            self.GamerHalo3 = SKShapeNode.init(rectOf: CGSize.init(width: w * 1.15, height: w * 1.15), cornerRadius: w / 2.75)
-        if let playerSpinnyNode = self.GamerHalo3 {
-            playerSpinnyNode.lineWidth = 2.5
-            playerSpinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: delay)))
-            playerSpinnyNode.run(SKAction.sequence([
-            SKAction.wait(forDuration: 0.75),
-            SKAction.fadeOut(withDuration: 0.75),
-            SKAction.removeFromParent()]))
-        }
-        if let halo = self.GamerHalo3?.copy() as! SKShapeNode? {
-            halo.run(SKAction.move(by: CGVector(dx: self.frame.minX - halo.frame.width, dy: self.frame.midY), duration: delay * 2))
-            halo.position = CGPoint(x: gamer.position.x, y: gamer.position.y)
-            halo.strokeColor = SKColor.init(cgColor: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1))
-                self.addChild(halo)
-            }
-        }
-    }
-    func HaloGamer4() {
-        if points > 5 && points <= 10 {
-        let delay = TimeInterval(1)
-        let w = (self.size.width + self.size.height) * 0.05
-            self.GamerHalo4 = SKShapeNode.init(rectOf: CGSize.init(width: w * 1.2, height: w * 1.2), cornerRadius: w / 3)
-        if let playerSpinnyNode = self.GamerHalo4 {
-            playerSpinnyNode.lineWidth = 2.5
-            playerSpinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: delay)))
-            playerSpinnyNode.run(SKAction.sequence([
-            SKAction.wait(forDuration: delay / 2),
-            SKAction.fadeOut(withDuration: delay / 2),
-            SKAction.removeFromParent()]))
-        }
-        if let halo = self.GamerHalo4?.copy() as! SKShapeNode? {
-            halo.run(SKAction.move(by: CGVector(dx: self.frame.minX - halo.frame.width, dy: self.frame.midY), duration: delay))
-            halo.position = CGPoint(x: gamer.position.x, y: gamer.position.y)
-            halo.strokeColor = SKColor.init(cgColor: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1))
-                self.addChild(halo)
-            }
+    func FuncGamerHalo() {
+        if self.points >= 5 && self.points <= 10 {
+            CreateGamerHalo(delay: 1/4, wScale: 1.25, hScale: 1.25, ColorHalo: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), X: 0, Y: 0)
+        } else if self.points >= 10 && points <= 20 {
+            CreateGamerHalo(delay: 1/3, wScale: 1.25, hScale: 1.25, ColorHalo: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), X: 0, Y: 0)
+            CreateGamerHalo(delay: 1/4, wScale: 1.20, hScale: 1.20, ColorHalo: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1), X: -50, Y: 0)
+        } else if points >= 20 && points <= 30 {
+            CreateGamerHalo(delay: 1/4, wScale: 1.25, hScale: 1.25, ColorHalo: #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1), X: 0, Y: 0)
+            CreateGamerHalo(delay: 1/4, wScale: 1.20, hScale: 1.20, ColorHalo: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), X: -50, Y: 0)
+            CreateGamerHalo(delay: 1/5, wScale: 1.15, hScale: 1.15, ColorHalo: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), X: -75, Y: 0)
+        } else if points >= 30 && points <= 40 {
+            CreateGamerHalo(delay: 1/4, wScale: 1.25, hScale: 1.25, ColorHalo: #colorLiteral(red: 0.5882352941, green: 0, blue: 0.5882352941, alpha: 1), X: 0, Y: 0)
+            CreateGamerHalo(delay: 1/4, wScale: 1.20, hScale: 1.20, ColorHalo: #colorLiteral(red: 0.3921568627, green: 0, blue: 0.5882352941, alpha: 1), X: -50, Y: 0)
+            CreateGamerHalo(delay: 1/5, wScale: 1.15, hScale: 1.15, ColorHalo: #colorLiteral(red: 0.2174631357, green: 0, blue: 0.6803928018, alpha: 1), X: -80, Y: 0)
+        } else if points >= 40 && points <= 50 {
+            CreateGamerHalo(delay: 1/4, wScale: 1.25, hScale: 1.25, ColorHalo: #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1), X: 0, Y: 0)
+            CreateGamerHalo(delay: 1/4, wScale: 1.20, hScale: 1.20, ColorHalo: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1), X: -50, Y: 0)
+            CreateGamerHalo(delay: 1/4, wScale: 1.15, hScale: 1.15, ColorHalo: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1), X: -75, Y: 0)
+            CreateGamerHalo(delay: 1/5, wScale: 1.10, hScale: 1.10, ColorHalo: #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1), X: -100, Y: 0)
+        } else if points >= 50 && points <= 60 {
+            CreateGamerHalo(delay: 1/5, wScale: 1.25, hScale: 1.25, ColorHalo: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), X: 0, Y: 0)
+            CreateGamerHalo(delay: 1/4, wScale: 1.20, hScale: 1.20, ColorHalo: #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1), X: -50, Y: 0)
+            CreateGamerHalo(delay: 1/3, wScale: 1.15, hScale: 1.15, ColorHalo: #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1), X: -75, Y: 0)
+            CreateGamerHalo(delay: 1/2, wScale: 1.10, hScale: 1.10, ColorHalo: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1), X: -100, Y: 0)
+            CreateGamerHalo(delay: 1/1, wScale: 1.05, hScale: 1.05, ColorHalo: #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1), X: -125, Y: 0)
+        } else if points >= 60 {
+            CreateGamerHalo(delay: 1/6, wScale: 1.25, hScale: 1.25, ColorHalo: #colorLiteral(red: 0.8823529412, green: 0, blue: 0.1960784314, alpha: 1), X: 0, Y: 0)
+            CreateGamerHalo(delay: 1/5, wScale: 1.20, hScale: 1.20, ColorHalo: #colorLiteral(red: 0.7843137255, green: 0, blue: 0.1960784314, alpha: 1), X: -50, Y: 0)
+            CreateGamerHalo(delay: 1/4, wScale: 1.15, hScale: 1.15, ColorHalo: #colorLiteral(red: 0.6862745098, green: 0, blue: 0.1960784314, alpha: 1), X: -75, Y: 0)
+            CreateGamerHalo(delay: 1/3, wScale: 1.10, hScale: 1.10, ColorHalo: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), X: -100, Y: 0)
+            CreateGamerHalo(delay: 1/2, wScale: 1.05, hScale: 1.05, ColorHalo: #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1), X: -133, Y: 0)
+            CreateGamerHalo(delay: 1/1, wScale: 1.00, hScale: 1.00, ColorHalo: #colorLiteral(red: 0.3176470697, green: 0.07450980693, blue: 0.02745098062, alpha: 1), X: -166, Y: 0)
         }
     }
     func Surprise() {
-        if points >= 10 && points <= 11 {
-            gamer.isHidden = true
-        } else if points >= 20 && points < 21 {
-            gamer.isHidden = true
-        } else if points >= 30 && points < 31 {
-            gamer.isHidden = true
+        let n = sqrt(Double(points))
+        if n == 5 || n == 10 || n == 15 || n == 20 {
+            self.gamer.isHidden = true
         } else {
-            gamer.isHidden = false
+            self.gamer.isHidden = false
         }
     }
 }
