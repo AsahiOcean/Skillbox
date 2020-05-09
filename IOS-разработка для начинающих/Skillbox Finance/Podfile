@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+source 'https://cdn.cocoapods.org/'
+
+target 'Cash' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  platform :ios, ’13.0’
+
+  # Pods for Cash
+  pod 'RealmSwift'
+  pod 'Alamofire', '~> 5.1'
+  pod 'SwiftyJSON', '~> 4.0'
+end
