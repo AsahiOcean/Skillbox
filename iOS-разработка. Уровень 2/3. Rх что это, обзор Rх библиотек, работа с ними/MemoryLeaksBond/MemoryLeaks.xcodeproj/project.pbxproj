@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D9D756853909B28B4DA8463 /* Pods_MemoryLeaks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DBC5E4337B4A43440D3D83 /* Pods_MemoryLeaks.framework */; };
+		FA561C4924703B2D00AEC457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA561C4824703B2D00AEC457 /* AppDelegate.swift */; };
+		FA561C4B24703B2D00AEC457 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA561C4A24703B2D00AEC457 /* SceneDelegate.swift */; };
+		FA561C4D24703B2D00AEC457 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA561C4C24703B2D00AEC457 /* ViewController.swift */; };
+		FA561C5024703B2D00AEC457 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA561C4E24703B2D00AEC457 /* Main.storyboard */; };
+		FA561C5224703B2F00AEC457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA561C5124703B2F00AEC457 /* Assets.xcassets */; };
+		FA561C5524703B2F00AEC457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA561C5324703B2F00AEC457 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B309AD310E9C5BFB9E7EE74 /* Pods-MemoryLeaks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryLeaks.release.xcconfig"; path = "Target Support Files/Pods-MemoryLeaks/Pods-MemoryLeaks.release.xcconfig"; sourceTree = "<group>"; };
+		D3DBC5E4337B4A43440D3D83 /* Pods_MemoryLeaks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryLeaks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCD96F330BF6D712969E88E /* Pods-MemoryLeaks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryLeaks.debug.xcconfig"; path = "Target Support Files/Pods-MemoryLeaks/Pods-MemoryLeaks.debug.xcconfig"; sourceTree = "<group>"; };
+		FA561C4524703B2D00AEC457 /* MemoryLeaks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryLeaks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA561C4824703B2D00AEC457 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA561C4A24703B2D00AEC457 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA561C4C24703B2D00AEC457 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA561C4F24703B2D00AEC457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA561C5124703B2F00AEC457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA561C5424703B2F00AEC457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA561C5624703B2F00AEC457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA561C4224703B2D00AEC457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D9D756853909B28B4DA8463 /* Pods_MemoryLeaks.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08B7EBAD35B8CC47B2638E5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECCD96F330BF6D712969E88E /* Pods-MemoryLeaks.debug.xcconfig */,
+				1B309AD310E9C5BFB9E7EE74 /* Pods-MemoryLeaks.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D122F89A0683AA90FC6C7C41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3DBC5E4337B4A43440D3D83 /* Pods_MemoryLeaks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA561C3C24703B2D00AEC457 = {
+			isa = PBXGroup;
+			children = (
+				FA561C4724703B2D00AEC457 /* MemoryLeaks */,
+				FA561C4624703B2D00AEC457 /* Products */,
+				08B7EBAD35B8CC47B2638E5E /* Pods */,
+				D122F89A0683AA90FC6C7C41 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA561C4624703B2D00AEC457 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA561C4524703B2D00AEC457 /* MemoryLeaks.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA561C4724703B2D00AEC457 /* MemoryLeaks */ = {
+			isa = PBXGroup;
+			children = (
+				FA561C4824703B2D00AEC457 /* AppDelegate.swift */,
+				FA561C4A24703B2D00AEC457 /* SceneDelegate.swift */,
+				FA561C4C24703B2D00AEC457 /* ViewController.swift */,
+				FA561C4E24703B2D00AEC457 /* Main.storyboard */,
+				FA561C5124703B2F00AEC457 /* Assets.xcassets */,
+				FA561C5324703B2F00AEC457 /* LaunchScreen.storyboard */,
+				FA561C5624703B2F00AEC457 /* Info.plist */,
+			);
+			path = MemoryLeaks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA561C4424703B2D00AEC457 /* MemoryLeaks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA561C5924703B2F00AEC457 /* Build configuration list for PBXNativeTarget "MemoryLeaks" */;
+			buildPhases = (
+				38F28C196B1C7940DE213148 /* [CP] Check Pods Manifest.lock */,
+				FA561C4124703B2D00AEC457 /* Sources */,
+				FA561C4224703B2D00AEC457 /* Frameworks */,
+				FA561C4324703B2D00AEC457 /* Resources */,
+				DD23BCD74D6FC54C8CFB9C82 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MemoryLeaks;
+			productName = MemoryLeaks;
+			productReference = FA561C4524703B2D00AEC457 /* MemoryLeaks.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA561C3D24703B2D00AEC457 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Sergey Fedotov";
+				TargetAttributes = {
+					FA561C4424703B2D00AEC457 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = FA561C4024703B2D00AEC457 /* Build configuration list for PBXProject "MemoryLeaks" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA561C3C24703B2D00AEC457;
+			productRefGroup = FA561C4624703B2D00AEC457 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA561C4424703B2D00AEC457 /* MemoryLeaks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA561C4324703B2D00AEC457 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA561C5524703B2F00AEC457 /* LaunchScreen.storyboard in Resources */,
+				FA561C5224703B2F00AEC457 /* Assets.xcassets in Resources */,
+				FA561C5024703B2D00AEC457 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38F28C196B1C7940DE213148 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemoryLeaks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD23BCD74D6FC54C8CFB9C82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryLeaks/Pods-MemoryLeaks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryLeaks/Pods-MemoryLeaks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryLeaks/Pods-MemoryLeaks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA561C4124703B2D00AEC457 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA561C4D24703B2D00AEC457 /* ViewController.swift in Sources */,
+				FA561C4924703B2D00AEC457 /* AppDelegate.swift in Sources */,
+				FA561C4B24703B2D00AEC457 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA561C4E24703B2D00AEC457 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA561C4F24703B2D00AEC457 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA561C5324703B2F00AEC457 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA561C5424703B2F00AEC457 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA561C5724703B2F00AEC457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA561C5824703B2F00AEC457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA561C5A24703B2F00AEC457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECCD96F330BF6D712969E88E /* Pods-MemoryLeaks.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KXDT64LHVB;
+				INFOPLIST_FILE = MemoryLeaks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.MemoryLeaks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA561C5B24703B2F00AEC457 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B309AD310E9C5BFB9E7EE74 /* Pods-MemoryLeaks.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KXDT64LHVB;
+				INFOPLIST_FILE = MemoryLeaks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.MemoryLeaks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA561C4024703B2D00AEC457 /* Build configuration list for PBXProject "MemoryLeaks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA561C5724703B2F00AEC457 /* Debug */,
+				FA561C5824703B2F00AEC457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA561C5924703B2F00AEC457 /* Build configuration list for PBXNativeTarget "MemoryLeaks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA561C5A24703B2F00AEC457 /* Debug */,
+				FA561C5B24703B2F00AEC457 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA561C3D24703B2D00AEC457 /* Project object */;
+}
