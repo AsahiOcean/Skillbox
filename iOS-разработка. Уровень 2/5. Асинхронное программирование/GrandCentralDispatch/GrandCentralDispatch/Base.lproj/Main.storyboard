@@ -15,8 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="0oh-sa-HOU">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="color" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pcC-cZ-gPU">
-                                <rect key="frame" x="20" y="316.5" width="374" height="273"/>
+                                <rect key="frame" x="20" y="316.5" width="374" height="275"/>
+                                <color key="backgroundColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HU1-oc-imb">
                                 <rect key="frame" x="20" y="639.5" width="374" height="42"/>
@@ -32,26 +37,65 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6k-e5-mAZ">
+                                <rect key="frame" x="140" y="719" width="134" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="jf4-Ob-Q9r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="CANCEL LOAD">
+                                    <color key="titleColor" red="0.52766100890000001" green="0.0" blue="0.019749846469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DjO-vy-09M"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eT-cT-SCw">
+                                <rect key="frame" x="20" y="610.5" width="373" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DELAY 2.0s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIl-6W-iR6">
+                                <rect key="frame" x="20" y="686.5" width="374" height="24.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="pcC-cZ-gPU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8gR-kH-dP5"/>
-                            <constraint firstItem="HU1-oc-imb" firstAttribute="top" secondItem="pcC-cZ-gPU" secondAttribute="bottom" constant="50" id="9uT-9a-IUT"/>
+                            <constraint firstItem="HU1-oc-imb" firstAttribute="top" secondItem="pcC-cZ-gPU" secondAttribute="bottom" constant="48" id="9uT-9a-IUT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D6k-e5-mAZ" secondAttribute="bottom" constant="107" id="Dew-hp-2lV"/>
+                            <constraint firstItem="bIl-6W-iR6" firstAttribute="top" secondItem="HU1-oc-imb" secondAttribute="bottom" constant="5" id="FyC-mE-7fh"/>
+                            <constraint firstItem="D6k-e5-mAZ" firstAttribute="centerX" secondItem="HU1-oc-imb" secondAttribute="centerX" id="Gcp-rE-TDh"/>
+                            <constraint firstItem="0oh-sa-HOU" firstAttribute="centerY" secondItem="pcC-cZ-gPU" secondAttribute="centerY" constant="-1" id="Hbg-QS-gjf"/>
                             <constraint firstItem="pcC-cZ-gPU" firstAttribute="top" secondItem="NtV-9o-nn5" secondAttribute="bottom" constant="100" id="Hnm-0V-F6m"/>
                             <constraint firstItem="pcC-cZ-gPU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Kqe-jm-Vei"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NtV-9o-nn5" secondAttribute="trailing" constant="20" id="MTy-81-aZP"/>
+                            <constraint firstItem="bIl-6W-iR6" firstAttribute="centerX" secondItem="D6k-e5-mAZ" secondAttribute="centerX" id="Qg4-Dw-aVi"/>
+                            <constraint firstItem="HU1-oc-imb" firstAttribute="top" secondItem="0eT-cT-SCw" secondAttribute="bottom" constant="8.5" id="Qws-Td-B1w"/>
                             <constraint firstItem="HU1-oc-imb" firstAttribute="leading" secondItem="pcC-cZ-gPU" secondAttribute="leading" id="UNB-qT-1yI"/>
-                            <constraint firstItem="pcC-cZ-gPU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Ugp-Qh-AEw"/>
-                            <constraint firstItem="pcC-cZ-gPU" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1:3" id="YA0-p8-ZQe"/>
+                            <constraint firstItem="pcC-cZ-gPU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="1" id="Ugp-Qh-AEw"/>
+                            <constraint firstItem="0eT-cT-SCw" firstAttribute="width" secondItem="pcC-cZ-gPU" secondAttribute="width" constant="-1" id="VCk-Af-0C3"/>
+                            <constraint firstItem="pcC-cZ-gPU" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1:3" constant="2.3333333333333712" id="YA0-p8-ZQe"/>
+                            <constraint firstItem="D6k-e5-mAZ" firstAttribute="top" secondItem="bIl-6W-iR6" secondAttribute="bottom" constant="8" id="Z9d-DT-p6A"/>
                             <constraint firstItem="pcC-cZ-gPU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eT0-nF-sLe"/>
-                            <constraint firstAttribute="trailing" secondItem="pcC-cZ-gPU" secondAttribute="trailing" constant="20" id="sPb-Af-sdG"/>
+                            <constraint firstItem="bIl-6W-iR6" firstAttribute="width" secondItem="HU1-oc-imb" secondAttribute="width" id="fGL-9T-0Sp"/>
+                            <constraint firstItem="D6k-e5-mAZ" firstAttribute="top" secondItem="HU1-oc-imb" secondAttribute="bottom" constant="37.5" id="gid-bQ-e4l"/>
+                            <constraint firstItem="0oh-sa-HOU" firstAttribute="centerX" secondItem="pcC-cZ-gPU" secondAttribute="centerX" id="m2t-AC-uaX"/>
+                            <constraint firstItem="0eT-cT-SCw" firstAttribute="leading" secondItem="pcC-cZ-gPU" secondAttribute="leading" id="s8g-pJ-k6M"/>
                             <constraint firstItem="HU1-oc-imb" firstAttribute="centerX" secondItem="pcC-cZ-gPU" secondAttribute="centerX" id="tfX-Zd-31m"/>
                             <constraint firstItem="NtV-9o-nn5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uTX-Ro-CT9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0eT-cT-SCw" secondAttribute="trailing" symbolic="YES" id="xFd-my-Z1W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="pcC-cZ-gPU" id="LJ4-6u-3BD"/>
+                        <outlet property="indicator" destination="0oh-sa-HOU" id="13i-1n-ggI"/>
+                        <outlet property="loadtimer" destination="0eT-cT-SCw" id="Afe-Jg-V93"/>
                         <outlet property="time" destination="NtV-9o-nn5" id="wvl-a8-5g2"/>
                     </connections>
                 </viewController>
