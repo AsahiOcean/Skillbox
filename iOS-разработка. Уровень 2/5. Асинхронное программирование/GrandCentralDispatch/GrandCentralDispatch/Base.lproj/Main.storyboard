@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GrandCentralDispatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pcC-cZ-gPU">
+                                <rect key="frame" x="20" y="316.5" width="374" height="273"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HU1-oc-imb">
+                                <rect key="frame" x="20" y="639.5" width="374" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Load Image"/>
+                                <connections>
+                                    <action selector="load:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MYj-cR-uId"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtV-9o-nn5">
+                                <rect key="frame" x="20" y="168.5" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pcC-cZ-gPU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8gR-kH-dP5"/>
+                            <constraint firstItem="HU1-oc-imb" firstAttribute="top" secondItem="pcC-cZ-gPU" secondAttribute="bottom" constant="50" id="9uT-9a-IUT"/>
+                            <constraint firstItem="pcC-cZ-gPU" firstAttribute="top" secondItem="NtV-9o-nn5" secondAttribute="bottom" constant="100" id="Hnm-0V-F6m"/>
+                            <constraint firstItem="pcC-cZ-gPU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Kqe-jm-Vei"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NtV-9o-nn5" secondAttribute="trailing" constant="20" id="MTy-81-aZP"/>
+                            <constraint firstItem="HU1-oc-imb" firstAttribute="leading" secondItem="pcC-cZ-gPU" secondAttribute="leading" id="UNB-qT-1yI"/>
+                            <constraint firstItem="pcC-cZ-gPU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Ugp-Qh-AEw"/>
+                            <constraint firstItem="pcC-cZ-gPU" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1:3" id="YA0-p8-ZQe"/>
+                            <constraint firstItem="pcC-cZ-gPU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eT0-nF-sLe"/>
+                            <constraint firstAttribute="trailing" secondItem="pcC-cZ-gPU" secondAttribute="trailing" constant="20" id="sPb-Af-sdG"/>
+                            <constraint firstItem="HU1-oc-imb" firstAttribute="centerX" secondItem="pcC-cZ-gPU" secondAttribute="centerX" id="tfX-Zd-31m"/>
+                            <constraint firstItem="NtV-9o-nn5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uTX-Ro-CT9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="pcC-cZ-gPU" id="LJ4-6u-3BD"/>
+                        <outlet property="time" destination="NtV-9o-nn5" id="wvl-a8-5g2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
