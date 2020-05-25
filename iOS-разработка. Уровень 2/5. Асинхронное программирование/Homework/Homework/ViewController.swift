@@ -68,3 +68,10 @@ class ViewController: UIViewController {
     @objc func UpdateTimer() { counter = counter + Float(delay) }
     @objc func UpdateTimer2() { counter2 = counter2 + Float(delay) }
 }
+/*
+https://medium.com/hackernoon/swift-multi-threading-using-gcd-for-beginners-2581b7aa21cb
+
+https://www.raywenderlich.com/966538-arc-and-memory-management-in-swift
+
+https://hackernoon.com/swift-avoiding-memory-leaks-by-examples-f901883d96e5
+*/
