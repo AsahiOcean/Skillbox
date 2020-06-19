@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-SocialNetworks/Pods-SocialNetworks-resources.sh
+${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle
+${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle
