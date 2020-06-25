@@ -62,7 +62,8 @@ class GoogleViewController: UIViewController {
 //        /self.mapView.animate(with: .fit(bounds, withPadding: 30.0))
 //        }
 //         - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        
+        // MARK: -- adding markers via GMUGeoJSONParser
+        // MARK: добавление маркеров через GMUGeoJSONParser
         // geojson проверен на валидаторе https://geojsonlint.com/
         if let path = Bundle.main.path(forResource: "PublicArt", ofType: "geojson") {
             do {
@@ -126,15 +127,16 @@ class GoogleViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //MARK: -- добавление маркеров простым способом
+        //MARK: -- adding markers from array
+        //MARK: добавление маркеров из массива
         // https://developers.google.com/maps/documentation/ios-sdk/marker
-        for place in places {
-            let marker = GMSMarker(position: place.coordinate)
-            marker.title = place.title
-            marker.snippet = place.snippet
-            marker.icon = GMSMarker.markerImage(with: colorMarker(title: place.title!))
-            marker.map = self.mapView
-        }
+//        for place in places {
+//            let marker = GMSMarker(position: place.coordinate)
+//            marker.title = place.title
+//            marker.snippet = place.snippet
+//            marker.icon = GMSMarker.markerImage(with: colorMarker(title: place.title!))
+//            marker.map = self.mapView
+//        }
         
         // MARK: -- Пример работы GMSMapStyle
         // MARK: Все норм работает, для json-а стилей можно найти какой-нибудь генератор, например https://mapstyle.withgoogle.com/ или собрать вручную (для извращенцев)
