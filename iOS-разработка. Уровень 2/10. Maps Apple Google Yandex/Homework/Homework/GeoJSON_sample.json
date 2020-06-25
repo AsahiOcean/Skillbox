@@ -1,0 +1,74 @@
+{"type": "FeatureCollection",
+    "features":[
+        { "type": "Feature",
+          "properties": {
+              "title": "Макдоналдс",
+              "subtitle": "ул. Манежная пл., 1, стр. 2",
+              "stroke": "#1e8d9e",
+              "fill": "#e2abfa",
+              "strokeWidth": "11",
+              "image": "mac",
+              "iconUrl": "https://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"
+          },
+            "geometry": { "type": "Point",
+                "coordinates": [37.6143095, 55.7554901]
+            }
+        },
+        { "type": "Feature",
+            "properties": {
+                "title": "Бургер Кинг",
+                "discipline": "ул. Театральный пр-д, 5",
+                "stroke": "#6957e4",
+                "fill": "#8d7229",
+                "strokeWidth": "11",
+                "image": "burger",
+                "iconUrl": "https://maps.google.com/mapfiles/kml/pushpin/ltblu-pushpin.png"
+            },
+            "geometry": { "type": "Point",
+                "coordinates": [37.6249793, 55.7601764]
+            }
+        },
+        { "type": "Feature",
+            "properties": {
+                "title": "Дети – жертвы пороков взрослых",
+                "discipline": "ул. Болотная пл., 10",
+                "stroke": "#861964",
+                "fill": "#1bdea7",
+                "strokeWidth": "11",
+                "image": "children",
+                "iconUrl": "https://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png"
+            },
+            "geometry": { "type": "Point",
+                "coordinates": [37.619407, 55.7459461]
+            }
+        },
+        { "type": "Feature",
+            "properties": {
+                "title": "KFC",
+                "discipline": "ул. Пятницкая, 11/23",
+                "stroke": "#11e57c",
+                "fill": "#dc780d",
+                "strokeWidth": "11",
+                "image": "kfc",
+                "iconUrl": "https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png"
+            },
+            "geometry": { "type": "Point",
+                "coordinates": [37.628147, 55.7439449]
+            }
+        },
+        { "type": "Feature",
+            "properties": {
+                "title": "Пятёрочка",
+                "discipline": "ул. Котельническая наб., 1/15",
+                "stroke": "#2b19f1",
+                "fill": "#bd2ab9",
+                "strokeWidth": "11",
+                "image": "5",
+                "iconUrl": "https://maps.google.com/mapfiles/kml/pushpin/grn-pushpin.png"
+            },
+            "geometry": { "type": "Point",
+                "coordinates": [37.6429273, 55.7456389]
+            }
+        }
+    ]
+}

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oOX-ae-6jk">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--YandexViewController-->
+        <scene sceneID="nzL-ih-Z0D">
+            <objects>
+                <viewController storyboardIdentifier="YandexViewController" title="YandexViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="czN-cK-0bY" customClass="YandexViewController" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9QB-iP-W5i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ekb-JV-OhJ" customClass="YMKMapView">
+                                <rect key="frame" x="5" y="5" width="404" height="677"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EO6-kB-by9">
+                                        <rect key="frame" x="314" y="547" width="80" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="bCV-lF-tYI"/>
+                                            <constraint firstAttribute="width" secondItem="EO6-kB-by9" secondAttribute="height" multiplier="1:1" id="bMk-Sw-0Uu"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="ngc-SS-aOG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Find Me">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="findMeAction:" destination="czN-cK-0bY" eventType="touchUpInside" id="DfW-tr-IUf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="EO6-kB-by9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ekb-JV-OhJ" secondAttribute="leading" constant="20" symbolic="YES" id="Bep-Oi-Tjk"/>
+                                    <constraint firstAttribute="bottom" secondItem="EO6-kB-by9" secondAttribute="bottom" constant="50" id="XZN-gh-TQz"/>
+                                    <constraint firstAttribute="trailing" secondItem="EO6-kB-by9" secondAttribute="trailing" constant="10" id="jdW-po-rKB"/>
+                                    <constraint firstAttribute="trailing" secondItem="EO6-kB-by9" secondAttribute="trailing" constant="10" id="sca-c5-5Ev"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wwi-4l-Yj6" firstAttribute="trailing" secondItem="Ekb-JV-OhJ" secondAttribute="trailing" constant="5" id="HDB-gu-S55"/>
+                            <constraint firstItem="Ekb-JV-OhJ" firstAttribute="top" secondItem="Wwi-4l-Yj6" secondAttribute="top" constant="5" id="UkA-S2-SKD"/>
+                            <constraint firstItem="Ekb-JV-OhJ" firstAttribute="leading" secondItem="Wwi-4l-Yj6" secondAttribute="leading" constant="5" id="dpe-do-pvv"/>
+                            <constraint firstItem="Wwi-4l-Yj6" firstAttribute="bottom" secondItem="Ekb-JV-OhJ" secondAttribute="bottom" constant="5" id="tdq-d0-19u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wwi-4l-Yj6"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Yandex" id="jOn-bH-ueH"/>
+                    <connections>
+                        <outlet property="findMe" destination="EO6-kB-by9" id="NX9-pl-PwM"/>
+                        <outlet property="mapView" destination="Ekb-JV-OhJ" id="pzv-au-vdN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6P-BL-MFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405.79710144927537" y="1027.9017857142858"/>
+        </scene>
+        <!--AppleViewController-->
+        <scene sceneID="T4E-Ct-gCL">
+            <objects>
+                <viewController storyboardIdentifier="AppleViewController" title="AppleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aGV-GO-S2E" customClass="AppleViewController" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A1A-yb-vfK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gmF-3d-cVb">
+                                <rect key="frame" x="5" y="5" width="404" height="677"/>
+                            </mapView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEb-0L-3R6">
+                                <rect key="frame" x="354" y="323.66666666666669" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="FBM-Nd-sYI"/>
+                                    <constraint firstAttribute="width" secondItem="AEb-0L-3R6" secondAttribute="height" multiplier="1:1" id="GoI-5p-sK7"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="location.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="findMeAction:" destination="aGV-GO-S2E" eventType="touchUpInside" id="RDL-0Y-ji4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="obn-Ak-rWL" firstAttribute="bottom" secondItem="gmF-3d-cVb" secondAttribute="bottom" constant="5" id="DME-9a-bXn"/>
+                            <constraint firstItem="gmF-3d-cVb" firstAttribute="top" secondItem="obn-Ak-rWL" secondAttribute="top" constant="5" id="P7l-mw-BO9"/>
+                            <constraint firstItem="AEb-0L-3R6" firstAttribute="centerY" secondItem="gmF-3d-cVb" secondAttribute="centerY" id="UP9-iL-vOg"/>
+                            <constraint firstItem="obn-Ak-rWL" firstAttribute="trailing" secondItem="gmF-3d-cVb" secondAttribute="trailing" constant="5" id="aPj-Ja-WSC"/>
+                            <constraint firstItem="obn-Ak-rWL" firstAttribute="trailing" secondItem="AEb-0L-3R6" secondAttribute="trailing" constant="20" id="bxN-du-C4x"/>
+                            <constraint firstItem="AEb-0L-3R6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="obn-Ak-rWL" secondAttribute="leading" symbolic="YES" id="iLv-eo-Ikp"/>
+                            <constraint firstItem="gmF-3d-cVb" firstAttribute="leading" secondItem="obn-Ak-rWL" secondAttribute="leading" constant="5" id="ocV-Lq-hwn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="obn-Ak-rWL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="AppleMaps" id="bS3-Gb-LIQ"/>
+                    <connections>
+                        <outlet property="findMe" destination="AEb-0L-3R6" id="OgV-dX-878"/>
+                        <outlet property="mapView" destination="gmF-3d-cVb" id="Cva-BU-HOP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytr-Ly-YyZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="1769"/>
+        </scene>
+        <!--GoogleViewController-->
+        <scene sceneID="fQP-oQ-xNo">
+            <objects>
+                <viewController storyboardIdentifier="GoogleViewController" title="GoogleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S0c-Wc-2E3" customClass="GoogleViewController" customModule="Homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qeS-A1-HJm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWE-Sj-Gef" customClass="GMSMapView">
+                                <rect key="frame" x="5" y="5" width="404" height="677"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wdd-XK-tXF" firstAttribute="trailing" secondItem="YWE-Sj-Gef" secondAttribute="trailing" constant="5" id="JVd-aT-77n"/>
+                            <constraint firstItem="YWE-Sj-Gef" firstAttribute="leading" secondItem="Wdd-XK-tXF" secondAttribute="leading" constant="5" id="bLM-Zt-TkP"/>
+                            <constraint firstItem="YWE-Sj-Gef" firstAttribute="top" secondItem="Wdd-XK-tXF" secondAttribute="top" constant="5" id="bLs-9s-2qh"/>
+                            <constraint firstItem="Wdd-XK-tXF" firstAttribute="bottom" secondItem="YWE-Sj-Gef" secondAttribute="bottom" constant="5" id="t0t-2k-uxA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wdd-XK-tXF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Google" id="EjR-yR-lr3"/>
+                    <connections>
+                        <outlet property="mapView" destination="YWE-Sj-Gef" id="JQO-zv-oEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wxN-Pa-fX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="329"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cqJ-SF-dkD">
+            <objects>
+                <tabBarController id="oOX-ae-6jk" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2xf-lP-U8g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="S0c-Wc-2E3" kind="relationship" relationship="viewControllers" id="RY2-Rq-ljG"/>
+                        <segue destination="czN-cK-0bY" kind="relationship" relationship="viewControllers" id="YzA-07-Yzr"/>
+                        <segue destination="aGV-GO-S2E" kind="relationship" relationship="viewControllers" id="9gU-q7-LEP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hmB-Tv-yUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-514" y="1028"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location.fill" catalog="system" width="128" height="115"/>
+    </resources>
+</document>

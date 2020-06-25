@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Homework' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Homework
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  # https://developers.google.com/maps/documentation/ios-sdk/utility/?hl=ru
+  pod 'Google-Maps-iOS-Utils'
+  
+  pod 'YandexMapKit', '~> 3.5.0'
+  pod 'YandexMapKitSearch', '~> 3.5.0'
+  pod 'YandexMapKitDirections', '~> 3.5.0'
+  pod 'YandexMapKitTransport', '~> 3.5.0'
+  pod 'YandexMapKitPlaces', '~> 3.5.0'
+end
