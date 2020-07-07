@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m2l-PB-Wr0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="66c-Da-Ek0">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" title="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eMG-wk-dZ1" customClass="ViewController" customModule="homeworkML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ggv-7I-tcH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="06d-8a-OuH">
+                                <rect key="frame" x="10" y="64" width="394" height="778"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T9t-2R-2wp" userLabel="Cats Stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="187"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9mg-32-EWN">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="187"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ucm-hf-hgQ">
+                                                <rect key="frame" x="197" y="0.0" width="197" height="187"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="should be here cats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sO-PS-x5s" customClass="CustomUILabel" customModule="homeworkML" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCW-Wa-CKH">
+                                                        <rect key="frame" x="0.0" y="20.5" width="197" height="166.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uqf-7N-kMI" userLabel="Dogs Stack">
+                                        <rect key="frame" x="0.0" y="197" width="394" height="187"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KD3-0s-iSw">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="187"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WaA-Wy-nGN">
+                                                <rect key="frame" x="197" y="0.0" width="197" height="187"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="should be here dogs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rs-5h-hOu" customClass="CustomUILabel" customModule="homeworkML" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anz-b8-SKV">
+                                                        <rect key="frame" x="0.0" y="20.5" width="197" height="166.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vAJ-N6-Stv" userLabel="Mices Stack">
+                                        <rect key="frame" x="0.0" y="394" width="394" height="187"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9t-9Y-OnT">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="187"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2wd-Hq-pPv">
+                                                <rect key="frame" x="197" y="0.0" width="197" height="187"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="should be here mices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSv-gg-OMy" customClass="CustomUILabel" customModule="homeworkML" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prQ-HJ-elY">
+                                                        <rect key="frame" x="0.0" y="20.5" width="197" height="166.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fJA-bi-JPs" userLabel="Trees Stack">
+                                        <rect key="frame" x="0.0" y="591" width="394" height="187"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r21-Em-Wgk" userLabel="Tree Images">
+                                                <rect key="frame" x="0.0" y="0.0" width="197" height="187"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MrF-Rm-RNj">
+                                                <rect key="frame" x="197" y="0.0" width="197" height="187"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="should be here trees" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipa-5h-rzW" customClass="CustomUILabel" customModule="homeworkML" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owh-9i-Tq9">
+                                                        <rect key="frame" x="0.0" y="20.5" width="197" height="166.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="06d-8a-OuH" secondAttribute="trailing" constant="10" id="8jo-Yb-IIk"/>
+                            <constraint firstItem="06d-8a-OuH" firstAttribute="centerY" secondItem="SEA-Bc-Ipf" secondAttribute="centerY" id="Jdg-Ei-3sw"/>
+                            <constraint firstItem="06d-8a-OuH" firstAttribute="leading" secondItem="SEA-Bc-Ipf" secondAttribute="leading" constant="10" id="Z1n-Mr-3RD"/>
+                            <constraint firstItem="06d-8a-OuH" firstAttribute="top" secondItem="SEA-Bc-Ipf" secondAttribute="top" constant="20" id="fGG-1b-YG5"/>
+                            <constraint firstItem="06d-8a-OuH" firstAttribute="centerX" secondItem="SEA-Bc-Ipf" secondAttribute="centerX" id="hUa-Iz-h9m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SEA-Bc-Ipf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Uiw-5i-bvJ"/>
+                    <connections>
+                        <outlet property="catsDetection" destination="uCW-Wa-CKH" id="gee-fD-4Mh"/>
+                        <outlet property="catsImages" destination="9mg-32-EWN" id="H4T-fr-0vw"/>
+                        <outlet property="dogsDetection" destination="anz-b8-SKV" id="4lN-1E-kR2"/>
+                        <outlet property="dogsImages" destination="KD3-0s-iSw" id="dRw-3s-Rfd"/>
+                        <outlet property="miceDetection" destination="prQ-HJ-elY" id="Joh-bf-dlB"/>
+                        <outlet property="miceImages" destination="F9t-9Y-OnT" id="fWf-8h-ED7"/>
+                        <outlet property="treeDetection" destination="Owh-9i-Tq9" id="XrW-YQ-OhA"/>
+                        <outlet property="treeImages" destination="r21-Em-Wgk" id="h7g-mO-IT9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ChS-JS-8b4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30" y="860"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="64u-i8-ccp">
+            <objects>
+                <viewController id="953-Qw-eVy" customClass="SkynetViewController2" customModule="homeworkML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L7T-Bb-r0o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VFS-KW-666">
+                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VFS-KW-666" secondAttribute="height" multiplier="1:1" id="JNg-zI-riF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VFS-KW-666" firstAttribute="top" secondItem="QyD-7g-m8G" secondAttribute="top" id="QjG-8f-3V8"/>
+                            <constraint firstItem="VFS-KW-666" firstAttribute="centerX" secondItem="L7T-Bb-r0o" secondAttribute="centerX" id="jil-w4-HDz"/>
+                            <constraint firstItem="VFS-KW-666" firstAttribute="width" secondItem="L7T-Bb-r0o" secondAttribute="width" id="oX0-Mz-rl7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QyD-7g-m8G"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="kVt-bn-OoB"/>
+                    <connections>
+                        <outlet property="imageView" destination="VFS-KW-666" id="bq8-Y3-QRw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82L-6C-MmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="860"/>
+        </scene>
+        <!--FaceTracking-->
+        <scene sceneID="bLl-9a-puC">
+            <objects>
+                <viewController storyboardIdentifier="FaceTracking" title="FaceTracking" useStoryboardIdentifierAsRestorationIdentifier="YES" id="m2l-PB-Wr0" customClass="SkynetViewController" customModule="homeworkML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9UL-MD-xpx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1g9-FE-GyH">
+                                <rect key="frame" x="0.0" y="69" width="414" height="250"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="j1c-72-Lin"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1g9-FE-GyH" firstAttribute="top" secondItem="7W1-tf-kJI" secondAttribute="top" constant="25" id="G3k-e2-Vd5"/>
+                            <constraint firstItem="1g9-FE-GyH" firstAttribute="centerX" secondItem="7W1-tf-kJI" secondAttribute="centerX" id="NY0-Fe-9xY"/>
+                            <constraint firstItem="1g9-FE-GyH" firstAttribute="leading" secondItem="7W1-tf-kJI" secondAttribute="leading" id="ih5-Gs-eAv"/>
+                            <constraint firstItem="1g9-FE-GyH" firstAttribute="trailing" secondItem="7W1-tf-kJI" secondAttribute="trailing" id="uAG-qM-0Bq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7W1-tf-kJI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="inc-7h-Qz0"/>
+                    <connections>
+                        <outlet property="imageView" destination="1g9-FE-GyH" id="b2r-kS-opW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MwB-um-eka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="860"/>
+        </scene>
+    </scenes>
+</document>
