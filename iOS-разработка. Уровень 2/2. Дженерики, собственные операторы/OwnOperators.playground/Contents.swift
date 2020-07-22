@@ -1,4 +1,6 @@
 import Foundation
+// Skillbox
+// Скиллбокс
 
 struct Emotion {
     var name = ""

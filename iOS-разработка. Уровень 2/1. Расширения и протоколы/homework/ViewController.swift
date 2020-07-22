@@ -2,8 +2,14 @@ import UIKit
 
 class ViewController: UIViewController, StepProtocol {
 // MARK: 1. Прочитайте главу про протоколы.
+// https://swiftbook.ru/content/languageguide/protocols/
+
 // MARK: 2. Прочитайте главу про расширения.
+// https://swiftbook.ru/content/languageguide/extensions/
+
 // MARK: 3. Прочитайте статью про Protocol oriented programming.
+// https://habr.com/ru/post/358804/
+
 // MARK: 4. В чем отличие класса от протокола?
 /*
 Класс - это описание для какого-либо объекта, другими словами конструктор.
