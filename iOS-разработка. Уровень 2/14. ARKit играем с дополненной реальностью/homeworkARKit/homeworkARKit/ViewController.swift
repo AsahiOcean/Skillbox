@@ -1,6 +1,8 @@
 import UIKit
 import SceneKit
 import ARKit
+//Skillbox
+//Скиллбокс
 /*
  Прочитайте отличную статью про геометрию в SceneKit: https://medium.com/@maxxfrazer/scenekit-geometry-part1-e5dca2156d8
 
