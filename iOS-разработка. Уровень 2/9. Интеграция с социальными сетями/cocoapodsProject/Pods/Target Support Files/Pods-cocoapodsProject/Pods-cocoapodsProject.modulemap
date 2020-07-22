@@ -1,6 +1,0 @@
-framework module Pods_cocoapodsProject {
-  umbrella header "Pods-cocoapodsProject-umbrella.h"
-
-  export *
-  module * { export * }
-}

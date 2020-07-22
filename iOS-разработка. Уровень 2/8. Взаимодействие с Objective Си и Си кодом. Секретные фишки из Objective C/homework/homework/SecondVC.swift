@@ -1,5 +1,6 @@
 import UIKit
-//1) добавьте в проект SegueSwizzler: https://drive.google.com/open?id=1xqRpsiNbUTsVFsJYsQUfXMvPwFqfZeTx сделайте несколько переходов на другие экраны с передачей данных на них с помощью нового performSegue
+// Skillbox
+// Скиллбокс
 
 class SecondVC: UIViewController {
     

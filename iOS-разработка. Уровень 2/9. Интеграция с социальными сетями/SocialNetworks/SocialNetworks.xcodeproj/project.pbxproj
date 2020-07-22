@@ -24,9 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07A14D7BEBCA4A5A66885974 /* Pods-SocialNetworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworks.release.xcconfig"; path = "Target Support Files/Pods-SocialNetworks/Pods-SocialNetworks.release.xcconfig"; sourceTree = "<group>"; };
 		89E4B86E5E81315429013965 /* Pods_SocialNetworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD1B9B2374F41ED3AE0ADFE5 /* Pods-SocialNetworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetworks.debug.xcconfig"; path = "Target Support Files/Pods-SocialNetworks/Pods-SocialNetworks.debug.xcconfig"; sourceTree = "<group>"; };
 		FA36408D249C128E00BF952E /* GoogleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleVC.swift; sourceTree = "<group>"; };
 		FA57661F2490BC6B002E07E5 /* SocialNetworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5766222490BC6B002E07E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,15 +54,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B026232C54D4A12DCCC130C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BD1B9B2374F41ED3AE0ADFE5 /* Pods-SocialNetworks.debug.xcconfig */,
-				07A14D7BEBCA4A5A66885974 /* Pods-SocialNetworks.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		CC5B65301BBE24F218D8B185 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +75,6 @@
 			children = (
 				FA5766212490BC6B002E07E5 /* SocialNetworks */,
 				FA5766202490BC6B002E07E5 /* Products */,
-				3B026232C54D4A12DCCC130C /* Pods */,
 				CC5B65301BBE24F218D8B185 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -429,7 +417,6 @@
 		};
 		FA5766342490BC6C002E07E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD1B9B2374F41ED3AE0ADFE5 /* Pods-SocialNetworks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,7 +435,6 @@
 		};
 		FA5766352490BC6C002E07E5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07A14D7BEBCA4A5A66885974 /* Pods-SocialNetworks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

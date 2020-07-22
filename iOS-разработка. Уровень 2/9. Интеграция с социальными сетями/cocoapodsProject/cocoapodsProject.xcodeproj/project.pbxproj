@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,8 +18,6 @@
 
 /* Begin PBXFileReference section */
 		3C17C0C5C0A6FFC2D6E4076A /* Pods_cocoapodsProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cocoapodsProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B662A70933295301F97D0FA /* Pods-cocoapodsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocoapodsProject.release.xcconfig"; path = "Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject.release.xcconfig"; sourceTree = "<group>"; };
-		84F8E3591D75BE8D7EF91E54 /* Pods-cocoapodsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocoapodsProject.debug.xcconfig"; path = "Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject.debug.xcconfig"; sourceTree = "<group>"; };
 		FA3640BC249C422000BF952E /* cocoapodsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cocoapodsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3640BF249C422000BF952E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA3640C1249C422000BF952E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,16 +40,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0347FD2E930C08F02642E9A0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				84F8E3591D75BE8D7EF91E54 /* Pods-cocoapodsProject.debug.xcconfig */,
-				6B662A70933295301F97D0FA /* Pods-cocoapodsProject.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		076B3B84615254941F477C5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +53,6 @@
 			children = (
 				FA3640BE249C422000BF952E /* cocoapodsProject */,
 				FA3640BD249C422000BF952E /* Products */,
-				0347FD2E930C08F02642E9A0 /* Pods */,
 				076B3B84615254941F477C5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -351,7 +338,6 @@
 		};
 		FA3640D1249C422100BF952E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84F8E3591D75BE8D7EF91E54 /* Pods-cocoapodsProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,7 +356,6 @@
 		};
 		FA3640D2249C422100BF952E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B662A70933295301F97D0FA /* Pods-cocoapodsProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,5 +1,6 @@
 import UIKit
-
+// Skillbox
+// Скиллбокс
 class BlurEffect: UIViewController {
     @IBOutlet weak var Image: UIImageView!
     

@@ -1,4 +1,7 @@
 import UIKit
+// Skillbox
+// Скиллбокс
+
 //2) напишите код, который с помощью swizzling’а добавляет в стандартный класс UIImagePickerController возможность сразу получить выбранную фотографию из галереи.
 
 class PickerViewController: UIViewController {

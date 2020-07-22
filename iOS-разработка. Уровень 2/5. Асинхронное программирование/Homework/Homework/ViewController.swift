@@ -1,4 +1,6 @@
 import UIKit
+// Skillbox
+// Скиллбокс
 /*
  Сыграйте в игру на понимание ошибок мультипоточности: https://deadlockempire.github.io
 

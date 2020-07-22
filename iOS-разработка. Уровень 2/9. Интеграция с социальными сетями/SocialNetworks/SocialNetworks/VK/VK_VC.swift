@@ -1,5 +1,7 @@
 import UIKit
 import VK_ios_sdk
+// Skillbox
+// Скиллбокс
 // https://vk.com/dev/ios_sdk
 // https://vk.com/dev/first_guide
 

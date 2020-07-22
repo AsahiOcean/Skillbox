@@ -1,7 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-SocialNetworks/Pods-SocialNetworks-frameworks.sh
-${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework
-${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework
-${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework
-${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework
-${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework
-${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework
