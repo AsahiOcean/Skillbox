@@ -1,4 +1,6 @@
 import UIKit
+// Skillbox
+// Скиллбокс
 
 // MARK: -- 1. Прочитайте главы Collection Types и Control Flow в книге «The Swift Programming Language»
 

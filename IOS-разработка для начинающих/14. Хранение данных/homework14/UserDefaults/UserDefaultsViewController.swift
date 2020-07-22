@@ -1,7 +1,8 @@
 import UIKit
+// Skillbox
+// Скиллбокс
 
 class UserDefaultsViewController: UIViewController {
-
     @IBOutlet weak var Name: UITextField!
     @IBOutlet weak var Surname: UITextField!
     @IBOutlet weak var GagView: UIView!

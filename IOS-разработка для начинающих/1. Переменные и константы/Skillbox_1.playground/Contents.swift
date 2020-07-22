@@ -48,3 +48,5 @@ let e = c && d // false (true на выходе будет, когда оба о
 let f = c || d // true (один из операндов имеет значение true)
 
 // MARK: Ссылка на книгу: https://itunes.apple.com/ru/book/the-swift-programming-language-swift-4-1/id881256329?mt=11
+// Skillbox
+// Скиллбокс

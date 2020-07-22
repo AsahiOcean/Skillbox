@@ -8,7 +8,7 @@ class TableViewCell: UITableViewCell {
     
     @IBAction func SwitchTap(_ sender: Any) {
         if nameLabel.text == "Авиарежим" {
-            Switch.isOn == true ? print("Включен Авиарежим") :             print("Авиарежим отключен")
+            Switch.isOn == true ? print("Включен Авиарежим") : print("Авиарежим отключен")
         }
     }
 

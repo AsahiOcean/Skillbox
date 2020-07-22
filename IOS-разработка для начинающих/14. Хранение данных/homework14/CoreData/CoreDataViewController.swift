@@ -1,6 +1,8 @@
 import UIKit
 import CoreData
 import SVProgressHUD
+// Skillbox
+// Скиллбокс
 
 class CoreDataViewController: UIViewController {
     

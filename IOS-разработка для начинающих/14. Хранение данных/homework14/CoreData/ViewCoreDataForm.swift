@@ -2,6 +2,8 @@ import UIKit
 import CoreData
 import Alamofire
 import SVProgressHUD
+// Skillbox
+// Скиллбокс
 
 class ViewCoreDataForm: UIView {
     

@@ -1,5 +1,7 @@
 import Foundation
 import RealmSwift
+// Skillbox
+// Скиллбокс
 
 class Persistance {
     static let shared = Persistance()

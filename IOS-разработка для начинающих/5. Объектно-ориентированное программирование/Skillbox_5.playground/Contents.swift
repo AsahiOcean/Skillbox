@@ -1,4 +1,6 @@
 import UIKit
+// Skillbox
+// Скиллбокс
 
 // MARK: -- 1. Прочитать статью про ООП.
 // https://www.raywenderlich.com/599-object-%20oriented-programming-in-swift

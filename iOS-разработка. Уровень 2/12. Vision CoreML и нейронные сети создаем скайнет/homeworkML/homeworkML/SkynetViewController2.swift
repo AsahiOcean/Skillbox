@@ -1,7 +1,5 @@
 import UIKit
 import Vision
-// Skillbox
-// VisionBasic
 /*
 Создайте ML модель, которая умеет различать собак, кошек, мышей и деревья
 
@@ -99,3 +97,6 @@ extension CGRect {
 }
 // https://source.unsplash.com/random?faces
 // https://thispersondoesnotexist.com/image
+// Skillbox
+// Скиллбокс
+// VisionBasic

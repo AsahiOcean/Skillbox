@@ -1,5 +1,7 @@
 import Foundation
 import UIKit
+// Skillbox
+// Скиллбокс
 
 extension WeatherViewController {
     

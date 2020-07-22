@@ -2,6 +2,8 @@ import Foundation
 import Alamofire
 import CoreData
 import RealmSwift
+// Skillbox
+// Скиллбокс
 
 protocol WeathermanDelegate {
     func Output(WeatherJSON: NSDictionary)

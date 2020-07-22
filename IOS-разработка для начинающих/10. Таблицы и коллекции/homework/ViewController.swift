@@ -9,7 +9,8 @@
 
  Ключевое в этой задаче — констрейнты между элементами и скролл вью.
  */
-
+// Skillbox
+// Скиллбокс
 import UIKit
 
 class ViewController: UIViewController {

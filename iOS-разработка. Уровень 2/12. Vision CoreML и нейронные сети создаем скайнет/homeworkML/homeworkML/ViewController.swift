@@ -1,8 +1,6 @@
 import UIKit
 import CoreML
 import Vision
-// Skillbox
-// VisionBasic
 /*
 Создайте ML модель, которая умеет различать собак, кошек, мышей и деревья
 
@@ -291,3 +289,6 @@ class ViewController: UIViewController {
     Рисунки
     https://thisartworkdoesnotexist.com/
 */
+// Skillbox
+// Скиллбокс
+// VisionBasic

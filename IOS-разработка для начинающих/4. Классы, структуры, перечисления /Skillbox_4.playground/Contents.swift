@@ -1,4 +1,6 @@
 import UIKit
+// Skillbox
+// Скиллбокс
 
 // MARK: -- 1. Прочитайте главы Enumerations и Classes and Structures в книге «The Swift Programming Language».
 // MARK: -- 2. Если бы в вашей программе была работа с игральными картами, как бы вы организовали их хранение? Приведите пример.

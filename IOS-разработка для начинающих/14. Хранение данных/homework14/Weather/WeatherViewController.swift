@@ -1,6 +1,8 @@
 import UIKit
 import Alamofire
 import CoreData
+// Skillbox
+// Скиллбокс
 
 class WeatherViewController: UIViewController, WeathermanDelegate, UITableViewDataSource, UITableViewDelegate {
     

@@ -1,4 +1,6 @@
 import UIKit
+// Skillbox
+// Скиллбокс
 
 class BasketTableViewCell: UITableViewCell {
     @IBOutlet weak var productImage: UIImageView!

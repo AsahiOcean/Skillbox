@@ -1,7 +1,5 @@
 import Foundation
 import UIKit
-// Skillbox
-// VisionBasic
 
 extension UIImageView {
     func load(url: URL) {
@@ -82,3 +80,6 @@ extension ViewController {
       })
     }
 }
+// Skillbox
+// Скиллбокс
+// VisionBasic

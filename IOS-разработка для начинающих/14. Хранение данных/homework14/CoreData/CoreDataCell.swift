@@ -1,5 +1,7 @@
 import UIKit
 import CoreData
+// Skillbox
+// Скиллбокс
 
 class CoreDataCell: UITableViewCell {
 

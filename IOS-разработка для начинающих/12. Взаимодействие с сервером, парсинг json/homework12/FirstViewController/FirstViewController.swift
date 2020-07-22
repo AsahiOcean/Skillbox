@@ -2,6 +2,8 @@
 1) Зарегистрируйтесь на https://openweathermap.org/api.
 2) Сделайте показ текущей погоды для Москвы
 */
+// Skillbox
+// Скиллбокс
 
 import UIKit
 

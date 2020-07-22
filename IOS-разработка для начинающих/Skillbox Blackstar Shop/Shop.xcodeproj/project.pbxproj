@@ -123,8 +123,8 @@
 				FAC7E010245C59950077EA77 /* AppDelegate.swift */,
 				FAC7E012245C59950077EA77 /* SceneDelegate.swift */,
 				FAC7E016245C59950077EA77 /* Main.storyboard */,
-				FAC7E019245C599B0077EA77 /* Assets.xcassets */,
 				FAC7E01B245C599B0077EA77 /* LaunchScreen.storyboard */,
+				FAC7E019245C599B0077EA77 /* Assets.xcassets */,
 				FAC7E01E245C599B0077EA77 /* Info.plist */,
 				FAC7E024245C5C370077EA77 /* categoriesCell.swift */,
 			);

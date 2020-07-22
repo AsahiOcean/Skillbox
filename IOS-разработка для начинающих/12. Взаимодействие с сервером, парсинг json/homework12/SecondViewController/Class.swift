@@ -1,4 +1,6 @@
 import  Foundation
+// Skillbox
+// Скиллбокс
 
 class Objects {
     let main: NSDictionary

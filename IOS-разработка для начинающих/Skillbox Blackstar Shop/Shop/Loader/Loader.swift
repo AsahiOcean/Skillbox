@@ -1,6 +1,8 @@
 import Foundation
 import Alamofire
 import UIKit
+// Skillbox
+// Скиллбокс
 
 class Loader {
 

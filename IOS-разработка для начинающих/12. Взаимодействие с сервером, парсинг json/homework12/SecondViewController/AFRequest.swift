@@ -1,5 +1,7 @@
 import Foundation
 import Alamofire
+// Skillbox
+// Скиллбокс
 
 class AFRequest {
     fileprivate let apikey = ""

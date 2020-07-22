@@ -1,5 +1,7 @@
 import Foundation
 import RealmSwift
+// Skillbox
+// Скиллбокс
 
 class TodoObject: Object {
     @objc dynamic var date: String = "TodoObject: date"

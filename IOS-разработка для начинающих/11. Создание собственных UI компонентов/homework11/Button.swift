@@ -1,12 +1,12 @@
 /*
   кнопка, у которой можно изменять ширину и цвет обводки, размер закругления
  */
+// Skillbox
+// Скиллбокс
 
 import UIKit
 
-class Button: UIButton {
-
-}
+class Button: UIButton { }
 
 @IBDesignable extension Button {
 

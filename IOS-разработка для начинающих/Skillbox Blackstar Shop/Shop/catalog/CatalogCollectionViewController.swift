@@ -1,4 +1,6 @@
 import UIKit
+// Skillbox
+// Скиллбокс
 
 private let reuseIdentifier = "CatalogCell"
 

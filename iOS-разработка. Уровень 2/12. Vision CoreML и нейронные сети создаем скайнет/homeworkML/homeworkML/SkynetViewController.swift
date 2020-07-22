@@ -1,8 +1,6 @@
 import UIKit
 import AVKit
 import Vision
-// Skillbox
-// VisionBasic
 /*
  Создайте ML модель, которая умеет различать собак, кошек, мышей и деревья
 
@@ -230,3 +228,6 @@ class SkynetViewController: UIViewController {
          return pixelBuffer
     }
 }
+// Skillbox
+// Скиллбокс
+// VisionBasic

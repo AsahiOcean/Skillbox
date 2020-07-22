@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5DA543C5B59C4B7DED77851D /* Pods_Cash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290E5316550CC27588DA698E /* Pods_Cash.framework */; };
-		FA38AAF62464AA86006B2E4F /* background.mov in Resources */ = {isa = PBXBuildFile; fileRef = FA38AAF52464AA86006B2E4F /* background.mov */; };
 		FA38AAF92464AE82006B2E4F /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AAF82464AE82006B2E4F /* VideoPlayer.swift */; };
 		FA38AAFB2464F620006B2E4F /* GenSmsCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AAFA2464F620006B2E4F /* GenSmsCode.swift */; };
 		FA38AAFE24650769006B2E4F /* BitCoinObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38AAFD24650769006B2E4F /* BitCoinObject.swift */; };
@@ -94,7 +93,6 @@
 /* Begin PBXFileReference section */
 		290E5316550CC27588DA698E /* Pods_Cash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF13A440097C84A36378084 /* Pods-Cash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cash.release.xcconfig"; path = "Target Support Files/Pods-Cash/Pods-Cash.release.xcconfig"; sourceTree = "<group>"; };
-		FA38AAF52464AA86006B2E4F /* background.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = background.mov; sourceTree = "<group>"; };
 		FA38AAF82464AE82006B2E4F /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		FA38AAFA2464F620006B2E4F /* GenSmsCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenSmsCode.swift; sourceTree = "<group>"; };
 		FA38AAFD24650769006B2E4F /* BitCoinObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitCoinObject.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 		FA38AAF72464ADB1006B2E4F /* BackgroundVideo */ = {
 			isa = PBXGroup;
 			children = (
-				FA38AAF52464AA86006B2E4F /* background.mov */,
 				FA38AAF82464AE82006B2E4F /* VideoPlayer.swift */,
 			);
 			path = BackgroundVideo;
@@ -544,7 +541,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA38AAF62464AA86006B2E4F /* background.mov in Resources */,
 				FA83CAB12462365B0098FB12 /* ItemCollectionViewCell.xib in Resources */,
 				FAE49192245D95F500C87A64 /* LaunchScreen.storyboard in Resources */,
 				FAE4918F245D95F500C87A64 /* Assets.xcassets in Resources */,
