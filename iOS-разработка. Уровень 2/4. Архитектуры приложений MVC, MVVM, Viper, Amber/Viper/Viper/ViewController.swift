@@ -1,6 +1,8 @@
 import UIKit
 import Bond
 import ReactiveKit
+// Skillbox
+// Скиллбокс
 /*
 1. Presenter - хранит внутренее состояние и обрабывает события,
 передает либо в Interactor, либо в Router
@@ -9,7 +11,6 @@ import ReactiveKit
 2. Interactor - внешнее взаимодействие, любая логика и работа с внешними библиотеками
 
 3. Router - отвечает за переходы
-
 */
 
 class ViewController: UIViewController {

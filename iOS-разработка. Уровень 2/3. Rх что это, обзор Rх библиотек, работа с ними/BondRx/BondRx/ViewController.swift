@@ -1,12 +1,14 @@
 import UIKit
 import Bond
+// Skillbox
+// Скиллбокс
 
 /*
- хватит для большинства программ:
- map
- filter
- combineLatest
- */
+хватит для большинства программ:
+map
+filter
+combineLatest
+*/
 
 class ViewController: UIViewController {
 
