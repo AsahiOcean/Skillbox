@@ -1,6 +1,8 @@
 import UIKit
 import MapKit
 import CoreLocation
+// Skillbox
+// Скиллбокс
 
 /*
 Домашняя работа:

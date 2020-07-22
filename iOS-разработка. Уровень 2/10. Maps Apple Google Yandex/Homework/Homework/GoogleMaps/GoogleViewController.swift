@@ -2,6 +2,9 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import GoogleMapsUtils
+// Skillbox
+// Скиллбокс
+
 // https://developers.google.com/maps/documentation/ios-sdk/start
 // https://developers.google.com/maps/documentation/ios-sdk/utility/setup
 

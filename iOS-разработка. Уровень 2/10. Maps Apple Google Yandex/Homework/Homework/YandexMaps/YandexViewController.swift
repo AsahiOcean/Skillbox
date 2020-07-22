@@ -1,6 +1,9 @@
 import UIKit
 import MapKit
 import YandexMapKit
+// Skillbox
+// Скиллбокс
+
 // статья про связку CLLocationManager и YMKLocationManager
 // https://habr.com/ru/post/479432/
 

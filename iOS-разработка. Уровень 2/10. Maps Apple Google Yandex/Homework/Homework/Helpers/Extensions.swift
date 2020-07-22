@@ -1,6 +1,8 @@
 import Foundation
 import UIKit
 import YandexMapKit
+// Skillbox
+// Скиллбокс
 
 extension UIImage {
     func scaled(with scale: CGFloat) -> UIImage? {
