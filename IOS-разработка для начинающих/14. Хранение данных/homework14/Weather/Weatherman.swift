@@ -68,7 +68,7 @@ class AlamofireRequest {
 //                                        print(utf8!)
                                             print(arrayOfData.count)
                                     } catch {
-                                        print("ошибка контейнера")
+                                        print("error")
                                     }
                                 }
 //                                    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
