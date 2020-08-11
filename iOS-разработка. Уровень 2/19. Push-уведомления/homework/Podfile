@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'testPush' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'Firebase'
+  pod 'Firebase/InAppMessaging'
+  pod 'Firebase/Core'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging'
+
+  # Pods for testPush
+
+  target 'testPushTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'testPushUITests' do
+    # Pods for testing
+  end
+
+end
