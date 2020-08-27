@@ -13,3 +13,8 @@
 *.swf
 *.vob
 *.wmv
+
+.DS_Store
+*.png
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
