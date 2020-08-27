@@ -1,5 +1,9 @@
 .DS_Store
 *.png
+*.jpg
+*.jpeg
+*.m4v
+*.mlmodel
 
 # Xcode
 #
@@ -11,10 +15,6 @@
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
-
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## User settings
 xcuserdata/
