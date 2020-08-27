@@ -47,7 +47,7 @@
 		FAEF001D24CC4480006B781C /* Patterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patterns.swift; sourceTree = "<group>"; };
 		FAEF001F24CC470F006B781C /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		FAEF002124CC49DD006B781C /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
-		FAEFFFEA24CC311C006B781C /* Generative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generative.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEFFFEA24CC311C006B781C /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEFFFED24CC311C006B781C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEFFFEF24CC311C006B781C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAEFFFF124CC311C006B781C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		FAEFFFEB24CC311C006B781C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FAEFFFEA24CC311C006B781C /* Generative.app */,
+				FAEFFFEA24CC311C006B781C /* .app */,
 				FAEF000024CC311D006B781C /* GenerativeTests.xctest */,
 				FAEF000B24CC311D006B781C /* GenerativeUITests.xctest */,
 			);
@@ -172,7 +172,7 @@
 			);
 			name = Generative;
 			productName = Generative;
-			productReference = FAEFFFEA24CC311C006B781C /* Generative.app */;
+			productReference = FAEFFFEA24CC311C006B781C /* .app */;
 			productType = "com.apple.product-type.application";
 		};
 		FAEFFFFF24CC311D006B781C /* GenerativeTests */ = {
@@ -453,8 +453,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.Generative;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -471,8 +470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.Generative;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
