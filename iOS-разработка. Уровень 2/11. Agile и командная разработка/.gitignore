@@ -1,2 +1,2 @@
 *.png
-*.pbxproj
+!*.xcodeproj/project.pbxproj
