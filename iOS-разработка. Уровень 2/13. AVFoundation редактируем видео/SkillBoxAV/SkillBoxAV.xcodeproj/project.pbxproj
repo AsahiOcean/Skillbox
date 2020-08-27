@@ -230,7 +230,7 @@
 				);
 				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
-				ORGANIZATIONNAME = "Sergey Fedotov";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					FA8FD0FF24B76D4E0044911C = {
 						CreatedOnToolsVersion = 11.5;
@@ -494,7 +494,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.SkillBoxAV;
+				PRODUCT_BUNDLE_IDENTIFIER = .SkillBoxAV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -512,7 +512,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.SkillBoxAV;
+				PRODUCT_BUNDLE_IDENTIFIER = .SkillBoxAV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -533,7 +533,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.SkillBoxAVTests;
+				PRODUCT_BUNDLE_IDENTIFIER = .SkillBoxAVTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -555,7 +555,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.SkillBoxAVTests;
+				PRODUCT_BUNDLE_IDENTIFIER = .SkillBoxAVTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -575,7 +575,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.SkillBoxAVUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = .SkillBoxAVUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -595,7 +595,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.SkillBoxAVUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = .SkillBoxAVUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
