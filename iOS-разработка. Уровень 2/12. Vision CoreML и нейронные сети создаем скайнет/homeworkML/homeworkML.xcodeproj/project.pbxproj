@@ -45,7 +45,7 @@
 		FA9974DF24AF0009003C8823 /* SkynetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkynetViewController.swift; sourceTree = "<group>"; };
 		FA9D80AD24B1C1A80081A16B /* 123.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = 123.m4v; sourceTree = "<group>"; };
 		FAB8C83C24ACAD540006E245 /* MyImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MyImageClassifier.mlmodel; path = MyImageClassifier.mlproj/Models/MyImageClassifier.mlmodel; sourceTree = "<group>"; };
-		FAC4C8DA24AAAD0700FB7BE5 /* homeworkML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homeworkML.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC4C8DA24AAAD0700FB7BE5 /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC4C8DD24AAAD0700FB7BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC4C8DF24AAAD0700FB7BE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAC4C8E124AAAD0700FB7BE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		FAC4C8DB24AAAD0700FB7BE5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FAC4C8DA24AAAD0700FB7BE5 /* homeworkML.app */,
+				FAC4C8DA24AAAD0700FB7BE5 /* .app */,
 				FAC4C8F024AAAD0800FB7BE5 /* homeworkMLTests.xctest */,
 				FAC4C8FB24AAAD0800FB7BE5 /* homeworkMLUITests.xctest */,
 			);
@@ -160,7 +160,7 @@
 			);
 			name = homeworkML;
 			productName = homeworkML;
-			productReference = FAC4C8DA24AAAD0700FB7BE5 /* homeworkML.app */;
+			productReference = FAC4C8DA24AAAD0700FB7BE5 /* .app */;
 			productType = "com.apple.product-type.application";
 		};
 		FAC4C8EF24AAAD0800FB7BE5 /* homeworkMLTests */ = {
@@ -461,8 +461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.homeworkML;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -479,8 +478,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.homeworkML;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
