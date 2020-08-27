@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FAEF002C24CC4E6B006B781C /* Structural.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Structural.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEF002C24CC4E6B006B781C /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEF002F24CC4E6B006B781C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEF003124CC4E6B006B781C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAEF003324CC4E6B006B781C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		FAEF002D24CC4E6B006B781C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FAEF002C24CC4E6B006B781C /* Structural.app */,
+				FAEF002C24CC4E6B006B781C /* .app */,
 				FAEF004224CC4E6D006B781C /* StructuralTests.xctest */,
 				FAEF004D24CC4E6D006B781C /* StructuralUITests.xctest */,
 			);
@@ -154,7 +154,7 @@
 			);
 			name = Structural;
 			productName = Structural;
-			productReference = FAEF002C24CC4E6B006B781C /* Structural.app */;
+			productReference = FAEF002C24CC4E6B006B781C /* .app */;
 			productType = "com.apple.product-type.application";
 		};
 		FAEF004124CC4E6D006B781C /* StructuralTests */ = {
@@ -453,8 +453,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.Structural;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -471,8 +470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.Structural;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

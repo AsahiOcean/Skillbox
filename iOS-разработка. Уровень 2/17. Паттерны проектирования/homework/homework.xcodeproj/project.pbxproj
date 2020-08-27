@@ -48,7 +48,7 @@
 		FA9FFE8124D02B0300057013 /* Memento_pattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Memento_pattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FA9FFE8224D02B1900057013 /* Strategy_pattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Strategy_pattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FA9FFE8324D02B3100057013 /* Visitor_pattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Visitor_pattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		FAEF00B024CC6769006B781C /* homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEF00B024CC6769006B781C /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEF00B324CC6769006B781C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEF00B524CC6769006B781C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAEF00B724CC6769006B781C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		FAEF00B124CC6769006B781C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FAEF00B024CC6769006B781C /* homework.app */,
+				FAEF00B024CC6769006B781C /* .app */,
 				FAEF00C624CC676A006B781C /* homeworkTests.xctest */,
 				FAEF00D124CC676A006B781C /* homeworkUITests.xctest */,
 			);
@@ -195,7 +195,7 @@
 			);
 			name = homework;
 			productName = homework;
-			productReference = FAEF00B024CC6769006B781C /* homework.app */;
+			productReference = FAEF00B024CC6769006B781C /* .app */;
 			productType = "com.apple.product-type.application";
 		};
 		FAEF00C524CC676A006B781C /* homeworkTests */ = {
@@ -491,8 +491,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.homework;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -509,8 +508,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.homework;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
