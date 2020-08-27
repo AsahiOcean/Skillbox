@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		FA8FADED24CB9A2B0064ADFB /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
-		FAC448F324C99D8600DEC2A0 /* homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC448F324C99D8600DEC2A0 /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC448F624C99D8600DEC2A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC448FC24C99D8600DEC2A0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		FAC448FE24C99D8600DEC2A0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		FAC448F424C99D8600DEC2A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FAC448F324C99D8600DEC2A0 /* homework.app */,
+				FAC448F324C99D8600DEC2A0 /* .app */,
 				FAC4490D24C99D8700DEC2A0 /* homeworkTests.xctest */,
 				FAC4491824C99D8700DEC2A0 /* homeworkUITests.xctest */,
 			);
@@ -148,7 +148,7 @@
 			);
 			name = homework;
 			productName = homework;
-			productReference = FAC448F324C99D8600DEC2A0 /* homework.app */;
+			productReference = FAC448F324C99D8600DEC2A0 /* .app */;
 			productType = "com.apple.product-type.application";
 		};
 		FAC4490C24C99D8700DEC2A0 /* homeworkTests */ = {
@@ -445,8 +445,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.homework;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -463,8 +462,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.homework;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
