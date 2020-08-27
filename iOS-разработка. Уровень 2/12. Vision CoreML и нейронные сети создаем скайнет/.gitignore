@@ -1,2 +1,6 @@
 *.m4v
 *.mlmodel
+.DS_Store
+*.png
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
