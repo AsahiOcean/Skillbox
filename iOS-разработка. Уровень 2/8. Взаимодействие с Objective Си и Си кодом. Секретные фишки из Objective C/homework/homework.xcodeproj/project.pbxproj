@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5240B124F8715C00819779 /* SegueSwizzler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5240B024F8715B00819779 /* SegueSwizzler.swift */; };
 		FAE05566249650CD008D27DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE05565249650CD008D27DF /* AppDelegate.swift */; };
 		FAE05568249650CD008D27DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE05567249650CD008D27DF /* SceneDelegate.swift */; };
 		FAE0556D249650CD008D27DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE0556B249650CD008D27DF /* Main.storyboard */; };
@@ -14,7 +15,6 @@
 		FAE05572249650CF008D27DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE05570249650CF008D27DF /* LaunchScreen.storyboard */; };
 		FAE0557E24965204008D27DF /* Obj1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE0557D24965204008D27DF /* Obj1ViewController.m */; };
 		FAE05583249653B9008D27DF /* Obj2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE05582249653B9008D27DF /* Obj2ViewController.m */; };
-		FAE055882496546D008D27DF /* SegueSwizzler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE055872496546D008D27DF /* SegueSwizzler.swift */; };
 		FAE0558A249654C5008D27DF /* SwizzlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE05589249654C5008D27DF /* SwizzlerViewController.swift */; };
 		FAE0558C249654DD008D27DF /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0558B249654DD008D27DF /* FirstVC.swift */; };
 		FAE0558E249654F0008D27DF /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0558D249654F0008D27DF /* SecondVC.swift */; };
@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA5240B024F8715B00819779 /* SegueSwizzler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueSwizzler.swift; path = ../../../../../../Downloads/SegueSwizzler.swift; sourceTree = SOURCE_ROOT; };
 		FAE05562249650CD008D27DF /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE05565249650CD008D27DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE05567249650CD008D27DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		FAE0557D24965204008D27DF /* Obj1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Obj1ViewController.m; sourceTree = "<group>"; };
 		FAE05581249653B9008D27DF /* Obj2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Obj2ViewController.h; sourceTree = "<group>"; };
 		FAE05582249653B9008D27DF /* Obj2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Obj2ViewController.m; sourceTree = "<group>"; };
-		FAE055872496546D008D27DF /* SegueSwizzler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SegueSwizzler.swift; path = ../../../../../../../SegueSwizzler.swift; sourceTree = "<group>"; };
 		FAE05589249654C5008D27DF /* SwizzlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwizzlerViewController.swift; path = homework/SwizzlerViewController.swift; sourceTree = SOURCE_ROOT; };
 		FAE0558B249654DD008D27DF /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstVC.swift; path = homework/FirstVC.swift; sourceTree = SOURCE_ROOT; };
 		FAE0558D249654F0008D27DF /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondVC.swift; path = homework/SecondVC.swift; sourceTree = SOURCE_ROOT; };
@@ -120,7 +120,7 @@
 		FAE055842496540E008D27DF /* SegueSwizzler */ = {
 			isa = PBXGroup;
 			children = (
-				FAE055872496546D008D27DF /* SegueSwizzler.swift */,
+				FA5240B024F8715B00819779 /* SegueSwizzler.swift */,
 				FAE05589249654C5008D27DF /* SwizzlerViewController.swift */,
 				FAE0558B249654DD008D27DF /* FirstVC.swift */,
 				FAE0558D249654F0008D27DF /* SecondVC.swift */,
@@ -221,9 +221,9 @@
 				FAE05568249650CD008D27DF /* SceneDelegate.swift in Sources */,
 				FAE05591249655C3008D27DF /* PickerViewController.swift in Sources */,
 				FAE0558C249654DD008D27DF /* FirstVC.swift in Sources */,
-				FAE055882496546D008D27DF /* SegueSwizzler.swift in Sources */,
 				FAE05594249655EA008D27DF /* objectassociation.swift in Sources */,
 				FAE0557E24965204008D27DF /* Obj1ViewController.m in Sources */,
+				FA5240B124F8715C00819779 /* SegueSwizzler.swift in Sources */,
 				FAE0558E249654F0008D27DF /* SecondVC.swift in Sources */,
 				FAE05583249653B9008D27DF /* Obj2ViewController.m in Sources */,
 			);
