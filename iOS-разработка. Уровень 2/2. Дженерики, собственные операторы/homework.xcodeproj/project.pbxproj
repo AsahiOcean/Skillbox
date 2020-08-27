@@ -94,7 +94,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
-				ORGANIZATIONNAME = "Sergey Fedotov";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					FAEA8534246EB213003B8077 = {
 						CreatedOnToolsVersion = 11.4.1;
