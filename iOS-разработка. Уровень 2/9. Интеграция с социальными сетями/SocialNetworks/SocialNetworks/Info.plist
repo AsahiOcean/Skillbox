@@ -46,7 +46,7 @@
 	<key>Google</key>
 	<dict>
 		<key>BUNDLE_ID</key>
-		<string>SergeyFedotov.SocialNetworks</string>
+		<string>.SocialNetworks</string>
 		<key>CLIENT_ID</key>
 		<string>158503143784-odp0siedppluff3cbv13qgsfk7scb4ju.apps.googleusercontent.com</string>
 		<key>PLIST_VERSION</key>
