@@ -177,7 +177,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
-				ORGANIZATIONNAME = "Sergey Fedotov";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					FA452E78249D1E8F006E1ECD = {
 						CreatedOnToolsVersion = 11.5;
@@ -424,7 +424,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.Homework;
+				PRODUCT_BUNDLE_IDENTIFIER = .Homework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -443,7 +443,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyFedotov.Homework;
+				PRODUCT_BUNDLE_IDENTIFIER = .Homework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
