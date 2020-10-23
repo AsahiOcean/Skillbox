@@ -138,6 +138,7 @@ class BinaryTree<String> {
          self.right = right
     }
 }
+
 class BinaryTreeString<String: Comparable & CustomStringConvertible> {
     
     var searchPath: [String] = []

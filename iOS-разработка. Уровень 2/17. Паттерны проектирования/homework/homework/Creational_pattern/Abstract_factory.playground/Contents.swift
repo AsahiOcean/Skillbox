@@ -82,6 +82,3 @@ client1.getMoney()
 let factory2 = ConcreteFactory2()
 let client2 = Client(factory: factory2)
 client2.getMoney()
-
-// Skillbox
-// Скиллбокс

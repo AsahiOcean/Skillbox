@@ -43,6 +43,3 @@ creators.forEach {
     let product = $0.factoryMethod()
     print("\(product.label()): \(product.specifications())")
 }
-
-// Skillbox
-// Скиллбокс
