@@ -9917,3 +9917,64 @@ iOS-разработка. Уровень 2/5. Асинхронное прогр�
 iOS-разработка. Уровень 2/5. Асинхронное программирование/Homework/Pods/Target Support Files/RxSwift/RxSwift.debug.xcconfig
 iOS-разработка. Уровень 2/5. Асинхронное программирование/Homework/Pods/Target Support Files/RxSwift/RxSwift.modulemap
 iOS-разработка. Уровень 2/5. Асинхронное программирование/Homework/Pods/Target Support Files/RxSwift/RxSwift.release.xcconfig
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/cocoapodsProject.xcodeproj/project.pbxproj
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Podfile.lock
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/LICENSE
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/README.md
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/AFError.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/Alamofire.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/AlamofireExtended.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/AuthenticationInterceptor.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/CachedResponseHandler.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/Combine.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/EventMonitor.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/HTTPHeaders.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/HTTPMethod.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/MultipartFormData.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/MultipartUpload.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/NetworkReachabilityManager.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/Notifications.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/OperationQueue+Alamofire.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/ParameterEncoder.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/ParameterEncoding.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/Protected.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/RedirectHandler.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/Request.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/RequestInterceptor.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/RequestTaskMap.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/Response.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/ResponseSerialization.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/Result+Alamofire.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/RetryPolicy.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/ServerTrustEvaluation.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/Session.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/SessionDelegate.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/StringEncoding+Alamofire.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/URLConvertible+URLRequestConvertible.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/URLEncodedFormEncoder.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/URLRequest+Alamofire.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/URLSessionConfiguration+Alamofire.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Alamofire/Source/Validation.swift
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Manifest.lock
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Pods.xcodeproj/project.pbxproj
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Alamofire/Alamofire-Info.plist
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Alamofire/Alamofire.debug.xcconfig
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Alamofire/Alamofire.modulemap
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Alamofire/Alamofire.release.xcconfig
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-acknowledgements.markdown
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-acknowledgements.plist
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-dummy.m
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-frameworks-Debug-input-files.xcfilelist
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-frameworks-Debug-output-files.xcfilelist
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-frameworks-Release-input-files.xcfilelist
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-frameworks-Release-output-files.xcfilelist
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-frameworks.sh
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-Info.plist
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-umbrella.h
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject.debug.xcconfig
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject.modulemap
+iOS-разработка. Уровень 2/9. Интеграция с социальными сетями/cocoapodsProject/Pods/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject.release.xcconfig
