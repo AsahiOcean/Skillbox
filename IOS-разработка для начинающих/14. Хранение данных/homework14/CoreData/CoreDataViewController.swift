@@ -34,7 +34,7 @@ class CoreDataViewController: UIViewController {
             tasks = try context.fetch(Tasks.fetchRequest())
         }
         catch {
-            print("ошибка persistentContainer")
+            print(error.localizedDescription)
         }
     }
 

@@ -43,7 +43,7 @@ class ViewCoreDataForm: UIView {
             }, completion: { _ in
                 super.removeFromSuperview()
         })
-    } // конец YesTap
+    }
     
     @IBAction func NoTap(_ sender: Any) {
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
@@ -53,7 +53,7 @@ class ViewCoreDataForm: UIView {
                 super.removeFromSuperview()
                 print("Порадуйте новостями...")
         })
-    } // конец NoTap
+    }
 
     @IBAction func FishTextGen(_ sender: Any) {
         SVProgressHUD.show(withStatus:"Придумываю...")

@@ -42,7 +42,6 @@ extension YMKMapObject {
     }
 }
 //MARK: для центровки по массиву координат
-// вместо Place может быть Annotation
 extension Array where Element == Place {
     // region == getRegion
     func region() -> YMKBoundingBox? {

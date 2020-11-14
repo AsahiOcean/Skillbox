@@ -48,7 +48,4 @@ class PaymentSystem {
 }
 
 let test = PaymentSystem()
-_ = test.paymentMethod()
-
-// Skillbox
-// Скиллбокс
+test.paymentMethod()
