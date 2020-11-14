@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		86EC3AE2534AE78D9DE12643 /* Pods_cocoapodsProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6097E8BEFB7C0AFC40C81C /* Pods_cocoapodsProject.framework */; };
 		FA3640C0249C422000BF952E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3640BF249C422000BF952E /* AppDelegate.swift */; };
 		FA3640C2249C422000BF952E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3640C1249C422000BF952E /* SceneDelegate.swift */; };
 		FA3640C4249C422000BF952E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3640C3249C422000BF952E /* ViewController.swift */; };
@@ -17,9 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C6097E8BEFB7C0AFC40C81C /* Pods_cocoapodsProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cocoapodsProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42F869B80B389A0C1D69B86B /* Pods-cocoapodsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocoapodsProject.release.xcconfig"; path = "Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject.release.xcconfig"; sourceTree = "<group>"; };
-		5F2E4D2ED9B47CA01DE1FA07 /* Pods-cocoapodsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cocoapodsProject.debug.xcconfig"; path = "Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject.debug.xcconfig"; sourceTree = "<group>"; };
 		FA3640BC249C422000BF952E /* cocoapodsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cocoapodsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3640BF249C422000BF952E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA3640C1249C422000BF952E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,38 +31,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86EC3AE2534AE78D9DE12643 /* Pods_cocoapodsProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C1881AE3CC18F9D099E5EB6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5F2E4D2ED9B47CA01DE1FA07 /* Pods-cocoapodsProject.debug.xcconfig */,
-				42F869B80B389A0C1D69B86B /* Pods-cocoapodsProject.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		8C3237A3D22E2FF440869FC7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0C6097E8BEFB7C0AFC40C81C /* Pods_cocoapodsProject.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		FA3640B3249C422000BF952E = {
 			isa = PBXGroup;
 			children = (
 				FA3640BE249C422000BF952E /* cocoapodsProject */,
 				FA3640BD249C422000BF952E /* Products */,
-				3C1881AE3CC18F9D099E5EB6 /* Pods */,
-				8C3237A3D22E2FF440869FC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,11 +74,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA3640D0249C422100BF952E /* Build configuration list for PBXNativeTarget "cocoapodsProject" */;
 			buildPhases = (
-				8ABD137DF6D3D802CE39C49B /* [CP] Check Pods Manifest.lock */,
 				FA3640B8249C422000BF952E /* Sources */,
 				FA3640B9249C422000BF952E /* Frameworks */,
 				FA3640BA249C422000BF952E /* Resources */,
-				E616165795EE92D42A1F546F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,48 +132,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8ABD137DF6D3D802CE39C49B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-cocoapodsProject-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E616165795EE92D42A1F546F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cocoapodsProject/Pods-cocoapodsProject-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA3640B8249C422000BF952E /* Sources */ = {
@@ -351,7 +282,6 @@
 		};
 		FA3640D1249C422100BF952E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F2E4D2ED9B47CA01DE1FA07 /* Pods-cocoapodsProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,7 +300,6 @@
 		};
 		FA3640D2249C422100BF952E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42F869B80B389A0C1D69B86B /* Pods-cocoapodsProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
