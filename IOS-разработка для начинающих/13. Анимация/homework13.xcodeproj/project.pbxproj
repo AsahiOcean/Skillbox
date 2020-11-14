@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49C798739A64E5BCCF9691C8 /* Pods_homework13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF1EC8DDD5F02069F76B6E0 /* Pods_homework13.framework */; };
 		FAD2B66D24361EED00FD276B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD2B66C24361EED00FD276B /* AppDelegate.swift */; };
 		FAD2B66F24361EED00FD276B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD2B66E24361EED00FD276B /* SceneDelegate.swift */; };
 		FAD2B67124361EED00FD276B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD2B67024361EED00FD276B /* ViewController.swift */; };
@@ -17,9 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6EF1EC8DDD5F02069F76B6E0 /* Pods_homework13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_homework13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8335EF4F38D8AF4CE6883FB8 /* Pods-homework13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homework13.debug.xcconfig"; path = "Target Support Files/Pods-homework13/Pods-homework13.debug.xcconfig"; sourceTree = "<group>"; };
-		B79DFC61945F188305E83D0C /* Pods-homework13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homework13.release.xcconfig"; path = "Target Support Files/Pods-homework13/Pods-homework13.release.xcconfig"; sourceTree = "<group>"; };
 		FAD2B66924361EED00FD276B /* homework13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD2B66C24361EED00FD276B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD2B66E24361EED00FD276B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49C798739A64E5BCCF9691C8 /* Pods_homework13.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,18 +40,8 @@
 		970C25C7983399E77EE4344D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8335EF4F38D8AF4CE6883FB8 /* Pods-homework13.debug.xcconfig */,
-				B79DFC61945F188305E83D0C /* Pods-homework13.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		CE02E8BFB77E62842726D59B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6EF1EC8DDD5F02069F76B6E0 /* Pods_homework13.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FAD2B66024361EED00FD276B = {
@@ -65,7 +50,6 @@
 				FAD2B66B24361EED00FD276B /* homework13 */,
 				FAD2B66A24361EED00FD276B /* Products */,
 				970C25C7983399E77EE4344D /* Pods */,
-				CE02E8BFB77E62842726D59B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +82,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAD2B67D24361EEF00FD276B /* Build configuration list for PBXNativeTarget "homework13" */;
 			buildPhases = (
-				5814251D57E7DC02A5629BF0 /* [CP] Check Pods Manifest.lock */,
 				FAD2B66524361EED00FD276B /* Sources */,
 				FAD2B66624361EED00FD276B /* Frameworks */,
 				FAD2B66724361EED00FD276B /* Resources */,
-				A57EAD98E12A2B2E0F0CB3FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,48 +140,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5814251D57E7DC02A5629BF0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-homework13-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A57EAD98E12A2B2E0F0CB3FE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-homework13/Pods-homework13-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-homework13/Pods-homework13-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-homework13/Pods-homework13-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAD2B66524361EED00FD276B /* Sources */ = {
@@ -350,7 +290,6 @@
 		};
 		FAD2B67E24361EEF00FD276B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8335EF4F38D8AF4CE6883FB8 /* Pods-homework13.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -369,7 +308,6 @@
 		};
 		FAD2B67F24361EEF00FD276B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B79DFC61945F188305E83D0C /* Pods-homework13.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
