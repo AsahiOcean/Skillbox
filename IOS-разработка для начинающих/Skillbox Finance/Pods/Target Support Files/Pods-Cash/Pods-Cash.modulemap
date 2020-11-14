@@ -1,6 +1,0 @@
-framework module Pods_Cash {
-  umbrella header "Pods-Cash-umbrella.h"
-
-  export *
-  module * { export * }
-}
