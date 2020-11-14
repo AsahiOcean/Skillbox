@@ -4686,3 +4686,79 @@ IOS-разработка для начинающих/14. Хранение дан
 IOS-разработка для начинающих/14. Хранение данных/Pods/Target Support Files/SVProgressHUD/SVProgressHUD.debug.xcconfig
 IOS-разработка для начинающих/14. Хранение данных/Pods/Target Support Files/SVProgressHUD/SVProgressHUD.modulemap
 IOS-разработка для начинающих/14. Хранение данных/Pods/Target Support Files/SVProgressHUD/SVProgressHUD.release.xcconfig
+IOS-разработка для начинающих/13. Анимация/Podfile.lock
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/LICENSE
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/README.md
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/AFError.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/Alamofire.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/AlamofireExtended.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/AuthenticationInterceptor.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/CachedResponseHandler.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/Combine.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/EventMonitor.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/HTTPHeaders.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/HTTPMethod.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/MultipartFormData.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/MultipartUpload.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/NetworkReachabilityManager.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/Notifications.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/OperationQueue+Alamofire.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/ParameterEncoder.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/ParameterEncoding.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/Protected.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/RedirectHandler.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/Request.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/RequestInterceptor.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/RequestTaskMap.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/Response.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/ResponseSerialization.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/Result+Alamofire.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/RetryPolicy.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/ServerTrustEvaluation.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/Session.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/SessionDelegate.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/StringEncoding+Alamofire.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/URLConvertible+URLRequestConvertible.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/URLEncodedFormEncoder.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/URLRequest+Alamofire.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/URLSessionConfiguration+Alamofire.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Alamofire/Source/Validation.swift
+IOS-разработка для начинающих/13. Анимация/Pods/Manifest.lock
+IOS-разработка для начинающих/13. Анимация/Pods/SVProgressHUD/LICENSE
+IOS-разработка для начинающих/13. Анимация/Pods/SVProgressHUD/README.md
+IOS-разработка для начинающих/13. Анимация/Pods/SVProgressHUD/SVProgressHUD/SVIndefiniteAnimatedView.h
+IOS-разработка для начинающих/13. Анимация/Pods/SVProgressHUD/SVProgressHUD/SVIndefiniteAnimatedView.m
+IOS-разработка для начинающих/13. Анимация/Pods/SVProgressHUD/SVProgressHUD/SVProgressAnimatedView.h
+IOS-разработка для начинающих/13. Анимация/Pods/SVProgressHUD/SVProgressHUD/SVProgressAnimatedView.m
+IOS-разработка для начинающих/13. Анимация/Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.h
+IOS-разработка для начинающих/13. Анимация/Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.m
+IOS-разработка для начинающих/13. Анимация/Pods/SVProgressHUD/SVProgressHUD/SVRadialGradientLayer.h
+IOS-разработка для начинающих/13. Анимация/Pods/SVProgressHUD/SVProgressHUD/SVRadialGradientLayer.m
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Alamofire/Alamofire-Info.plist
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Alamofire/Alamofire.debug.xcconfig
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Alamofire/Alamofire.modulemap
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Alamofire/Alamofire.release.xcconfig
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13-acknowledgements.markdown
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13-acknowledgements.plist
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13-dummy.m
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13-frameworks-Debug-input-files.xcfilelist
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13-frameworks-Debug-output-files.xcfilelist
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13-frameworks-Release-input-files.xcfilelist
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13-frameworks-Release-output-files.xcfilelist
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13-frameworks.sh
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13-Info.plist
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13-umbrella.h
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13.debug.xcconfig
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13.modulemap
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/Pods-homework13/Pods-homework13.release.xcconfig
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/SVProgressHUD/SVProgressHUD-dummy.m
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/SVProgressHUD/SVProgressHUD-Info.plist
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/SVProgressHUD/SVProgressHUD-umbrella.h
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/SVProgressHUD/SVProgressHUD.debug.xcconfig
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/SVProgressHUD/SVProgressHUD.modulemap
+IOS-разработка для начинающих/13. Анимация/Pods/Target Support Files/SVProgressHUD/SVProgressHUD.release.xcconfig
