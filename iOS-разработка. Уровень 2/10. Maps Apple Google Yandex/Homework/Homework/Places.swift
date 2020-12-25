@@ -1,7 +1,5 @@
 import Foundation
 import MapKit
-// Skillbox
-// Скиллбокс
 
 let places: [Place] = [
     Place(title: "Макдоналдс", snippet: "ул. Манежная пл., 1, стр. 2", hex: "#e2abfa", icon: UIImage(named: "mac")!, coordinate: CLLocationCoordinate2D(latitude: 55.7554901, longitude: 37.6143095)),
