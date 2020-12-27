@@ -166,10 +166,10 @@
 		FAC7E045245C76EE0077EA77 /* СategoriesAndSubcategories */ = {
 			isa = PBXGroup;
 			children = (
-				FAC7E046245C77020077EA77 /* SubcategoriesViewController.swift */,
+				FAC7E04C245C77540077EA77 /* CategoriesTableViewCell.swift */,
 				FAC7E048245C77190077EA77 /* CategoriesViewController.swift */,
 				FAC7E04A245C77320077EA77 /* Category.swift */,
-				FAC7E04C245C77540077EA77 /* CategoriesTableViewCell.swift */,
+				FAC7E046245C77020077EA77 /* SubcategoriesViewController.swift */,
 			);
 			path = "СategoriesAndSubcategories";
 			sourceTree = "<group>";
