@@ -375,10 +375,10 @@
 		FAC50054245FDDF70057C306 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				FAC50060246066540057C306 /* InfoRatingVC.swift */,
-				FAC5005B245FFC480057C306 /* ProfileNotificationsVC.swift */,
-				FAC50042245F5F870057C306 /* PrivacyPolicyVC.swift */,
 				FAC50055245FDE020057C306 /* AboutAppVC.swift */,
+				FAC50060246066540057C306 /* InfoRatingVC.swift */,
+				FAC50042245F5F870057C306 /* PrivacyPolicyVC.swift */,
+				FAC5005B245FFC480057C306 /* ProfileNotificationsVC.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
