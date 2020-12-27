@@ -1,10 +1,8 @@
 /*
-Если в текстовом поле не введено целое число, то «Введите целое число в строку».
-
-Для этой задачи нужно будет сделать три текстовых поля. По сути — это аналог калькулятора. В первое поле вводится целое число, во второе — оператор (минус, плюс, умножить, делить), в третье поле — второе число. При нажатии на кнопку, операция из второго поля применяется к числу из первого и третьего поля. Если где-то введены некорректные данные, в лейбл должно вывестись «Некорректные данные».
-*/
-// Skillbox
-// Скиллбокс
+ Если в текстовом поле не введено целое число, то «Введите целое число в строку».
+ 
+ Для этой задачи нужно будет сделать три текстовых поля. По сути — это аналог калькулятора. В первое поле вводится целое число, во второе — оператор (минус, плюс, умножить, делить), в третье поле — второе число. При нажатии на кнопку, операция из второго поля применяется к числу из первого и третьего поля. Если где-то введены некорректные данные, в лейбл должно вывестись «Некорректные данные».
+ */
 
 import UIKit
 
@@ -42,9 +40,9 @@ class SecondViewController: UIViewController {
             self.Label.text = toString }
         else {
             Label.text = "Некорректные данные"
-            }
         }
-
+    }
+    
     @IBAction func Left(_ sender: Any) {
         if (TextField1.text?.contains("."))! || (TextField1.text?.contains(","))! || (TextField3.text?.contains("."))! || (TextField3.text?.contains(","))! {
             Label.text = "Введите целое число в строку" }
@@ -59,25 +57,25 @@ class SecondViewController: UIViewController {
         } else {
             Label.text = "Некорректные данные"
         }
-}
+    }
     
     @IBAction func Right(_ sender: Any) {
         if (TextField1.text?.contains("."))! || (TextField1.text?.contains(","))! || (TextField3.text?.contains("."))! || (TextField3.text?.contains(","))! {
             Label.text = "Введите целое число в строку" }
         else if Int(TextField3.text!) != nil {
             let value = Int(TextField3.text!)!
-                if value >= 63 {
-                    Label.text = "ЭТО ОЧЕНЬ МНОГО!!!"
-                } else {
-                    let toString = String(1 << value)
-                    self.Label.text = toString
-                }
+            if value >= 63 {
+                Label.text = "ЭТО ОЧЕНЬ МНОГО!!!"
+            } else {
+                let toString = String(1 << value)
+                self.Label.text = toString
+            }
         } else {
             Label.text = "Некорректные данные"
         }
     }
     
-        override func viewDidLoad() {
-            super.viewDidLoad()
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
