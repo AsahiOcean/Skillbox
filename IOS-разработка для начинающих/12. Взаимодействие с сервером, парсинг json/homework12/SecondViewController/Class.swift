@@ -1,6 +1,4 @@
 import  Foundation
-// Skillbox
-// Скиллбокс
 
 class Objects {
     let main: NSDictionary
@@ -37,8 +35,8 @@ class Weather {
             let humidity = data["humidity"] as? Int,
             let temp = data["temp"] as? Double,
             let pressure = data["pressure"] as? Int
-            else {
-                return nil
+        else {
+            return nil
         }
         self.humidity = humidity
         self.temp = temp
