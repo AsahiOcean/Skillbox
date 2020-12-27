@@ -271,16 +271,16 @@
 		FA83CAA5246210A20098FB12 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				FAEC2EBD2465DBD500DD269E /* ChatBot */,
-				FA67314D24637E03006CA010 /* PageController */,
-				FA6730FF2463484C006CA010 /* PagerTable */,
-				FA83CABE24624A5D0098FB12 /* Collection FlowLayouts */,
+				FA67314E24639060006CA010 /* BlueViewController.swift */,
 				FA83CAAE246234100098FB12 /* ItemCollectionViewCell.swift */,
-				FA83CAB02462365B0098FB12 /* ItemCollectionViewCell.xib */,
 				FA83CAB22462492E0098FB12 /* Items.swift */,
 				FA83CAB4246249800098FB12 /* ItemsProvider.swift */,
 				FA83CAC024624C350098FB12 /* ItemsViewController.swift */,
-				FA67314E24639060006CA010 /* BlueViewController.swift */,
+				FA83CAB02462365B0098FB12 /* ItemCollectionViewCell.xib */,
+				FAEC2EBD2465DBD500DD269E /* ChatBot */,
+				FA83CABE24624A5D0098FB12 /* Collection FlowLayouts */,
+				FA67314D24637E03006CA010 /* PageController */,
+				FA6730FF2463484C006CA010 /* PagerTable */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
