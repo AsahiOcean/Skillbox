@@ -1,7 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIWebViewDelegate {
-
+    
     @IBOutlet weak var webView: UIWebView! // Закон Хлейда
     
     override func viewDidLoad() {
