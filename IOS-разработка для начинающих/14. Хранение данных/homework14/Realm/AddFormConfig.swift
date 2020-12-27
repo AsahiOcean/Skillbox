@@ -1,7 +1,5 @@
 import UIKit
 import RealmSwift
-// Skillbox
-// Скиллбокс
 
 class AddFormConfig: UIView {
     
@@ -10,7 +8,7 @@ class AddFormConfig: UIView {
     fileprivate let todoinfo = TodoObject()
     let name = UserDataPersistance.sharing.NameData
     let surname = UserDataPersistance.sharing.SurnameData
-            
+    
     @IBOutlet weak var Task: UITextView!
     @IBOutlet weak var Cancel: UIButton!
     @IBOutlet weak var Add: UIButton!
@@ -18,10 +16,10 @@ class AddFormConfig: UIView {
     @IBAction func AddTouch(_ sender: Any) {
         RealmClass.shared.add(tasktext: self.Task.text)
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
-                self.center.y -= UIScreen.main.bounds.height
-            }, completion: { _ in
-                super.removeFromSuperview() // удаляем view
-            })
+            self.center.y -= UIScreen.main.bounds.height
+        }, completion: { _ in
+            super.removeFromSuperview() // удаляем view
+        })
         let rc = RealmClass()
         print("UIID: \(self.todoinfo.uuid)") // на всякий случай :)
         print("Дата и время: \(rc.DateString())")
@@ -36,9 +34,9 @@ class AddFormConfig: UIView {
     
     @IBAction func CancelTouch(_ sender: Any) {
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
-                self.center.y += UIScreen.main.bounds.height
-            }, completion: { _ in
-                super.removeFromSuperview()
+            self.center.y += UIScreen.main.bounds.height
+        }, completion: { _ in
+            super.removeFromSuperview()
         })
         
         let rc = RealmClass()
@@ -50,8 +48,8 @@ class AddFormConfig: UIView {
     }
     
     static func loadFromNIB() -> AddFormConfig {
-            let nib = UINib(nibName: "AddForm", bundle: nil)
-            return nib.instantiate(withOwner: self, options: nil).first as! AddFormConfig
+        let nib = UINib(nibName: "AddForm", bundle: nil)
+        return nib.instantiate(withOwner: self, options: nil).first as! AddFormConfig
     }
     
     func username() -> String {
