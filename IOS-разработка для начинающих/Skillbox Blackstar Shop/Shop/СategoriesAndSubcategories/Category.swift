@@ -1,7 +1,5 @@
 import Foundation
 import UIKit
-// Skillbox
-// Скиллбокс
 
 struct Category {
     let id: String
