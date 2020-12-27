@@ -2,7 +2,7 @@ import UIKit
 import MapKit
 
 class MapVC: UIViewController, MKMapViewDelegate {
-
+    
     @IBOutlet weak var Map: MKMapView!
     
     override func viewDidLoad() {
@@ -19,26 +19,26 @@ class MapVC: UIViewController, MKMapViewDelegate {
         let startName = MKPointAnnotation()
         startName.title = "Times Square"
         if let location = sourcePlacemark.location {
-          startName.coordinate = location.coordinate
+            startName.coordinate = location.coordinate
         }
         
         let finishName = MKPointAnnotation()
         finishName.title = "Empire State Building"
         if let location = destinationPlacemark.location {
-          finishName.coordinate = location.coordinate
+            finishName.coordinate = location.coordinate
         }
         self.Map.showAnnotations([startName,finishName], animated: true)
     }
 }
 
 func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-      if overlay.isKind(of: MKPolyline.self){
+    if overlay.isKind(of: MKPolyline.self){
         let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-              polylineRenderer.fillColor = UIColor.blue
-              polylineRenderer.strokeColor = UIColor.blue
-              polylineRenderer.lineWidth = 2
-
-          return polylineRenderer
-   }
-      return MKOverlayRenderer(overlay: overlay)
+        polylineRenderer.fillColor = UIColor.blue
+        polylineRenderer.strokeColor = UIColor.blue
+        polylineRenderer.lineWidth = 2
+        
+        return polylineRenderer
+    }
+    return MKOverlayRenderer(overlay: overlay)
 }
