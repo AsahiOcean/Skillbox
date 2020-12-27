@@ -1,8 +1,9 @@
 import UIKit
 
 private let reuseIdentifier = "CatalogCell"
-class CatalogCollectionVC: UICollectionViewController {
 
+class CatalogCollectionVC: UICollectionViewController {
+    
     var categoryId = ""; var TitleCategory = ""
     
     private var products: [Product] = []
@@ -38,11 +39,11 @@ class CatalogCollectionVC: UICollectionViewController {
         
         destination.product = products[i.row]
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         products.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProductsCollectionViewCell
         cell.nameLabel.text = products[indexPath.row].name
