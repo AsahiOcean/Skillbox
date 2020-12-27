@@ -332,11 +332,11 @@
 			isa = PBXGroup;
 			children = (
 				FA972FBE24612E0A0076C2F7 /* PopoverSizeViewController.swift */,
-				FA972FC024612EC90076C2F7 /* SizeCellTableViewCell.swift */,
 				FA972FC224612F860076C2F7 /* Product.swift */,
-				FA972FC6246133290076C2F7 /* SliderCollectionViewCell.swift */,
-				FA972FC82461357B0076C2F7 /* SingleProductViewController.swift */,
 				FA972FCC2461383D0076C2F7 /* ProductObject.swift */,
+				FA972FC82461357B0076C2F7 /* SingleProductViewController.swift */,
+				FA972FC024612EC90076C2F7 /* SizeCellTableViewCell.swift */,
+				FA972FC6246133290076C2F7 /* SliderCollectionViewCell.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
