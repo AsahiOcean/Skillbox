@@ -1,6 +1,4 @@
 import Foundation
-// Skillbox
-// Скиллбокс
 
 class UserDataPersistance {
     static let sharing = UserDataPersistance()

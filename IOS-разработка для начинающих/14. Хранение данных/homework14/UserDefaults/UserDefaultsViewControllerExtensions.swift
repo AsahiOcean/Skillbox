@@ -1,6 +1,4 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 extension UserDefaultsViewController {
     
@@ -20,7 +18,7 @@ extension UserDefaultsViewController {
             animations: nil,
             completion: nil)
     }
-     func Hello() {
+    func Hello() {
         if UserDataPersistance.sharing.FirstRunData == "false" {
             func username() -> String {
                 let name = UserDataPersistance.sharing.NameData
@@ -35,16 +33,16 @@ extension UserDefaultsViewController {
                     return "\(name!) \(surname!)"
                 }
             }
-//            print("Первый запуск уже был")
+            //            print("Первый запуск уже был")
             self.Welcome.alpha = 1
-//            self.GagView.alpha = 1
+            //            self.GagView.alpha = 1
             DispatchQueue.main.async {
                 UIView.animate(
                     withDuration: 0.2,
                     delay: 0,
                     options: [.repeat, .autoreverse, .curveEaseInOut],
                     animations: {
-                self.GagView.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 5)
+                        self.GagView.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 5)
                     });
             }
             RealmSection.setBackgroundImage(UIImage(named: "realm"), for: UIControl.State.normal)
@@ -52,88 +50,88 @@ extension UserDefaultsViewController {
             self.Welcome.textAlignment = .center
             self.Welcome.font = .systemFont(ofSize: 25)
         } else {
-        print("Приложение запущено \(Date())")
-        UserDataPersistance.sharing.FirstRunData = "false"
-        DispatchQueue.main.async {
-        self.Welcome.text = "ДОБРО ПОЖАЛОВАТЬ!!!"
-        self.RealmImage.frame.origin.x += super.view.frame.width
-        self.CoreDataImage.frame.origin.x -= super.view.frame.width
-        self.Welcome.frame.origin.y -= super.view.frame.height
-        self.GagView.frame.origin.y -= super.view.frame.height
-        self.Welcome.alpha = 1
-        self.GagView.alpha = 1
-        
-        UIView.animate(
-            withDuration: 0.5,
-            delay: 0.5,
-            options: .curveEaseInOut,
-            animations: {
-        self.Welcome.frame.origin.y += self.view.frame.height
-            });
-        
-        UIView.animate(
-            withDuration: 0.20,
-            delay: 2.0,
-            options: .repeat,
-            animations: {
-        self.Welcome.alpha = 0
-            });
-        
-        UIView.animate(
-            withDuration: 0.5,
-            delay: 1.5,
-            options: .curveEaseInOut,
-            animations: {
-        self.GagView.frame.origin.y += self.view.frame.height
-            });
-        
-        UIView.animate(
-            withDuration: 0.25,
-            delay: 1.75,
-            options: .repeat,
-            animations: {
-    //            self.GagView.alpha = 0.5
-            });
-        
-        UIView.animate(
-            withDuration: 0.5,
-            delay: 2,
-            options: .curveEaseInOut,
-            animations: {
-        self.RealmImage.frame.origin.x -= self.view.frame.width
-            });
-        
-        UIView.animate(
-            withDuration: 0.5,
-            delay: 2,
-            options: .curveEaseInOut,
-            animations: {
-        self.CoreDataImage.frame.origin.x += self.view.frame.width
-            });
-        
-        UIView.animate(
-            withDuration: 0.2,
-            delay: 2.75,
-            options: [.repeat, .autoreverse, .curveEaseInOut],
-            animations: {
-        self.GagView.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 5)
-            });
-        
-        UIView.animate(
-            withDuration: 0.2,
-            delay: 2.5,
-            options: [.repeat, .autoreverse, .curveEaseInOut],
-            animations: {
-        self.RealmImage.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 15)
-            });
-        
-        UIView.animate(
-            withDuration: 0.2,
-            delay: 2.5,
-            options: [.repeat, .autoreverse, .curveEaseInOut],
-            animations: {
-        self.CoreDataImage.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 15)
-            });
+            print("Приложение запущено \(Date())")
+            UserDataPersistance.sharing.FirstRunData = "false"
+            DispatchQueue.main.async {
+                self.Welcome.text = "ДОБРО ПОЖАЛОВАТЬ!!!"
+                self.RealmImage.frame.origin.x += super.view.frame.width
+                self.CoreDataImage.frame.origin.x -= super.view.frame.width
+                self.Welcome.frame.origin.y -= super.view.frame.height
+                self.GagView.frame.origin.y -= super.view.frame.height
+                self.Welcome.alpha = 1
+                self.GagView.alpha = 1
+                
+                UIView.animate(
+                    withDuration: 0.5,
+                    delay: 0.5,
+                    options: .curveEaseInOut,
+                    animations: {
+                        self.Welcome.frame.origin.y += self.view.frame.height
+                    });
+                
+                UIView.animate(
+                    withDuration: 0.20,
+                    delay: 2.0,
+                    options: .repeat,
+                    animations: {
+                        self.Welcome.alpha = 0
+                    });
+                
+                UIView.animate(
+                    withDuration: 0.5,
+                    delay: 1.5,
+                    options: .curveEaseInOut,
+                    animations: {
+                        self.GagView.frame.origin.y += self.view.frame.height
+                    });
+                
+                UIView.animate(
+                    withDuration: 0.25,
+                    delay: 1.75,
+                    options: .repeat,
+                    animations: {
+                        //            self.GagView.alpha = 0.5
+                    });
+                
+                UIView.animate(
+                    withDuration: 0.5,
+                    delay: 2,
+                    options: .curveEaseInOut,
+                    animations: {
+                        self.RealmImage.frame.origin.x -= self.view.frame.width
+                    });
+                
+                UIView.animate(
+                    withDuration: 0.5,
+                    delay: 2,
+                    options: .curveEaseInOut,
+                    animations: {
+                        self.CoreDataImage.frame.origin.x += self.view.frame.width
+                    });
+                
+                UIView.animate(
+                    withDuration: 0.2,
+                    delay: 2.75,
+                    options: [.repeat, .autoreverse, .curveEaseInOut],
+                    animations: {
+                        self.GagView.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 5)
+                    });
+                
+                UIView.animate(
+                    withDuration: 0.2,
+                    delay: 2.5,
+                    options: [.repeat, .autoreverse, .curveEaseInOut],
+                    animations: {
+                        self.RealmImage.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 15)
+                    });
+                
+                UIView.animate(
+                    withDuration: 0.2,
+                    delay: 2.5,
+                    options: [.repeat, .autoreverse, .curveEaseInOut],
+                    animations: {
+                        self.CoreDataImage.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 15)
+                    });
             }
         }
     }
@@ -142,7 +140,7 @@ extension UserDefaultsViewController {
         self.CoreDataSection.setBackgroundImage(UIImage(named: "coredata"), for: UIControl.State.normal)
         self.RealmImage.isHidden = true
         self.CoreDataImage.isHidden = true
-//        self.GagView.alpha = 0
+        //        self.GagView.alpha = 0
         self.Welcome.alpha = 1
         self.GagView.transform = CGAffineTransform(rotationAngle: 0)
     }
