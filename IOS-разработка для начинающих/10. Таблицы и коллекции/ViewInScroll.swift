@@ -1,6 +1,3 @@
 import UIKit
 
-class ViewInScroll: UIView {
-
-
-}
+class ViewInScroll: UIView {}
