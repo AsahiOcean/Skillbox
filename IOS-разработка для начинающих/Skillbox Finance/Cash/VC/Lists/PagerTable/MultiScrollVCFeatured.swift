@@ -31,13 +31,13 @@ public class MultiScrollVCFeatured: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.contentView.addSubview(self.container)
         self.container.addSubview(self.titleLabel)
         self.container.addSubview(self.subtitleLabel)
-
+        
         NSLayoutConstraint.activate([
             self.container.topAnchor.constraint(equalTo: self.contentView.topAnchor),
             self.container.leftAnchor.constraint(equalTo: self.contentView.leftAnchor),
@@ -57,7 +57,7 @@ public class MultiScrollVCFeatured: UICollectionViewCell {
             self.subtitleLabel.rightAnchor.constraint(equalTo: self.container.rightAnchor, constant: -20)
         ])
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init?(coder:) не реализован")
     }
