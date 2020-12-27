@@ -8,13 +8,13 @@ class DeletePopoverVC: UIViewController {
     @IBAction func TouchYes(_ sender: Any) {
         if let delegate = delegate, let indexPath = indexPath {
             delegate.deleteItem(indexPath: indexPath)
-    }}
+        }}
     @IBAction func TouchNo(_ sender: Any) {
         self.view.removeFromSuperview()
     }
     var indexPath: IndexPath?
     var delegate: DeletePopoverVCDelegate?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         popoverView.layer.cornerRadius = 20
@@ -31,6 +31,6 @@ class DeletePopoverVC: UIViewController {
 }
 extension DeletePopoverVC: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-    return (touch.view === self.view)
-  }
+        return (touch.view === self.view)
+    }
 }
