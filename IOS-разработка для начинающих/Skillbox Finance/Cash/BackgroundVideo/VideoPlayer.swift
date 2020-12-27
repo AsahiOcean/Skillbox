@@ -1,8 +1,5 @@
-import Foundation
 import UIKit
 import AVKit
-// Skillbox
-// Скиллбокс
 
 func BackgroundVideo() -> UIView {
     let background = UIView()
