@@ -11,14 +11,14 @@ class ProfileSettings: UIViewController {
         sender.isSelected = !sender.isSelected
     }
     @IBAction func Lang(_ sender: Any) {
-    LangLabel.text = ["Русский", "English"].randomElement()
+        LangLabel.text = ["Русский", "English"].randomElement()
     }
     @IBAction func Metrics(_ sender: Any) {
-    MetricsLabel.text = ["USD", "EUR", "RUR"].randomElement()
+        MetricsLabel.text = ["USD", "EUR", "RUR"].randomElement()
     }
     
     @IBAction func Noti(_ sender: Any) {
-    NotiLabel.text = ["Часто", "Редко", "Никогда"].randomElement()
+        NotiLabel.text = ["Часто", "Редко", "Никогда"].randomElement()
     }
     
     override func viewDidLoad() {
