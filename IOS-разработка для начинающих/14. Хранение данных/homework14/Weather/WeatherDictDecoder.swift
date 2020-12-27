@@ -1,6 +1,4 @@
-import UIKit
-// Skillbox
-// Скиллбокс
+import Foundation
 
 class WeatherDictDecoder {
     let main: NSDictionary
