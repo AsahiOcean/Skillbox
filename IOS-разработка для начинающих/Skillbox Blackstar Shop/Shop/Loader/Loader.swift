@@ -3,7 +3,7 @@ import Alamofire
 import UIKit
 
 class Loader {
-
+    
     func loadCategories(completition: @escaping ([Category]) -> Void){
         AF.request("https://blackstarshop.ru/index.php?route=api/v1/categories").responseJSON{
             response in
@@ -59,12 +59,12 @@ class Loader {
             
             if let objects = response.value, let jsonDict = objects as? [String : Any] {
                 var tempProducts: [Product] = []
-                    
+                
                 for (i, value) in jsonDict {
                     let id = i
-                        
+                    
                     guard let productJson = value as? [String : Any] else { return }
-                        
+                    
                     let name = productJson["name"] as! String
                     let sortOrder = productJson["sortOrder"] as! String
                     let article = productJson["article"] as! String
@@ -79,7 +79,7 @@ class Loader {
                     let offers = productJson["offers"] as! [[String : String]]
                     
                     let jsonImagesLinks = productJson["productImages"] as! [[String : String]]
-                        
+                    
                     for dict in jsonImagesLinks {
                         let url = dict["imageURL"]!
                         let sortOrderImage = dict["sortOrder"]!
@@ -96,7 +96,7 @@ class Loader {
                     
                     tempProducts.append(product)
                 }
-                    
+                
                 let products = tempProducts.sorted{
                     item1, item2 in
                     Int(item1.sortOrder)! > Int(item2.sortOrder)!
@@ -108,13 +108,13 @@ class Loader {
             }
         }
     }
-
+    
     func loadImage(link: String, completition: @escaping (UIImage?) -> Void) {
-//        var image: UIImage?
+        //        var image: UIImage?
         AF.request("https://blackstarshop.ru/" + link).response{
             response in
             guard let data = response.data, let gotImage = UIImage(data: data) else { return }
-//            image = gotImage
+            //            image = gotImage
             DispatchQueue.main.async {
                 completition(gotImage)
             }

@@ -1,9 +1,7 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 class SubcategoriesViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var subcategories: [Category] = []
@@ -29,13 +27,13 @@ class SubcategoriesViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CatalogSegueFromSubcategories",
-            let destination = segue.destination as? CatalogCollectionViewController,
-            let cell = sender as? UITableViewCell,
-            let i = tableView.indexPath(for: cell)
-            {
-                destination.categoryId = subcategories[i.row].id
-                destination.screenName = subcategories[i.row].name
-            }
+           let destination = segue.destination as? CatalogCollectionViewController,
+           let cell = sender as? UITableViewCell,
+           let i = tableView.indexPath(for: cell)
+        {
+            destination.categoryId = subcategories[i.row].id
+            destination.screenName = subcategories[i.row].name
+        }
     }
 }
 
