@@ -242,8 +242,8 @@
 		FA83CAA02461F8FD0098FB12 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				FAC50057245FF9870057C306 /* ProfileHistoryVC.swift */,
 				FA83CAA12461F9330098FB12 /* HistoryTableViewCell.swift */,
+				FAC50057245FF9870057C306 /* ProfileHistoryVC.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
