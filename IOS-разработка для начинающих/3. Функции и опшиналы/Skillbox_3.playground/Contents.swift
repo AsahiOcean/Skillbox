@@ -1,6 +1,4 @@
-import UIKit
-// Skillbox
-// Скиллбокс
+import Foundation
 
 // MARK: -- Необходимо выполнить несколько заданий с кодом.
 
