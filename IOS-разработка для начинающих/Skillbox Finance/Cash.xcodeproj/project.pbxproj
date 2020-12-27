@@ -344,8 +344,8 @@
 		FA972F992461127E0076C2F7 /* Basket */ = {
 			isa = PBXGroup;
 			children = (
-				FA7CEF052461CDAD002F7AB2 /* BasketVC.swift */,
 				FA7CEF072461CE9D002F7AB2 /* BasketTableViewCell.swift */,
+				FA7CEF052461CDAD002F7AB2 /* BasketVC.swift */,
 				FA7CEF092461D1CE002F7AB2 /* DeletePopoverViewController.swift */,
 				FA6731502463AB8C006CA010 /* MoneyNotif.swift */,
 			);
