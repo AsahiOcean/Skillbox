@@ -31,7 +31,7 @@ class ColorViewController: UIViewController {
         delegate?.setColor(ColorTextField.text!, colorUI: .red)
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ColorTextField.text = ColorOutput
@@ -43,5 +43,3 @@ class ColorViewController: UIViewController {
         }
     }
 }
-// Skillbox
-// Скиллбокс
