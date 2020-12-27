@@ -1,9 +1,7 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 class PopoverSizeViewController: UIViewController {
-
+    
     @IBOutlet weak var sizeView: UIView!
     
     var product: Product? = nil
