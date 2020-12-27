@@ -37,7 +37,7 @@ class ItemsViewController: UICollectionViewController {
         self.view.backgroundColor = .red
         
         self.collectionView.register(ItemCollectionViewCell.nib,
-            forCellWithReuseIdentifier: ItemCollectionViewCell.reuseID)
+                                     forCellWithReuseIdentifier: ItemCollectionViewCell.reuseID)
         collectionView.contentInset = .zero
         updatePresentationStyle()
         
@@ -49,7 +49,7 @@ class ItemsViewController: UICollectionViewController {
         collectionView.performBatchUpdates({
             collectionView.reloadData()
         }, completion: nil)
-
+        
         navigationItem.rightBarButtonItem?.image = selectedStyle.buttonImage
     }
     
@@ -68,13 +68,13 @@ extension ItemsViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemCollectionViewCell.reuseID,
-    for: indexPath) as? ItemCollectionViewCell else {
-        fatalError("Нет ячейки")
-    }
-    let cellitem = ItemsCell[indexPath.item]
-    
-    cell.update(title: cellitem.name, image: cellitem.img)
-    return cell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemCollectionViewCell.reuseID,
+                                                            for: indexPath) as? ItemCollectionViewCell else {
+            fatalError("Нет ячейки")
+        }
+        let cellitem = ItemsCell[indexPath.item]
+        
+        cell.update(title: cellitem.name, image: cellitem.img)
+        return cell
     }
 }
