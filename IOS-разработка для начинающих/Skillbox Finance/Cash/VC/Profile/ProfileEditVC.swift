@@ -21,12 +21,12 @@ class ProfileEditVC: UIViewController {
     
     @IBAction func Save(_ sender: Any) {
         if self.Name.text!.count > 0 && self.Surname.text!.count > 0 && self.About.text!.count > 0 {
-        let userinfo = self.realm.objects(UserInfo.self)
-        if let userinfo = userinfo.first {
-        try! self.realm.write {
-        userinfo.name = "\(self.Name.text!)"
-        userinfo.surname = "\(self.Surname.text!)"
-        userinfo.aboutme = "\(self.About.text!)"
+            let userinfo = self.realm.objects(UserInfo.self)
+            if let userinfo = userinfo.first {
+                try! self.realm.write {
+                    userinfo.name = "\(self.Name.text!)"
+                    userinfo.surname = "\(self.Surname.text!)"
+                    userinfo.aboutme = "\(self.About.text!)"
                 }
             }
         } else {
