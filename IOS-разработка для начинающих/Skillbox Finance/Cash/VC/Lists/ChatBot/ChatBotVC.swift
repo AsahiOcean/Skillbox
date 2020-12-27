@@ -2,7 +2,7 @@ import UIKit
 import RealmSwift
 
 class ChatBotVC: UIViewController {
-
+    
     @IBOutlet weak var NavigationBarTitle: UINavigationBar!
     
     override func viewDidLoad() {
