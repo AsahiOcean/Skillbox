@@ -289,9 +289,9 @@
 			isa = PBXGroup;
 			children = (
 				FA83CAB624624A050098FB12 /* DefaultCollectionViewDelegate.swift */,
-				FA83CAB824624A200098FB12 /* TableViewDelegate.swift */,
 				FA83CABA24624A370098FB12 /* DefaultGridDelegate.swift */,
 				FA83CABC24624A4E0098FB12 /* GridDelegate.swift */,
+				FA83CAB824624A200098FB12 /* TableViewDelegate.swift */,
 			);
 			path = "Collection FlowLayouts";
 			sourceTree = "<group>";
