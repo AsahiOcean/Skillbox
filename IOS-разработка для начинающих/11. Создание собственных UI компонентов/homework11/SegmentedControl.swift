@@ -11,7 +11,7 @@ protocol Delegate {
 }
 
 @IBDesignable class SegmentedControl: UIView {
-
+    
     var isSetuped = false
     
     let First = UIView()
@@ -22,8 +22,8 @@ protocol Delegate {
     var SecondLabel = UILabel()
     
     var delegate: Delegate?
-
-// MARK: -  Названия сегментов
+    
+    // MARK: -  Названия сегментов
     @IBInspectable var FirstName: String = "First" {
         didSet { FirstLabel.text = FirstName }
     }
@@ -31,13 +31,13 @@ protocol Delegate {
         didSet { SecondLabel.text = SecondName }
     }
     
-// MARK: - Подложка
+    // MARK: - Подложка
     @IBInspectable var FirstColor: UIColor = UIColor.clear {
-            didSet { First.backgroundColor = FirstColor
+        didSet { First.backgroundColor = FirstColor
         }
     }
     @IBInspectable var SecondColor: UIColor = UIColor.clear {
-            didSet { Second.backgroundColor = SecondColor
+        didSet { Second.backgroundColor = SecondColor
         }
     }
     @IBInspectable var PodlozhkaColor: UIColor = UIColor.systemGreen {
@@ -45,7 +45,7 @@ protocol Delegate {
         }
     }
     
-// MARK: - Обводка
+    // MARK: - Обводка
     @IBInspectable var CornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = CornerRadius
@@ -63,50 +63,50 @@ protocol Delegate {
         }
     }
     
-// MARK: - layoutSubviews
+    // MARK: - layoutSubviews
     override func layoutSubviews() {
         super.layoutSubviews()
         let H = frame.size.height
         let W = frame.size.width
-
-// MARK: - First
+        
+        // MARK: - First
         First.layer.frame = CGRect(x: 0, y: 0, width: W / 2, height: H)
         First.backgroundColor = FirstColor
-// Label
+        // Label
         FirstLabel.layer.frame = CGRect(x: 0, y: 0, width: W / 2, height: H)
         FirstLabel.text = FirstName
         FirstLabel.textAlignment = .center
         FirstLabel.textColor = .black
         First.addSubview(FirstLabel)
-
-// MARK: - Second
+        
+        // MARK: - Second
         Second.layer.frame = CGRect(x: W / 2, y: 0, width: W / 2, height: H)
         Second.backgroundColor = SecondColor
-// Label
+        // Label
         SecondLabel.layer.frame = CGRect(x: 0, y: 0, width: W / 2, height: H)
         SecondLabel.text = SecondName
         SecondLabel.textAlignment = .center
         SecondLabel.textColor = .black
         Second.addSubview(SecondLabel)
-
-// MARK: - Podlozhka
+        
+        // MARK: - Podlozhka
         
         Podlozhka.layer.frame = CGRect(x: 0, y: 0, width: W/2, height: H)
         Podlozhka.backgroundColor = PodlozhkaColor
-
+        
         super.addSubview(Podlozhka)
         super.addSubview(First)
         super.addSubview(Second)
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-         if let touch = touches.first {
+        if let touch = touches.first {
             // если нажат вью First
             if touch.view == self.First {
                 UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
                     // центр подложки едет к центру First
                     self.Podlozhka.center = self.First.center
                 }, completion: nil)
-//                print("\(FirstLabel.text!)")
+                //                print("\(FirstLabel.text!)")
                 delegate?.setSegment(FirstLabel.text!)
             }
             // если нажат вью Second
@@ -115,7 +115,7 @@ protocol Delegate {
                     // центр подложки едет к центру Second
                     self.Podlozhka.center = self.Second.center
                 }, completion: nil)
-//                print("\(SecondLabel.text!)")
+                //                print("\(SecondLabel.text!)")
                 delegate?.setSegment(SecondLabel.text!)
             } else {
                 return
