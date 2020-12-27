@@ -1,26 +1,24 @@
 /*
-  кнопка, у которой можно изменять ширину и цвет обводки, размер закругления
+ кнопка, у которой можно изменять ширину и цвет обводки, размер закругления
  */
-// Skillbox
-// Скиллбокс
 
 import UIKit
 
 class Button: UIButton { }
 
 @IBDesignable extension Button {
-
+    
     @IBInspectable var BorderWidth: CGFloat {
-// получает значение
+        // получает значение
         get {
             layer.borderWidth
         }
-// устанавливаем новое значение
+        // устанавливаем новое значение
         set {
             layer.borderWidth = newValue
         }
     }
-
+    
     @IBInspectable var CornerRadius: CGFloat {
         get {
             layer.cornerRadius
@@ -29,10 +27,10 @@ class Button: UIButton { }
             layer.cornerRadius = newValue
         }
     }
-
+    
     @IBInspectable var BorderColor: UIColor? {
         get {
-// действительно ли cgColor = layer.borderColor
+            // действительно ли cgColor = layer.borderColor
             guard let cgColor = layer.borderColor else { return nil }
             return UIColor(cgColor: cgColor)
         }
