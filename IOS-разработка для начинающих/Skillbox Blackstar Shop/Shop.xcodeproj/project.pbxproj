@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -145,11 +145,11 @@
 		FAC7E035245C75840077EA77 /* product */ = {
 			isa = PBXGroup;
 			children = (
-				FAC7E036245C75D10077EA77 /* SingleProductViewController.swift */,
-				FAC7E038245C75F00077EA77 /* Product.swift */,
-				FAC7E03A245C76160077EA77 /* SliderCollectionViewCell.swift */,
-				FAC7E03C245C763F0077EA77 /* SizeCellTableViewCell.swift */,
 				FAC7E03E245C767B0077EA77 /* PopoverSizeViewController.swift */,
+				FAC7E038245C75F00077EA77 /* Product.swift */,
+				FAC7E036245C75D10077EA77 /* SingleProductViewController.swift */,
+				FAC7E03C245C763F0077EA77 /* SizeCellTableViewCell.swift */,
+				FAC7E03A245C76160077EA77 /* SliderCollectionViewCell.swift */,
 			);
 			path = product;
 			sourceTree = "<group>";
