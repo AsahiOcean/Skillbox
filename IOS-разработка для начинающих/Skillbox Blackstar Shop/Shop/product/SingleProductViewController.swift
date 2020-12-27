@@ -1,9 +1,7 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 class SingleProductViewController: UIViewController {
-
+    
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var UIViewScroll: UIView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -51,8 +49,8 @@ class SingleProductViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews(){
-    super.viewWillLayoutSubviews()
-    scroll.contentSize = CGSize(width: 375, height: 1000)
+        super.viewWillLayoutSubviews()
+        scroll.contentSize = CGSize(width: 375, height: 1000)
     }
     
     private func addImage(){
@@ -72,7 +70,7 @@ class SingleProductViewController: UIViewController {
     
     private func addAttributes(product: Product) {
         var attributes = product.productAttributes
-            
+        
         guard attributes.count != 0 else {
             (attributeName.text,attributeData.text) = ("","")
             return
@@ -81,29 +79,29 @@ class SingleProductViewController: UIViewController {
         let firstData = attributes.removeFirst()
         attributeName.text = firstData.first!.key + ":"
         attributeData.text = firstData.first?.value
-       
+        
         for dictinory in attributes {
             for (key, value) in dictinory {
                 let newStack = UIStackView()
                 newStack.frame = attributesStackViewLine.frame
-
+                
                 let newAttributeName = UILabel()
                 newAttributeName.frame = attributeName.frame
                 newAttributeName.font = attributeName.font
                 newAttributeName.text = key + ":"
-
+                
                 let newAttributeData = UILabel()
                 newAttributeData.frame = attributeData.frame
                 newAttributeData.font = attributeData.font
                 newAttributeData.textColor = UIColor.lightGray
                 newAttributeData.text = value
-               
+                
                 newStack.addArrangedSubview(newAttributeName)
                 newStack.addArrangedSubview(newAttributeData)
                 newStack.distribution = .equalSpacing
                 attributesStackView.addArrangedSubview(newStack)
-           }
-       }
+            }
+        }
     }
 }
 
@@ -117,7 +115,7 @@ extension SingleProductViewController: UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCell", for: indexPath) as! SliderCollectionViewCell
         guard let product = self.product else { return cell }
-
+        
         if indexPath.row == 0 {
             cell.sliderImage.image = product.mainImage
         } else {
