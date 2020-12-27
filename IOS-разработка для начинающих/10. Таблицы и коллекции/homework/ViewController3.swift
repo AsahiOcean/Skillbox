@@ -1,15 +1,13 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 class ViewController3: UIViewController {
     
-// MARK: - IBOutlet
+    // MARK: - IBOutlet
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var ViewInScroll: UIView!
     @IBOutlet weak var ImageFoodScroll: UIScrollView!
-
-// Видимый UIView
+    
+    // Видимый UIView
     @IBOutlet weak var ViewUp: UIView!
     @IBOutlet weak var Label: UILabel!
     @IBOutlet weak var KitchenType: UILabel!
@@ -24,19 +22,19 @@ class ViewController3: UIViewController {
     @IBOutlet weak var Button1: UIButton!
     @IBOutlet weak var Button2: UIButton!
     
-// MARK: - Screen & Frames
-
+    // MARK: - Screen & Frames
+    
     let ScreenHeight = CGFloat(UIScreen.main.bounds.height)
     let ScreenWidth = CGFloat(UIScreen.main.bounds.width)
-
+    
     lazy var Height = ScreenHeight * 1.75
     lazy var Width = ScreenWidth
     
     lazy var ScrollFoodsHeight = ScreenHeight / 3
     lazy var ScrollFoodsWidth = ScreenWidth
-
-// MARK: - Images Food
-
+    
+    // MARK: - Images Food
+    
     var ImagesFoodArray = ["food1", "food2", "food3", "food4", "food5"]
     var Index = 0
     
@@ -45,33 +43,33 @@ class ViewController3: UIViewController {
     
     lazy var X = CGFloat(0)
     lazy var Y = CGFloat(0)
-
-// Вытаскивает "картинку" из массива и выдает UIImageView с ней
+    
+    // Вытаскивает "картинку" из массива и выдает UIImageView с ней
     func FoodDemonstration () -> UIImageView {
-            Index += 1
-            let ImageFood = UIImageView()
-            ImageFood.frame = CGRect(x: X, y: Y, width: ImageViewWidth * 2, height: ImageViewHeight)
+        Index += 1
+        let ImageFood = UIImageView()
+        ImageFood.frame = CGRect(x: X, y: Y, width: ImageViewWidth * 2, height: ImageViewHeight)
         if (UIScreen.main.bounds.height / UIScreen.main.bounds.width) > 1.5 {
             ImageFood.contentMode = .scaleToFill
         } else {
             ImageFood.contentMode = .scaleAspectFill
         }
-            ImageFood.image = UIImage.init(named: ImagesFoodArray[Index % ImagesFoodArray.count])
-            X += ScreenWidth
-            return ImageFood
-        }
-
-// MARK: - viewDidLoad
+        ImageFood.image = UIImage.init(named: ImagesFoodArray[Index % ImagesFoodArray.count])
+        X += ScreenWidth
+        return ImageFood
+    }
+    
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print("Высота экрана: \(ScreenHeight)")
-//        print("Ширина экрана: \(ScreenWidth)")
+        //        print("Высота экрана: \(ScreenHeight)")
+        //        print("Ширина экрана: \(ScreenWidth)")
         ViewUp.layer.zPosition = 1
-// Перелистывание картинок в шапке
+        // Перелистывание картинок в шапке
         ImageFoodScroll.isPagingEnabled = true
-}
+    }
     
-// MARK: - viewDidLayoutSubviews
+    // MARK: - viewDidLayoutSubviews
     override func viewDidLayoutSubviews() {
         Label.text = "Ресторан 5 звезд Мишлен"
         KitchenType.text = "Универсальная кухня"
@@ -81,10 +79,10 @@ class ViewController3: UIViewController {
         CentalTextLabel2.text = "Вроде это барахло неплохо работает \n проверял на 6s, 8+, 11 max и ipad 12.9"
         Star.layer.frame.size = CGSize(width: 42, height: 42)
         
-// Всякие закругления
+        // Всякие закругления
         ViewUp.layer.cornerRadius = 30
-
-// MARK: - Размер шрифтов
+        
+        // MARK: - Размер шрифтов
         
         if (UIScreen.main.bounds.height / UIScreen.main.bounds.width) > 1.5 {
             Label.font = UIFont.systemFont(ofSize: 30)
@@ -101,15 +99,15 @@ class ViewController3: UIViewController {
             RatingNumberLabel.font = UIFont.systemFont(ofSize: 40)
             CentralTextLabel.font = UIFont.systemFont(ofSize: 40)
         }
-
-// Переопределяем размеры
+        
+        // Переопределяем размеры
         ViewInScroll.translatesAutoresizingMaskIntoConstraints = true
         ViewInScroll.layer.frame = CGRect(x: 0, y: 0, width: Width, height: Height)
         ImageFoodScroll.translatesAutoresizingMaskIntoConstraints = true
         ImageFoodScroll.layer.frame = CGRect(x: 0, y: 0, width: ScrollFoodsWidth, height: ScrollFoodsHeight)
         ImageFoodScroll.contentSize = CGSize(width: ScrollFoodsWidth * CGFloat(ImagesFoodArray.count), height: ScrollFoodsHeight)
-
-// Добавляем картинки в скролл в шапке
+        
+        // Добавляем картинки в скролл в шапке
         for _ in 0...ImagesFoodArray.count - 1 {
             if ScrollFoodsWidth * CGFloat(ImagesFoodArray.count) < X {
                 break
