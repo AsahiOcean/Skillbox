@@ -355,19 +355,19 @@
 		FAC50039245F0EE90057C306 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				FA83CAA42462019C0098FB12 /* Map */,
-				FA83CAA02461F8FD0098FB12 /* History */,
+				FAC50050245FCB2C0057C306 /* BookmarksVC.swift */,
+				FAC50059245FFBF20057C306 /* ProfileBonusesVC.swift */,
+				FAC50052245FCF8B0057C306 /* ProfileEditVC.swift */,
+				FAC5004C245F96160057C306 /* ProfileSettings.swift */,
+				FAC50048245F80C20057C306 /* ProfileStatVC.swift */,
 				FAC5003A245F0EFF0057C306 /* ProfileVC.swift */,
 				FAC5003C245F30850057C306 /* ProfileVC2.swift */,
 				FAC5003E245F47810057C306 /* ProfileVC3.swift */,
-				FAC50048245F80C20057C306 /* ProfileStatVC.swift */,
 				FAC5004A245F92BD0057C306 /* ProfileVC4.swift */,
-				FAC5004C245F96160057C306 /* ProfileSettings.swift */,
 				FAC5004E245FA2760057C306 /* ProfileWalletsVC.swift */,
-				FAC50050245FCB2C0057C306 /* BookmarksVC.swift */,
-				FAC50052245FCF8B0057C306 /* ProfileEditVC.swift */,
-				FAC50059245FFBF20057C306 /* ProfileBonusesVC.swift */,
 				FA6731522463BDA7006CA010 /* refillViewController.swift */,
+				FA83CAA02461F8FD0098FB12 /* History */,
+				FA83CAA42462019C0098FB12 /* Map */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
