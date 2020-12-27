@@ -9,17 +9,16 @@
  
  Выбранный элемент (по умолчанию первый) должен иметь цветную подложку, при нажатии на второй сегмент – эта подложка должна анимированно перемещаться под него и наоборот. В интерфейсе можно задать названия сегментов, цвет обводки и цвет подложки. Также он должен иметь делегат, через который будет сообщать о выбранном сегменте.
  */
-// Skillbox
-// Скиллбокс
+
 import UIKit
 
 class ViewController: UIViewController, Delegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    func setSegment(_ SegmentLabel: String) {
-        print("\(SegmentLabel)")
+    func setSegment(_ label: String) {
+        print("\(label)")
     }
 }
