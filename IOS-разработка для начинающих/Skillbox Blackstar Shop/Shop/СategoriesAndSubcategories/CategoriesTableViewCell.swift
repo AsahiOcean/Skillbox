@@ -1,9 +1,7 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 class CategoriesTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryName: UILabel!
     
