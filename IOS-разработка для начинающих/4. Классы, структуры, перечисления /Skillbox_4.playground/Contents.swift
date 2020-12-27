@@ -1,6 +1,4 @@
-import UIKit
-// Skillbox
-// Скиллбокс
+import Foundation
 
 // MARK: -- 1. Прочитайте главы Enumerations и Classes and Structures в книге «The Swift Programming Language».
 // MARK: -- 2. Если бы в вашей программе была работа с игральными картами, как бы вы организовали их хранение? Приведите пример.
@@ -137,36 +135,36 @@ struct StructUser2{
 }
 /*
 // MARK: 1. name в class ClassUser1 является константой, ее нельзя изменить
-let user1 = ClassUser1(name: "Nikita")
-user1.name = "Anton"
+let user1 = ClassUser1(name: "Username_1")
+user1.name = "Username_2"
 
 //2.
-let user2 = ClassUser2(name: "Nikita")
-user2.name = "Anton"
+let user2 = ClassUser2(name: "Username_2")
+user2.name = "Username_3"
 
 // MARK: 3. name в struct StructUser1 является константой, ее нельзя изменить
-let user3 = StructUser1(name: "Nikita")
-user3.name = "Anton"
+let user3 = StructUser1(name: "Username_3")
+user3.name = "Username_4"
 
 // MARK: 4. name в struct StructUser2 является константой, ее нельзя изменить
-let user4 = StructUser2(name: "Nikita")
-user4.name = "Anton"
+let user4 = StructUser2(name: "Username_4")
+user4.name = "Username_5"
 
 // MARK: 5. name в class ClassUser1 является константой, ее нельзя изменить
-var user5 = ClassUser1(name: "Nikita")
-user5.name = "Anton"
+var user5 = ClassUser1(name: "Username_5")
+user5.name = "Username_6"
 
 //6.
-var user6 = ClassUser2(name: "Nikita")
-user6.name = "Anton"
+var user6 = ClassUser2(name: "Username_6")
+user6.name = "Username_7"
 
 // MARK: 7. name в struct StructUser1 является константой, ее нельзя изменить
-var user7 = StructUser1(name: "Nikita")
-user7.name = "Anton"
+var user7 = StructUser1(name: "Username_7")
+user7.name = "Username_8"
 
 //8.
-var user8 = StructUser2(name: "Nikita")
-user8.name = "Anton"
+var user8 = StructUser2(name: "Username_8")
+user8.name = "Username_9"
 */
 
 // MARK: -- 6. Напишите пример класса автомобиля (какие поля ему нужны – на ваше усмотрение) с конструктором, в котором часть полей будет иметь значение по умолчанию.
@@ -186,7 +184,7 @@ class SaleNewCar {
         }
 }
 
-var Car1 = SaleNewCar(Mark: "BMW", Model: "I8", Color: "White", Price: 12345678)
+var Car1 = SaleNewCar(Mark: "Mark", Model: "Model", Color: "Color", Price: 12345678)
 
 // MARK: -- 7. Напишите класс для калькулятора с функциями для сложения, вычитания, умножения и деления цифр, которые в нем хранятся как свойства.
 
