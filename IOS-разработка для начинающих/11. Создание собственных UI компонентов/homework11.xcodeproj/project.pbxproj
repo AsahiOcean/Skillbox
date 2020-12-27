@@ -63,15 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				FA49F391242B7AC9007C2C9D /* AppDelegate.swift */,
-				FA49F393242B7AC9007C2C9D /* SceneDelegate.swift */,
-				FA49F395242B7AC9007C2C9D /* ViewController.swift */,
-				FAD0373B242BBB8500A9F219 /* Clock.swift */,
-				FA49F397242B7AC9007C2C9D /* Main.storyboard */,
-				FA2D0A0F242CC3F2002E47A1 /* SegmentedControl.swift */,
-				FA49F3A5242B86F6007C2C9D /* Button.swift */,
 				FA49F39A242B7ACB007C2C9D /* Assets.xcassets */,
-				FA49F39C242B7ACB007C2C9D /* LaunchScreen.storyboard */,
+				FA49F3A5242B86F6007C2C9D /* Button.swift */,
+				FAD0373B242BBB8500A9F219 /* Clock.swift */,
 				FA49F39F242B7ACB007C2C9D /* Info.plist */,
+				FA49F39C242B7ACB007C2C9D /* LaunchScreen.storyboard */,
+				FA49F397242B7AC9007C2C9D /* Main.storyboard */,
+				FA49F393242B7AC9007C2C9D /* SceneDelegate.swift */,
+				FA2D0A0F242CC3F2002E47A1 /* SegmentedControl.swift */,
+				FA49F395242B7AC9007C2C9D /* ViewController.swift */,
 			);
 			path = homework11;
 			sourceTree = "<group>";
