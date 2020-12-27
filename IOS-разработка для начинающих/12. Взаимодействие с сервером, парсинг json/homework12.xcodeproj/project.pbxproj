@@ -114,10 +114,10 @@
 		FA354083242E742000EB0682 /* SecondViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FA99C94224306D0200F9AC41 /* SecondViewController.swift */,
 				FAEB727324311AD6005A9B07 /* AFRequest.swift */,
 				FA1FEF80243402AF00AAFDD9 /* Cell.swift */,
 				FA44BDB62434C0A8003A1283 /* Class.swift */,
+				FA99C94224306D0200F9AC41 /* SecondViewController.swift */,
 			);
 			path = SecondViewController;
 			sourceTree = "<group>";
