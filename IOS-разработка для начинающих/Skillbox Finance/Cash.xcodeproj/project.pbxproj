@@ -403,16 +403,16 @@
 		FAE49184245D95F400C87A64 /* Cash */ = {
 			isa = PBXGroup;
 			children = (
-				FA38AAF72464ADB1006B2E4F /* BackgroundVideo */,
-				FAE491A8245DE1DB00C87A64 /* Persistance */,
-				FAE491A5245DBEF200C87A64 /* VC */,
 				FAE49185245D95F400C87A64 /* AppDelegate.swift */,
-				FAE49187245D95F400C87A64 /* SceneDelegate.swift */,
-				FAE4918B245D95F400C87A64 /* Main.storyboard */,
 				FAE4918E245D95F500C87A64 /* Assets.xcassets */,
-				FAE49190245D95F500C87A64 /* LaunchScreen.storyboard */,
-				FAE49193245D95F500C87A64 /* Info.plist */,
+				FA38AAF72464ADB1006B2E4F /* BackgroundVideo */,
 				FAE4919E245D99F300C87A64 /* Helpers */,
+				FAE49193245D95F500C87A64 /* Info.plist */,
+				FAE49190245D95F500C87A64 /* LaunchScreen.storyboard */,
+				FAE4918B245D95F400C87A64 /* Main.storyboard */,
+				FAE491A8245DE1DB00C87A64 /* Persistance */,
+				FAE49187245D95F400C87A64 /* SceneDelegate.swift */,
+				FAE491A5245DBEF200C87A64 /* VC */,
 			);
 			path = Cash;
 			sourceTree = "<group>";
