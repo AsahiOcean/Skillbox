@@ -1,6 +1,4 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 struct Category {
     var CategoryNames = ""
@@ -18,31 +16,31 @@ class SettingsTable {
 }
 
 class ViewController2: UIViewController {
-
+    
     var Cell = SettingsTable.Cell()
-
+    
     @IBOutlet weak var SettingsTableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
 extension ViewController2: UITableViewDataSource, UITableViewDelegate {
-// Количество секций
+    // Количество секций
     func numberOfSections(in tableView: UITableView) -> Int {
         return Cell.count
     }
-// Количетсво ячеек
+    // Количетсво ячеек
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Cell[section].CellsSettings.count
     }
-// Заголовок секции
+    // Заголовок секции
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return Cell[section].CategoryNames
     }
     
-// Как выглядит ячейка
+    // Как выглядит ячейка
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = SettingsTableView.dequeueReusableCell(withIdentifier: "Cell") as! TableViewCell
         let name = Cell[indexPath.section].CellsSettings[indexPath.row]
