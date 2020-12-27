@@ -39,7 +39,7 @@ class ProfileHistoryVC: UIViewController {
     
     private func addImage(){
         for index in self.historyItems.indices {
-    Loader().loadImage(link: self.historyItems[index].mainImageLink) {
+            Loader().loadImage(link: self.historyItems[index].mainImageLink) {
                 gotImage in
                 if let image = gotImage {
                     self.images.append(image)
@@ -50,22 +50,22 @@ class ProfileHistoryVC: UIViewController {
     }
 }
 extension ProfileHistoryVC: UITableViewDelegate, UITableViewDataSource {
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         historyItems.count
-}
-    
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell", for: indexPath) as! HistoryTableViewCell
-    cell.nameLabel.text = historyItems[indexPath.row].name
-    cell.sizeLabel.text = historyItems[indexPath.row].size
-    cell.colorLabel.text = historyItems[indexPath.row].colorName
-    cell.priceLabel.text = historyItems[indexPath.row].price + " ₽"
-    if indexPath.row < images.count {
-        cell.productImage.image = images[indexPath.row]
     }
-//    cell.indexPath = indexPath
-//    cell.delegate = self
-    return cell
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell", for: indexPath) as! HistoryTableViewCell
+        cell.nameLabel.text = historyItems[indexPath.row].name
+        cell.sizeLabel.text = historyItems[indexPath.row].size
+        cell.colorLabel.text = historyItems[indexPath.row].colorName
+        cell.priceLabel.text = historyItems[indexPath.row].price + " ₽"
+        if indexPath.row < images.count {
+            cell.productImage.image = images[indexPath.row]
+        }
+        //    cell.indexPath = indexPath
+        //    cell.delegate = self
+        return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
