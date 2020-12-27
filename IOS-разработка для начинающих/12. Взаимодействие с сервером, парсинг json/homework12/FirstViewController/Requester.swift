@@ -1,6 +1,4 @@
 import Foundation
-// Skillbox
-// Скиллбокс
 
 protocol WeathermanDelegate {
     func Output(WeatherJSON: NSDictionary)
