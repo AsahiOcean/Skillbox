@@ -3,10 +3,10 @@ import RealmSwift
 import UserNotifications
 
 class ProfileNotificationsVC: UIViewController {
-
+    
     @IBOutlet weak var Yes: UIButton!
     @IBOutlet weak var No: UIButton!
-        
+    
     private let realm = try! Realm()
     var info: Results<UserInfo>!
     
@@ -21,13 +21,13 @@ class ProfileNotificationsVC: UIViewController {
     }
     
     func registerForPushNotifications() {
-      UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
-        (granted, error) in
-        print("Уведомления разрешены?: \(granted) \n")
-        guard granted else { return }
-      }
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
+            print("Уведомления разрешены?: \(granted) \n")
+            guard granted else { return }
+        }
     }
-
+    
     
     @IBAction func NoTap(_ sender: Any) {
         let userinfo = self.realm.objects(UserInfo.self)
