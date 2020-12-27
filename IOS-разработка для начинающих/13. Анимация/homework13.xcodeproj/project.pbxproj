@@ -65,12 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				FAD2B66C24361EED00FD276B /* AppDelegate.swift */,
+				FAD2B67524361EEF00FD276B /* Assets.xcassets */,
+				FAD2B67A24361EEF00FD276B /* Info.plist */,
+				FAD2B67724361EEF00FD276B /* LaunchScreen.storyboard */,
+				FAD2B67224361EED00FD276B /* Main.storyboard */,
 				FAD2B66E24361EED00FD276B /* SceneDelegate.swift */,
 				FAD2B67024361EED00FD276B /* ViewController.swift */,
-				FAD2B67224361EED00FD276B /* Main.storyboard */,
-				FAD2B67524361EEF00FD276B /* Assets.xcassets */,
-				FAD2B67724361EEF00FD276B /* LaunchScreen.storyboard */,
-				FAD2B67A24361EEF00FD276B /* Info.plist */,
 			);
 			path = homework13;
 			sourceTree = "<group>";
