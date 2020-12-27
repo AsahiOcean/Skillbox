@@ -6,7 +6,7 @@
 import UIKit
 
 class ButtonViewController: UIViewController {
-
+    
     @IBOutlet weak var ConfigButton: UIButton!
     
     @IBOutlet weak var ColorLabel: UILabel!
@@ -22,7 +22,7 @@ class ButtonViewController: UIViewController {
         if let vc = segue.destination as? ColorViewController, segue.identifier == "Show" {
             vc.ColorOutput = ColorLabel.text!
             vc.delegate = self
-            }
+        }
     }
 }
 
@@ -34,5 +34,3 @@ extension ButtonViewController: Delegator {
         }
     }
 }
-// Skillbox
-// Скиллбокс
