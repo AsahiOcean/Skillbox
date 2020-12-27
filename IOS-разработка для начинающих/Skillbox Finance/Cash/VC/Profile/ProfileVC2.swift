@@ -16,7 +16,7 @@ class ProfileVC2: UIViewController {
     private let realm = try! Realm()
     var info: Results<UserInfo>!
     private var timer: Timer?
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let userinfo = self.realm.objects(UserInfo.self)
@@ -31,11 +31,11 @@ class ProfileVC2: UIViewController {
         fishtext(tf: self.Text1); fishtext(tf: self.Text2)
         
         Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { _ in
-        let followers = Int(self.Followers.text!)
-        self.Followers.text = String(followers! + Int.random(in: 1..<100))
-        if Int(self.Followers.text!)! > 99999 {
-            self.Followers.text = "99999"
-        }}
+            let followers = Int(self.Followers.text!)
+            self.Followers.text = String(followers! + Int.random(in: 1..<100))
+            if Int(self.Followers.text!)! > 99999 {
+                self.Followers.text = "99999"
+            }}
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -43,8 +43,8 @@ class ProfileVC2: UIViewController {
         timer?.invalidate()
         let userinfo = self.realm.objects(UserInfo.self)
         if let userinfo = userinfo.first {
-        try! self.realm.write {
-        userinfo.followers = Int(self.Followers.text!)!
-        }}; print(userinfo)
+            try! self.realm.write {
+                userinfo.followers = Int(self.Followers.text!)!
+            }}; print(userinfo)
     }
 }
