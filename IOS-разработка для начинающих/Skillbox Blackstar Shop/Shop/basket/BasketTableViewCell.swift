@@ -1,6 +1,4 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 class BasketTableViewCell: UITableViewCell {
     @IBOutlet weak var productImage: UIImageView!
@@ -19,7 +17,7 @@ class BasketTableViewCell: UITableViewCell {
     var indexPath : IndexPath?
     
     override func awakeFromNib() { super.awakeFromNib() }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
