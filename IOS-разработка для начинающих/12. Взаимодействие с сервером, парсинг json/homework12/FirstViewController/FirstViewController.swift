@@ -1,14 +1,12 @@
 /*
-1) Зарегистрируйтесь на https://openweathermap.org/api.
-2) Сделайте показ текущей погоды для Москвы
-*/
-// Skillbox
-// Скиллбокс
+ 1) Зарегистрируйтесь на https://openweathermap.org/api.
+ 2) Сделайте показ текущей погоды для Москвы
+ */
 
 import UIKit
 
 class FirstViewController: UIViewController, WeathermanDelegate {
-// MARK: - IBOutlet
+    // MARK: - IBOutlet
     @IBOutlet weak var TempButton: UIButton!
     @IBOutlet weak var CityButton: UIButton!
     @IBOutlet weak var Cloudiness: UILabel!
@@ -22,14 +20,14 @@ class FirstViewController: UIViewController, WeathermanDelegate {
     @IBOutlet weak var HumidityUnit: UILabel!
     @IBOutlet weak var CityTextField: UITextField!
     @IBOutlet weak var ChangeCityButton: UIButton!
-
-// MARK: - UIScreen
+    
+    // MARK: - UIScreen
     let H = UIScreen.main.bounds.height
     let W = UIScreen.main.bounds.width
     
-// MARK: - viewDidLoad
+    // MARK: - viewDidLoad
     var DefaultCity = "Moscow"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let Meteo = Weatherman()
@@ -45,7 +43,7 @@ class FirstViewController: UIViewController, WeathermanDelegate {
         ChangeCityButton.isHidden = false
         CityTextField.text = nil
     }
-
+    
     @IBAction func ChangeCityName(_ sender: Any) {
         let Meteo = Weatherman()
         Meteo.delegate = self
@@ -55,20 +53,20 @@ class FirstViewController: UIViewController, WeathermanDelegate {
         ChangeCityButton.isHidden = true
         CityTextField.text = nil
     }
-
+    
     func Output(WeatherJSON: NSDictionary) {
         DispatchQueue.main.async {
-// MARK: - Город
-// получаем город и выводим в название кнопки
+            // MARK: - Город
+            // получаем город и выводим в название кнопки
             self.CityButton.setTitle("\(WeatherJSON.value(forKey: "name") as? String ?? "Неверно указан город")", for: .normal)
-// MARK: - Температура
-// конвертируем температуру и выводим кнопку
+            // MARK: - Температура
+            // конвертируем температуру и выводим кнопку
             func CelsiusFunc() -> Double {
                 let Temp = (WeatherJSON.value(forKeyPath: "main.temp")) ?? 0.0
                 let result = (Temp as! Double) - Double(273.15)
                 return Double(Int(result))
             }
-// MARK: - Ветер
+            // MARK: - Ветер
             func WindSpeed() -> Double {
                 var WindSpeed = WeatherJSON.value(forKeyPath: "wind.speed") as? Double
                 if WindSpeed == nil {
@@ -104,15 +102,15 @@ class FirstViewController: UIViewController, WeathermanDelegate {
                 default : return "Неизвестно"
                 }
             }
-// MARK: - Облачность
+            // MARK: - Облачность
             func CloudFunc() -> String {
                 let string = "\(WeatherJSON.value(forKeyPath: "weather.description") ?? "Облачная аномалия")"
-            // облачность криво парсится, пришлось чистить
-            // удаляем символы и newline
+                // облачность криво парсится, пришлось чистить
+                // удаляем символы и newline
                 let result = string.components(separatedBy: ["(", ")", "\""]).joined().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
                 return result
             }
-// MARK: - Давление
+            // MARK: - Давление
             func PressureFunc() -> String {
                 let Hectopascal = "\(WeatherJSON.value(forKeyPath: "main.pressure") ?? 0.0)"
                 let mmHg = 0.7500637554192
@@ -120,13 +118,13 @@ class FirstViewController: UIViewController, WeathermanDelegate {
                 let result = (Int(converter))
                 return String(result)
             }
-// MARK: - Влажность
+            // MARK: - Влажность
             func HumidityFunc() -> String {
                 let result = "\(WeatherJSON.value(forKeyPath: "main.humidity") ?? "Полейте телефон")"
                 return result
             }
             
-// MARK: - Вывод
+            // MARK: - Вывод
             self.TempButton.setTitle("\(CelsiusFunc())ºC", for: .normal)
             self.WindDirection.text = "\(WindFunc())"
             self.WindSpeed.text = "\(WindSpeed()) м/с"
