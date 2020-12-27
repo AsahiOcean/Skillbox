@@ -1,6 +1,4 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 class RealmCell: UITableViewCell {
     
