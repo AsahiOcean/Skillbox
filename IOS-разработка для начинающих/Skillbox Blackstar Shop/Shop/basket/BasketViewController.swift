@@ -1,9 +1,7 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 class BasketViewController: UIViewController {
-
+    
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var orderButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -11,7 +9,7 @@ class BasketViewController: UIViewController {
     @IBAction func goNextScreen(_ sender: UIButton) {
         if toMain {
             let vc = storyboard!.instantiateViewController(identifier: "MainScreen"); show(vc, sender: nil)
-    }}
+        }}
     
     private var items = Persistance.shared.getItems()
     private var images: [UIImage] = []
@@ -22,7 +20,7 @@ class BasketViewController: UIViewController {
         orderButton.layer.cornerRadius = 10
         addImage(); sum()
     }
-        
+    
     private func sum(){
         var sum = 0
         for item in items {
@@ -76,7 +74,7 @@ extension BasketViewController: BasketTableViewCellDelegate {
         
         let popover = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DeletePopover") as! DeletePopoverViewController
         self.addChild(popover)
-
+        
         popover.view.frame = CGRect(x: .zero, y: .zero, width: self.view.frame.width, height: self.view.frame.height)
         
         popover.indexPath = indexPath

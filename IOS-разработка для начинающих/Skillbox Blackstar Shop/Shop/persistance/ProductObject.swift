@@ -1,7 +1,5 @@
 import Foundation
 import RealmSwift
-// Skillbox
-// Скиллбокс
 
 class ProductObject: Object{
     
