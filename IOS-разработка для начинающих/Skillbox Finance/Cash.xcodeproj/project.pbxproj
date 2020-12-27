@@ -420,16 +420,16 @@
 		FAE4919E245D99F300C87A64 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				FAE491A1245DA29100C87A64 /* MobileNumberGen.swift */,
-				FAE491A3245DB78300C87A64 /* RadioButton.swift */,
-				FAC5002E245E64BF0057C306 /* EmailGen.swift */,
-				FAC50030245E66AE0057C306 /* PassGen.swift */,
-				FA972F752460DE610076C2F7 /* asyncAfter.swift */,
-				FA38AAFA2464F620006B2E4F /* GenSmsCode.swift */,
-				FAFF97492462691400075097 /* fishtext.swift */,
-				FA38AB0224653DA2006B2E4F /* ManagerImages.swift */,
-				FA38AB042465481B006B2E4F /* ImageCompressor.swift */,
 				FA38AB0824655EB7006B2E4F /* AdsBanner.swift */,
+				FA972F752460DE610076C2F7 /* asyncAfter.swift */,
+				FAC5002E245E64BF0057C306 /* EmailGen.swift */,
+				FAFF97492462691400075097 /* fishtext.swift */,
+				FA38AAFA2464F620006B2E4F /* GenSmsCode.swift */,
+				FA38AB042465481B006B2E4F /* ImageCompressor.swift */,
+				FA38AB0224653DA2006B2E4F /* ManagerImages.swift */,
+				FAE491A1245DA29100C87A64 /* MobileNumberGen.swift */,
+				FAC50030245E66AE0057C306 /* PassGen.swift */,
+				FAE491A3245DB78300C87A64 /* RadioButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";

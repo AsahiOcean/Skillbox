@@ -17,23 +17,23 @@ func MobileNumberGenString() -> String {
     n11 = String(Int.random(in: 0..<9))
     return "+\(n1)(\(n2)\(n3)\(n4))\(n5)\(n6)\(n7)-\(n8)\(n9)-\(n10)\(n11)"
 }
- 
+
 func MobileNumberGen(TF: UITextField!) {
     asyncAfter(0.10) { TF.text?.append("+")
-    asyncAfter(0.10) { TF.text?.append("7")
-    asyncAfter(0.10) { TF.text?.append("(")
-    asyncAfter(0.10) { TF.text?.append("9")
-    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
-    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
-    asyncAfter(0.10) { TF.text?.append(")")
-    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
-    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
-    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
-    asyncAfter(0.10) { TF.text?.append("-")
-    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
-    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
-    asyncAfter(0.10) { TF.text?.append("-")
-    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
-    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
-    }}}}}}}}}}}}}}}}
+        asyncAfter(0.10) { TF.text?.append("7")
+            asyncAfter(0.10) { TF.text?.append("(")
+                asyncAfter(0.10) { TF.text?.append("9")
+                    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
+                        asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
+                            asyncAfter(0.10) { TF.text?.append(")")
+                                asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
+                                    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
+                                        asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
+                                            asyncAfter(0.10) { TF.text?.append("-")
+                                                asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
+                                                    asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
+                                                        asyncAfter(0.10) { TF.text?.append("-")
+                                                            asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
+                                                                asyncAfter(0.10) { TF.text?.append(String(Int.random(in: 0..<9)))
+                                                                }}}}}}}}}}}}}}}}
 }
