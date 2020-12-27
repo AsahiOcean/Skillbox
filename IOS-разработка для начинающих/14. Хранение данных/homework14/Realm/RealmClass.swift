@@ -1,7 +1,5 @@
 import Foundation
 import RealmSwift
-// Skillbox
-// Скиллбокс
 
 class RealmClass {
     
@@ -11,7 +9,7 @@ class RealmClass {
     func getTasks() -> Results<TodoObject> {
         return realm.objects(TodoObject.self) // возвращает все объекты
     }
-
+    
     func add(tasktext: String) {
         let item = TodoObject()
         try! realm.write {
@@ -27,8 +25,8 @@ class RealmClass {
             realm.delete(todo)
         }
     }
-
-// MARK: - Date to String
+    
+    // MARK: - Date to String
     func DateString() -> String {
         let (rawDate, dateFormatter) = (Date(), DateFormatter())
         dateFormatter.dateFormat = "dd.MM.YY HH:mm:ss"
