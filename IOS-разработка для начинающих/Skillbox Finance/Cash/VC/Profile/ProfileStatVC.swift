@@ -12,12 +12,12 @@ class ProfileStatVC: UIViewController {
     var info: Results<UserInfo>!
     var timer: Timer?
     var pourboire = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Followers.text = "0"
         Money.text = "0"
-
+        
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(timerFunc), userInfo: nil, repeats: true)
         let userinfo = self.realm.objects(UserInfo.self)
         Name.text = "\(userinfo.first!.name)"
