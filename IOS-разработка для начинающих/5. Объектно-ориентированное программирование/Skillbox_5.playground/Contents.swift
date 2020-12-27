@@ -1,6 +1,4 @@
-import UIKit
-// Skillbox
-// Скиллбокс
+import Foundation
 
 // MARK: -- 1. Прочитать статью про ООП.
 // https://www.raywenderlich.com/599-object-%20oriented-programming-in-swift
@@ -97,7 +95,7 @@ enum InteractiveObject: Created {
 
 enum FixedElements: Created {
     case Derevo, Stena
-
+    
     func create(on the: Map) -> String {
         return "Created \(self)"
     }
@@ -135,44 +133,44 @@ class MODELS_A {
     private var Color = ColorsModels.allCases.randomElement()!
     private var Engine: Float = 1.0
 }
-    extension MODELS_A: COMPLECTATION {
-        func NextGereration_A() {
-            ClassModel = "A"
-            Name += 100
-            Price = (Price + (Price/5))
-            Color = ColorsModels.allCases.randomElement()!
-            Engine += 0.25
-            print("Name: Model A\(Name)")
-            print("Price: \(Price) RUR")
-            print("Color: \(Color)")
-            print("Engine: \(Engine)L")
-            print("- - - - - - - - - - -")
-        }
-        func NextGereration_B() {
-            ClassModel = "B"
-            Name += 125
-            Price = (Price + (Price/2.5))
-            Color = ColorsModels.allCases.randomElement()!
-            Engine += 0.50
-            print("Name: Model B\(Name)")
-            print("Price: \(Price) RUR")
-            print("Color: \(Color)")
-            print("Engine: \(Engine)L")
-            print("- - - - - - - - - - -")
-        }
-        func NextGereration_C() {
-            ClassModel = "C"
-            Name += 150
-            Price = (Price + (Price/1.5))
-            Color = ColorsModels.allCases.randomElement()!
-            Engine += 1
-            print("Name: Model C\(Name)")
-            print("Price: \(Price) RUR")
-            print("Color: \(Color)")
-            print("Engine: \(Engine)L")
-            print("- - - - - - - - - - -")
-        }
+extension MODELS_A: COMPLECTATION {
+    func NextGereration_A() {
+        ClassModel = "A"
+        Name += 100
+        Price = (Price + (Price/5))
+        Color = ColorsModels.allCases.randomElement()!
+        Engine += 0.25
+        print("Name: Model A\(Name)")
+        print("Price: \(Price) RUR")
+        print("Color: \(Color)")
+        print("Engine: \(Engine)L")
+        print("- - - - - - - - - - -")
     }
+    func NextGereration_B() {
+        ClassModel = "B"
+        Name += 125
+        Price = (Price + (Price/2.5))
+        Color = ColorsModels.allCases.randomElement()!
+        Engine += 0.50
+        print("Name: Model B\(Name)")
+        print("Price: \(Price) RUR")
+        print("Color: \(Color)")
+        print("Engine: \(Engine)L")
+        print("- - - - - - - - - - -")
+    }
+    func NextGereration_C() {
+        ClassModel = "C"
+        Name += 150
+        Price = (Price + (Price/1.5))
+        Color = ColorsModels.allCases.randomElement()!
+        Engine += 1
+        print("Name: Model C\(Name)")
+        print("Price: \(Price) RUR")
+        print("Color: \(Color)")
+        print("Engine: \(Engine)L")
+        print("- - - - - - - - - - -")
+    }
+}
 
 let Model_A = MODELS_A()
 Model_A.NextGereration_A()
@@ -228,7 +226,7 @@ class C: A { // "class C" наследует "protocol A"
 class D: C, B { // "class D" наследует "class C" и "protocol B"
     func b() {
         print("B")
-}
+    }
     func d() {
         print("D")
     }
@@ -260,10 +258,10 @@ v4.a()
 class Person{
     var name: String
     var age: Int
-        init(name: String, age: Int){
-            self.name = name
-            self.age = age
-        }
+    init(name: String, age: Int){
+        self.name = name
+        self.age = age
+    }
     func display(){
         print("Имя: \(name)  Возраст: \(age)")
     }
@@ -271,10 +269,10 @@ class Person{
 
 class Employee : Person{
     var company: String
-        init(name: String, age: Int, company: String) {
-            self.company = company
-            super.init(name: name, age: age) // здесь "Employee" наследует от "Person" параметры "name" и "age"
-        }
+    init(name: String, age: Int, company: String) {
+        self.company = company
+        super.init(name: name, age: age) // здесь "Employee" наследует от "Person" параметры "name" и "age"
+    }
     override func display(){
         print("Имя: \(name)  Возраст: \(age)  Сотрудник компании: \(company)")
     }
