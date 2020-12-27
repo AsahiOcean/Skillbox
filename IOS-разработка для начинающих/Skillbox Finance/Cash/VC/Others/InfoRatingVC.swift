@@ -11,7 +11,7 @@ class InfoRatingVC: UIViewController {
     
     @IBOutlet weak var Image3: UIImageView!
     @IBOutlet weak var Text3: UITextView!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fishtext(tf: self.Text1)
