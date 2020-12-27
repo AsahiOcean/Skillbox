@@ -1,9 +1,7 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 class CategoriesViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var categories: [Category] = []
@@ -68,7 +66,7 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
             UIGraphicsEndImageContext()
             
             cell.categoryImage.image = newImage
-
+            
             cell.categoryImage.contentMode = UIView.ContentMode.top
         } else {
             if cell.categoryName.text == "Обувь" { // картинка nil
