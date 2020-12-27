@@ -1,6 +1,4 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 class UserDefaultsViewController: UIViewController {
     @IBOutlet weak var Name: UITextField!
@@ -39,7 +37,7 @@ class UserDefaultsViewController: UIViewController {
     @IBAction func Exit(_ sender: Any) {
         exit(0)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         RealmSection.layer.zPosition = 1
@@ -47,7 +45,7 @@ class UserDefaultsViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
+        
         if UserDataPersistance.sharing.NameData != nil {
             transitionFlipFromTop(Name)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
