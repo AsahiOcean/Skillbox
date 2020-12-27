@@ -16,40 +16,40 @@ class MultiScrollVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.collectionView)
         NSLayoutConstraint.activate([
-        self.collectionView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
-        self.collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-        self.collectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-        self.collectionView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
+            self.collectionView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
+            self.collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            self.collectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            self.collectionView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
         ])
     }
-
+    
     func makeLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (section: Int, environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
             if GALLERY_SECTION.contains(section) {
                 return
-
-            LayoutBuilderMultiScroll.buildGallerySectionLayout(size: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalHeight(0.25)))
+                    
+                    LayoutBuilderMultiScroll.buildGallerySectionLayout(size: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalHeight(0.25)))
             } else if TEXT_SECTION.contains(section) {
                 return
-            LayoutBuilderMultiScroll.buildTextSectionLayout()
+                    LayoutBuilderMultiScroll.buildTextSectionLayout()
             } else {
                 return
-            LayoutBuilderMultiScroll.buildTableSectionLayout()
+                    LayoutBuilderMultiScroll.buildTableSectionLayout()
             }
         }
         return layout
         
     }
-
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 5
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if GALLERY_SECTION.contains(section) {
             return 3
@@ -62,20 +62,20 @@ class MultiScrollVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         }
         return 0
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    if GALLERY_SECTION.contains(indexPath.section) {
-        return
-    CellBuilderMultiScroll.getFeaturedCell(collectionView: collectionView, indexPath: indexPath)
-    }
-    if TEXT_SECTION.contains(indexPath.section) {
-        return
-    CellBuilderMultiScroll.getTextCell(collectionView: collectionView, indexPath: indexPath)
-    }
-    if LIST_SECTION.contains(indexPath.section) {
-        return
-    CellBuilderMultiScroll.getListCell(collectionView: collectionView, indexPath: indexPath)
-    }
+        if GALLERY_SECTION.contains(indexPath.section) {
+            return
+                CellBuilderMultiScroll.getFeaturedCell(collectionView: collectionView, indexPath: indexPath)
+        }
+        if TEXT_SECTION.contains(indexPath.section) {
+            return
+                CellBuilderMultiScroll.getTextCell(collectionView: collectionView, indexPath: indexPath)
+        }
+        if LIST_SECTION.contains(indexPath.section) {
+            return
+                CellBuilderMultiScroll.getListCell(collectionView: collectionView, indexPath: indexPath)
+        }
         return UICollectionViewCell()
     }
 }
