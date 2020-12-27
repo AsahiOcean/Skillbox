@@ -251,11 +251,11 @@
 		FA83CAA3246200AB0098FB12 /* Login & Reg */ = {
 			isa = PBXGroup;
 			children = (
-				FAE49189245D95F400C87A64 /* Login.swift */,
-				FAE491A6245DBF2E00C87A64 /* SMScodeVC.swift */,
 				FAE491AF245E011A00C87A64 /* EmailVC.swift */,
 				FAE491B3245E44E400C87A64 /* FacebookVC.swift */,
+				FAE49189245D95F400C87A64 /* Login.swift */,
 				FAE491B5245E48C000C87A64 /* RegVC.swift */,
+				FAE491A6245DBF2E00C87A64 /* SMScodeVC.swift */,
 			);
 			path = "Login & Reg";
 			sourceTree = "<group>";
