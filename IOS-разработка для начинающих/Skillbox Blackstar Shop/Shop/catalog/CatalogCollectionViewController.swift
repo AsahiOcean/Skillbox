@@ -1,11 +1,9 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 private let reuseIdentifier = "CatalogCell"
 
 class CatalogCollectionViewController: UICollectionViewController {
-
+    
     var categoryId = ""
     private var products: [Product] = []
     var screenName = ""
@@ -41,11 +39,11 @@ class CatalogCollectionViewController: UICollectionViewController {
         
         destination.product = products[i.row]
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         products.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProductsCollectionViewCell
         cell.nameLabel.text = products[indexPath.row].name
@@ -56,17 +54,17 @@ class CatalogCollectionViewController: UICollectionViewController {
             let width = cell.mainImage.frame.width
             let ratio = width / image.size.width
             let newSize = CGSize(width: width, height: image.size.height * ratio)
-
+            
             UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
             image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
             let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
-
+            
             cell.mainImage.image = newImage
         } else {
             cell.mainImage.image = nil
         }
-
+        
         return cell
     }
     
