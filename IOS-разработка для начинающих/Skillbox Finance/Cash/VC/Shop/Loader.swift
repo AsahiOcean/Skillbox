@@ -1,4 +1,3 @@
-import Foundation
 import Alamofire
 import UIKit
 
@@ -30,23 +29,23 @@ class Loader {
             let imageLink = categoryJson["image"] as! String
             
             if  let subcategories = categoryJson["subcategories"],
-            let subcategoriesArray = subcategories as? [[String : Any]] {
-            var subcategoriesResult: [Category] = []
-            
-            for item in subcategoriesArray{
-            let subcategoryId = String(describing: item["id"]!)
-            let subcategoryName = item["name"] as! String
-            let subcategorySortOrder = String(describing: item["sortOrder"]!)
-            let subcategoryImageLink = item["iconImage"] as! String
+                let subcategoriesArray = subcategories as? [[String : Any]] {
+                var subcategoriesResult: [Category] = []
+                
+                for item in subcategoriesArray{
+                    let subcategoryId = String(describing: item["id"]!)
+                    let subcategoryName = item["name"] as! String
+                    let subcategorySortOrder = String(describing: item["sortOrder"]!)
+                    let subcategoryImageLink = item["iconImage"] as! String
                     
-            let subcategory = Category(id: subcategoryId, name: subcategoryName, imageLink: subcategoryImageLink, sortOrder: subcategorySortOrder, subcategories: nil, image: nil)
-            subcategoriesResult.append(subcategory)
+                    let subcategory = Category(id: subcategoryId, name: subcategoryName, imageLink: subcategoryImageLink, sortOrder: subcategorySortOrder, subcategories: nil, image: nil)
+                    subcategoriesResult.append(subcategory)
                 }
                 let category = Category(id: id, name: name, imageLink: imageLink, sortOrder: sortOrder, subcategories: subcategoriesResult, image: nil)
-            categories.append(category)
+                categories.append(category)
             } else {
-            let category = Category(id: id, name: name, imageLink: imageLink, sortOrder: sortOrder, subcategories: nil, image: nil)
-            categories.append(category)
+                let category = Category(id: id, name: name, imageLink: imageLink, sortOrder: sortOrder, subcategories: nil, image: nil)
+                categories.append(category)
             }
         }
         return categories
@@ -58,12 +57,12 @@ class Loader {
             
             if let objects = response.value, let jsonDict = objects as? [String : Any] {
                 var tempProducts: [Product] = []
-                    
+                
                 for (i, value) in jsonDict {
                     let id = i
-                        
+                    
                     guard let productJson = value as? [String : Any] else { return }
-                        
+                    
                     let name = productJson["name"] as! String
                     let sortOrder = productJson["sortOrder"] as! String
                     let article = productJson["article"] as! String
@@ -78,7 +77,7 @@ class Loader {
                     let offers = productJson["offers"] as! [[String : String]]
                     
                     let jsonImagesLinks = productJson["productImages"] as! [[String : String]]
-                        
+                    
                     for dict in jsonImagesLinks {
                         let url = dict["imageURL"]!
                         let sortOrderImage = dict["sortOrder"]!
@@ -95,7 +94,7 @@ class Loader {
                     
                     tempProducts.append(product)
                 }
-                    
+                
                 let products = tempProducts.sorted{
                     item1, item2 in
                     Int(item1.sortOrder)! > Int(item2.sortOrder)!
@@ -107,13 +106,13 @@ class Loader {
             }
         }
     }
-
+    
     func loadImage(link: String, completition: @escaping (UIImage?) -> Void) {
-//        var image: UIImage?
+        //        var image: UIImage?
         AF.request("https://blackstarshop.ru/" + link).response{
             response in
             guard let data = response.data, let gotImage = UIImage(data: data) else { return }
-//            image = gotImage
+            //            image = gotImage
             DispatchQueue.main.async {
                 completition(gotImage)
             }
