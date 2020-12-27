@@ -233,8 +233,8 @@
 		FA67314D24637E03006CA010 /* PageController */ = {
 			isa = PBXGroup;
 			children = (
-				FA6730FB24631739006CA010 /* PageController.swift */,
 				FA6730FD24632E2C006CA010 /* Page.swift */,
+				FA6730FB24631739006CA010 /* PageController.swift */,
 			);
 			path = PageController;
 			sourceTree = "<group>";
