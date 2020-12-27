@@ -1,6 +1,4 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 class DeletePopoverViewController: UIViewController {
     @IBOutlet weak var popoverView: UIView!
@@ -9,7 +7,7 @@ class DeletePopoverViewController: UIViewController {
     @IBAction func deleteAction(_ sender: UIButton) {
         if let delegate = delegate, let indexPath = indexPath {
             delegate.deleteItem(indexPath: indexPath); exit()
-    }}
+        }}
     
     @IBAction func backAction(_ sender: UIButton) { exit() }
     
