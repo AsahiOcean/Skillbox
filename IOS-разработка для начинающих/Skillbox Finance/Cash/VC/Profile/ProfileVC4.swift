@@ -3,7 +3,7 @@ import RealmSwift
 import Alamofire
 
 class ProfileVC4: UIViewController {
-
+    
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var Text: UITextView!
     
