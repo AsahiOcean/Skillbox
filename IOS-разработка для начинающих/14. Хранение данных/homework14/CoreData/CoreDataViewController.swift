@@ -1,8 +1,6 @@
 import UIKit
 import CoreData
 import SVProgressHUD
-// Skillbox
-// Скиллбокс
 
 class CoreDataViewController: UIViewController {
     
@@ -16,14 +14,14 @@ class CoreDataViewController: UIViewController {
         AddButton.isEnabled = false // чтоб не хулиганить
         
         constraints = super.view.constraints.count
-//        self.updateTime?.invalidate()
+        //        self.updateTime?.invalidate()
         
         let AddForm = ViewCoreDataForm.loadFromNIB()
         self.view.addSubview(AddForm)
         AddForm.TaskText.becomeFirstResponder()
         AddForm.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height)
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: .curveEaseInOut, animations: {
-                AddForm.center = self.view.center
+            AddForm.center = self.view.center
         })
         updaterStart()
     }
@@ -37,32 +35,32 @@ class CoreDataViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-
-// MARK: - Updater
+    
+    // MARK: - Updater
     var updateTime: Timer?; var delay = 1.0; var constraints = 0
     
     @objc func updater(){
         /*
-        такой костыль с constraints вроде работает неплохо, в идеале бы сравнивать количество элементов в базе данных до и после, а уже после этого обновлять таблицу
-        */
+         такой костыль с constraints вроде работает неплохо, в идеале бы сравнивать количество элементов в базе данных до и после, а уже после этого обновлять таблицу
+         */
         if constraints != super.view.constraints.count {
             getData(); tableView.reloadData();
-//            print("UPD: \(Date())")
+            //            print("UPD: \(Date())")
         } else {
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.getData(); self.tableView.reloadData()
-                self.AddButton.isEnabled = true
-                self.updateTime?.invalidate()
-                print("Обновление вроде остановилось")
-//            }
+            //            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.getData(); self.tableView.reloadData()
+            self.AddButton.isEnabled = true
+            self.updateTime?.invalidate()
+            print("Обновление вроде остановилось")
+            //            }
         }
     }
     
     func updaterStart() {
-//        print("Обновляю таблицу каждые \(delay) секунд(ы)")
+        //        print("Обновляю таблицу каждые \(delay) секунд(ы)")
         self.updateTime = Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(self.updater), userInfo: nil, repeats: true) }
-
-// MARK: - override
+    
+    // MARK: - override
     override func viewDidLoad() {
         super.viewDidLoad()
     }
