@@ -8,7 +8,7 @@ class MoneyNotif: UIViewController {
     
     private let realm = try! Realm()
     var info: Results<UserInfo>!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let userinfo = self.realm.objects(UserInfo.self)
@@ -16,8 +16,8 @@ class MoneyNotif: UIViewController {
         balance.text = "\(userinfo.first!.money - userinfo.first!.portacheno)"
         if let userinfo = userinfo.first {
             try! self.realm.write {
-            userinfo.money = Int(balance.text!)!
-        }}
+                userinfo.money = Int(balance.text!)!
+            }}
         backbround.layer.cornerRadius = 20
         asyncAfter(2.0) { self.view.removeFromSuperview() }
     }
