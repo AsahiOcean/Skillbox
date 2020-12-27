@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 
 extension UIImage {
@@ -9,7 +8,7 @@ extension UIImage {
         case high    = 0.75
         case highest = 1
     }
-
+    
     func jpeg(_ jpegQuality: JPEGQuality) -> Data? {
         return jpegData(compressionQuality: jpegQuality.rawValue)
     }
