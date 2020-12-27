@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -219,12 +219,12 @@
 		FA6730FF2463484C006CA010 /* PagerTable */ = {
 			isa = PBXGroup;
 			children = (
+				FA673143246361F1006CA010 /* CellBuilderMultiScroll.swift */,
+				FA673141246361BB006CA010 /* LayoutBuilderMultiScroll.swift */,
 				FA67313924636062006CA010 /* MultiScrollVC.swift */,
 				FA67313B2463611A006CA010 /* MultiScrollVCCell.swift */,
 				FA67313D24636158006CA010 /* MultiScrollVCFeatured.swift */,
 				FA67313F24636183006CA010 /* MultiScrollVCText.swift */,
-				FA673141246361BB006CA010 /* LayoutBuilderMultiScroll.swift */,
-				FA673143246361F1006CA010 /* CellBuilderMultiScroll.swift */,
 				FA67314524636265006CA010 /* Utils.swift */,
 			);
 			path = PagerTable;
