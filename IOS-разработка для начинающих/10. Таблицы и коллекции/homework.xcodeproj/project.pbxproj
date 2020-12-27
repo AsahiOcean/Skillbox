@@ -68,16 +68,16 @@
 			isa = PBXGroup;
 			children = (
 				FA49EB2B24255C16002C3EAD /* AppDelegate.swift */,
+				FA49EB3424255C17002C3EAD /* Assets.xcassets */,
+				FAE1F85924261222001CDDEC /* CollectionViewCell.swift */,
+				FA49EB3924255C17002C3EAD /* Info.plist */,
+				FA49EB3624255C17002C3EAD /* LaunchScreen.storyboard */,
+				FA49EB3124255C16002C3EAD /* Main.storyboard */,
 				FA49EB2D24255C16002C3EAD /* SceneDelegate.swift */,
+				FA5E7D5B24290F2A00BE6F7A /* TableViewCell.swift */,
 				FA49EB2F24255C16002C3EAD /* ViewController.swift */,
 				FAA0B65C2428079F000830D1 /* ViewController2.swift */,
-				FAE1F85924261222001CDDEC /* CollectionViewCell.swift */,
-				FA49EB3124255C16002C3EAD /* Main.storyboard */,
 				FAC434FC2429342F007C8844 /* ViewController3.swift */,
-				FA5E7D5B24290F2A00BE6F7A /* TableViewCell.swift */,
-				FA49EB3424255C17002C3EAD /* Assets.xcassets */,
-				FA49EB3624255C17002C3EAD /* LaunchScreen.storyboard */,
-				FA49EB3924255C17002C3EAD /* Info.plist */,
 			);
 			path = homework;
 			sourceTree = "<group>";
