@@ -1,13 +1,6 @@
 import Foundation
 
-protocol RouterInput {
-    
-}
+protocol RouterInput { }
+protocol RouterOutput { }
 
-protocol RouterOutput {
-    
-}
-
-class Router: RouterInput {
-    
-}
+class Router: RouterInput { }
