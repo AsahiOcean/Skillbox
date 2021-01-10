@@ -1,8 +1,7 @@
 import UIKit
 import Bond
 import ReactiveKit
-// Skillbox
-// Скиллбокс
+
 /*
  1. Presenter - хранит внутренее состояние и обрабывает события,
  передает либо в Interactor, либо в Router
