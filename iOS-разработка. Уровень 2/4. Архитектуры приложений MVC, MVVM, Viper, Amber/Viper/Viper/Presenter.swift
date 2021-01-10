@@ -2,7 +2,7 @@ import Foundation
 
 protocol PresenterInput: class {
     var output: PresenterOutput! { get set }
-
+    
     func nameUpdated(name: String)
 }
 
@@ -13,7 +13,7 @@ protocol PresenterOutput {
 
 // связующее звено между ViewController и (Interactor + Router)
 class Presenter: PresenterInput {
-// weak - чтобы не получилось замыкания
+    // weak - чтобы не получилось замыкания
     var output: PresenterOutput!
     
     var interactor: InteractorInput! = Interactor()
