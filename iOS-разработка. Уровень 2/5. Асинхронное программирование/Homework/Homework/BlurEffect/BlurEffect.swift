@@ -1,11 +1,10 @@
 import UIKit
-// Skillbox
-// Скиллбокс
+
 class BlurEffect: UIViewController {
     @IBOutlet weak var Image: UIImageView!
     
     var img = UIImage()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // MARK: viewDidLoad == Main queue
@@ -26,9 +25,9 @@ class BlurEffect: UIViewController {
 
 postfix operator ++
 @discardableResult postfix func ++(_ Img: UIImage) -> UIImage {
-/*
-https://developer.apple.com/library/archive/documentation/GraphicsImaging/Reference/CoreImageFilterReference/
-*/
+    /*
+     https://developer.apple.com/library/archive/documentation/GraphicsImaging/Reference/CoreImageFilterReference/
+     */
     let fltr = CIFilter(name: "CIGaussianBlur")
     fltr?.setValue(CIImage(cgImage: Img.cgImage!), forKey: "inputImage")
     fltr?.setValue(3, forKey: "inputRadius") // Default setValue: 10
