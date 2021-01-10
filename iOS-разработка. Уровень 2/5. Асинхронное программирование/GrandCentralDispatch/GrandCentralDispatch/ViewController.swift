@@ -11,9 +11,9 @@ class ViewController: UIViewController {
     
     var (timer,timerLoad): (Timer?,Timer?)
     var stopwatch: Float = 0.00 {
-    didSet { self.time.text = String(format: "%.2f", stopwatch) }}
+        didSet { self.time.text = String(format: "%.2f", stopwatch) }}
     var timeLoad : Float = 0.00 {
-    didSet { self.loadtimer.text = String(format: "%.2f", timeLoad) }}
+        didSet { self.loadtimer.text = String(format: "%.2f", timeLoad) }}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,8 @@ class ViewController: UIViewController {
     @objc func TimerImage() { self.timeLoad = self.timeLoad + 0.05 }
     
     var loadingImage: DispatchWorkItem?
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     
     @IBAction func load(_ sender: UIButton) {
         self.timeLoad = 0.00
@@ -39,15 +39,15 @@ class ViewController: UIViewController {
         loadingImage = DispatchWorkItem { [weak self] in
             let url = URL(string: "https://i.picsum.photos/id/\(n)/0/0.jpg")!
             let data = try? Data(contentsOf: url)
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
                 self!.imageView.isHidden = false
                 if data != nil {
                     self!.imageView.image = UIImage(data: data!)
                     self!.timerLoad?.invalidate()
                 }
-                }
             }
-    DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + 2, execute: loadingImage!)
+        }
+        DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + 2, execute: loadingImage!)
     }
     
     @IBAction func cancel(_ sender: UIButton) {
