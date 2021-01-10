@@ -1,9 +1,9 @@
 import UIKit
-// Skillbox
-// Скиллбокс
+
 /*
-загрузка изображения в фоновом потоке и показ его на экране
-*/
+ загрузка изображения в фоновом потоке и показ его на экране
+ */
+
 func loadimage() -> UIImage {
     let url = URL(string: "https://i.picsum.photos/id/\(Int.random(in: 0...100))/500/500.jpg")!
     if url.dataRepresentation.count > 0 {
