@@ -23,36 +23,36 @@ class PrimeNumbers: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         Input.rx.text.orEmpty.filter{(Int($0) ?? 0 > 0)}
-        .subscribe(onNext: { text in
-        self.Output.text = ""
-        DispatchQueue.global(qos: .background).async {
-            print("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~")
-            let nums = 1...Int(text)!
-            let start = CFAbsoluteTimeGetCurrent()
-            for num in nums {
-                var prime = true
-                if num == 1 {
-                    prime = false
-                }
-            var i = 2
-            while (i < num) {
-                if num % i == 0 {
-                    prime = false
-                }
-                i += 1
-            }
-            if prime == false {
-            let end = CFAbsoluteTimeGetCurrent()
-            print("\(num) не простое число. \(Float(end-start)*1000) мс")
-            } else {
-            let end = CFAbsoluteTimeGetCurrent()
-            print(">> \(num)  простое число. \(Float(end-start)*1000) мс")
-//            var primeNum = [String()]
-//            primeNum.append("\(num) простое число.")
-//            print(primeNum.dropFirst())
-            }
-            }}
-        self.Output.text = "Result in console 😉"
-        }).disposed(by: disposeBag)
+            .subscribe(onNext: { text in
+                self.Output.text = ""
+                DispatchQueue.global(qos: .background).async {
+                    print("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~")
+                    let nums = 1...Int(text)!
+                    let start = CFAbsoluteTimeGetCurrent()
+                    for num in nums {
+                        var prime = true
+                        if num == 1 {
+                            prime = false
+                        }
+                        var i = 2
+                        while (i < num) {
+                            if num % i == 0 {
+                                prime = false
+                            }
+                            i += 1
+                        }
+                        if prime == false {
+                            let end = CFAbsoluteTimeGetCurrent()
+                            print("\(num) не простое число. \(Float(end-start)*1000) мс")
+                        } else {
+                            let end = CFAbsoluteTimeGetCurrent()
+                            print(">> \(num)  простое число. \(Float(end-start)*1000) мс")
+                            //            var primeNum = [String()]
+                            //            primeNum.append("\(num) простое число.")
+                            //            print(primeNum.dropFirst())
+                        }
+                    }}
+                self.Output.text = "Result in console 😉"
+            }).disposed(by: disposeBag)
     }
 }
