@@ -7,22 +7,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var addButton: UIButton!
     var processor: (() -> ())?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        addButton.reactive.tap.observeNext { [ weak self] in
-//            self?.dateprint()
-//        }
+        //        addButton.reactive.tap.observeNext { [ weak self] in
+        //            self?.dateprint()
+        //        }
         
         // unowned - если мы уверены, что self не будет nil
         addButton.reactive.tap.observeNext {
             self.dateprint()
         }.dispose(in: reactive.bag)
         
-//        processor = {
-//            self.dateprint()
-//        }
+        //        processor = {
+        //            self.dateprint()
+        //        }
         
         let h1 = Human()
         let h2 = Human()
