@@ -1,8 +1,6 @@
 import UIKit
 import Bond
 import ReactiveKit
-// Skillbox
-// Скиллбокс
 
 class ViewController: UIViewController {
     
