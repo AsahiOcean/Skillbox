@@ -1,9 +1,8 @@
 import UIKit
-// Skillbox
-// Скиллбокс
+
 /*
  Сыграйте в игру на понимание ошибок мультипоточности: https://deadlockempire.github.io
-
+ 
  Прочитайте дополнительную теорию: https://medium.com/@gabriel_lewis/threading-in-swift-simply-explained-5c8dd680b9b2 и https://hackernoon.com/swift-multi-threading-using-gcd-for-beginners-2581b7aa21cb
  */
 
@@ -48,22 +47,22 @@ class ViewController: UIViewController {
     
     var timer: Timer?
     var counter: Float = 0.00 {
-    didSet { DispatchQueueTime.text = String(format: "%.1f", counter) }
+        didSet { DispatchQueueTime.text = String(format: "%.1f", counter) }
     }
     var timer2: Timer?
     var counter2: Float = 0.00 {
-    didSet { GlobalTime.text = String(format: "%.1f", counter) }
+        didSet { GlobalTime.text = String(format: "%.1f", counter) }
     }
-
+    
     override func viewDidLoad() { // MARK: viewDidLoad == Main queue
         super.viewDidLoad()
         //MARK: НИКОГДА НЕ вызывайте метод sync на Main queue - это приведет к блокировке приложения
         DispatchQueue.main.async {
-        self.timer = Timer.scheduledTimer(timeInterval: self.delay, target:self, selector: #selector(self.UpdateTimer), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: self.delay, target:self, selector: #selector(self.UpdateTimer), userInfo: nil, repeats: true)
             //MARK: sync указывает на выполнение кода в блоке синхронно с тем потоком, где он вызван
             //MARK: поток остановится на время выполнения кода в sync
             utilityQueue.sync {
-            self.timer2 = Timer.scheduledTimer(timeInterval: self.delay, target:self, selector: #selector(self.UpdateTimer2), userInfo: nil, repeats: true)
+                self.timer2 = Timer.scheduledTimer(timeInterval: self.delay, target:self, selector: #selector(self.UpdateTimer2), userInfo: nil, repeats: true)
             }
         }
     }
@@ -71,9 +70,9 @@ class ViewController: UIViewController {
     @objc func UpdateTimer2() { counter2 = counter2 + Float(delay) }
 }
 /*
-https://medium.com/hackernoon/swift-multi-threading-using-gcd-for-beginners-2581b7aa21cb
-
-https://www.raywenderlich.com/966538-arc-and-memory-management-in-swift
-
-https://hackernoon.com/swift-avoiding-memory-leaks-by-examples-f901883d96e5
-*/
+ https://medium.com/hackernoon/swift-multi-threading-using-gcd-for-beginners-2581b7aa21cb
+ 
+ https://www.raywenderlich.com/966538-arc-and-memory-management-in-swift
+ 
+ https://hackernoon.com/swift-avoiding-memory-leaks-by-examples-f901883d96e5
+ */
