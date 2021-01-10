@@ -1,18 +1,19 @@
 import UIKit
 import RxSwift
 import RxCocoa
-// Skillbox
-// Скиллбокс
+
 /*
  одно текстовое поле с вводом числа и кнопка “Рассчитать”.
  После нажатия на кнопку приложение должно в фоновом режиме найти все простые числа (которые делятся без остатка только на 1 и себя) от единицы до введенного числа.
  Все найденные числа нужно вывести в консоль вместе с длительностью расчета этих чисел (сколько времени ушло на поиск этих чисел).
  */
+
 extension String {
     var isNumeric: Bool {
         return NumberFormatter().number(from: self) != nil
     }
 }
+
 class PrimeNumbers: UIViewController {
     @IBOutlet weak var Input: UITextField!
     @IBOutlet weak var Output: UITextView!
