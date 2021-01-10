@@ -20,7 +20,7 @@ class ViewModel {
         // подписываемся
         // только при вызове updateGreeting будет забираться последнее значение name и отправляться в greeting
         updateGreeting.with(latestFrom: name)
-         .map { "Hello, \($1)" }.bind(to: greeting)
+            .map { "Hello, \($1)" }.bind(to: greeting)
         
         //name.map { "Hello, \($0)" }.bind(to: greeting)
     }
