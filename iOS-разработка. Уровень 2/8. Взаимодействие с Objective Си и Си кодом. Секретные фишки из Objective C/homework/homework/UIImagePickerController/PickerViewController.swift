@@ -1,6 +1,4 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 //2) напишите код, который с помощью swizzling’а добавляет в стандартный класс UIImagePickerController возможность сразу получить выбранную фотографию из галереи.
 
@@ -15,9 +13,9 @@ class PickerViewController: UIViewController {
             }
         })
     }
-
+    
     let picker = UIImagePickerController()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // задание 3 | objectassociation.swift
@@ -36,17 +34,17 @@ class PickedImage {
 }
 
 extension UIImagePickerController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         // объявляем делегатом сам UIImagePickerController
         self.delegate = self
     }
-
+    
     struct AssociatedKey {
         static var ImagePickedKey = "ImagePickedKey"
     }
-
+    
     typealias ImagePicked = (UIImage?) -> (Void)
     var configurateImagePicked: ImagePicked? {
         get {
@@ -55,29 +53,29 @@ extension UIImagePickerController: UIImagePickerControllerDelegate, UINavigation
             let img = objc_getAssociatedObject(
                 self, // объект
                 &AssociatedKey.ImagePickedKey // ключ
-                ) as? PickedImage
+            ) as? PickedImage
             return img?.value
         }
         set {
             print("setting ⬅️")
             objc_setAssociatedObject(
-            self, // объект для которого создается связь
-            
-            &AssociatedKey.ImagePickedKey, // уникальный(!) ключ для ассоциации
-            
-            PickedImage(newValue!), // значение, которое будет связано с объектом
-            
-            objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+                self, // объект для которого создается связь
+                
+                &AssociatedKey.ImagePickedKey, // уникальный(!) ключ для ассоциации
+                
+                PickedImage(newValue!), // значение, которое будет связано с объектом
+                
+                objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
             // objc_AssociationPolicy определяет поведение(тип) связи между объектом и значением
             // OBJC_ASSOCIATION_RETAIN - сохраняет сильную ссылку на значение атомарно(операция будет выполнена целиком, либо не выполнится вовсе), и значение существует до тех пор, пока существует объект, к которому он был привязан.
             // https://ru.wikipedia.org/wiki/Атомарная_операция
         }
     }
-
+    
     func swizzling(vc: UIViewController, callback: ImagePicked?) {
         // callback = completion
         print("swizzling: ✅")
-
+        
         print("swizzlingPicker: [\(UIImagePickerController.swizzlingPicker)] -- OK")
         
         //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -85,7 +83,7 @@ extension UIImagePickerController: UIImagePickerControllerDelegate, UINavigation
         //MARK: тем самым картинка в UIImageView будет меняться
         UIImagePickerController.swizzlingPicker.toggle()
         //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+        
         //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         //MARK: не стоит подменять делегат установленный в viewDidLoad, иначе он не сможет обрабатывать выбранное изображение
         //self.delegate = vc as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
@@ -113,41 +111,41 @@ extension UIImagePickerController: UIImagePickerControllerDelegate, UINavigation
         
         let didAddMethod =
             class_addMethod(instanceClass, originalSelector,
-            method_getImplementation(swizzledMethod!),
-            method_getTypeEncoding(swizzledMethod!))
+                            method_getImplementation(swizzledMethod!),
+                            method_getTypeEncoding(swizzledMethod!))
         
         if didAddMethod {
             print("didAddMethod: replaceMethod")
             class_replaceMethod(instanceClass, swizzledSelector,
-            method_getImplementation(originalMethod!),
-            method_getTypeEncoding(originalMethod!))
+                                method_getImplementation(originalMethod!),
+                                method_getTypeEncoding(originalMethod!))
         } else {
             print("didAddMethod: exchange ")
             method_exchangeImplementations(originalMethod!, swizzledMethod!)
         }
         return true
     }()
-
+    
     @objc public func extImagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-
+        
         // прием данных из UIImagePickerController
         let originalImage = info[.originalImage] as? UIImage
         
         // присвоение картинки в configurateImagePicked
         self.configurateImagePicked?(originalImage)
-
+        
         print("Finish Picking 👍")
-
+        
         self.dismiss(animated: true, completion: {
             print("swizzlingPicker: [\(UIImagePickerController.swizzlingPicker)] -- OK")
             print("extImagePickerController: dismiss")
         })
     }
-
+    
     @objc public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-
+        
         print("Fail swizzling 🤦‍♂️")
-
+        
         self.dismiss(animated: true, completion: {
             print("imagePickerController: dismiss")
         })

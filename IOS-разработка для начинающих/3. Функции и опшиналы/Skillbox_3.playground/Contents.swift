@@ -17,7 +17,7 @@ func Temperature(_ array: Int...) -> (min: Int, max: Int) {
         var maxTemp = array[0]
         for v in array {
             if v > maxTemp {maxTemp = v}
-    }
+        }
         return maxTemp
     }
     return (Min(), Max())
