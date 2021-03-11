@@ -1,23 +1,22 @@
 import UIKit
-// Skillbox
-// Скиллбокс
+
 /*
-1) Написать, какие 4 ценности есть в манифесте Agile (своими словами).
-//MARK: см. Agile.md
-
-2) В чем отличия скрама от канбана? Написать минимум 3.
-//MARK: см. ScrumVsKanban.md
-
-3) Описать процесс работы по скраму.
-//MARK: см. ScrumProcess.md
+ 1) Написать, какие 4 ценности есть в манифесте Agile (своими словами).
+ //MARK: см. Agile.md
  
-4) Прочитать статью про тестирование.
-https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial
-
-5) Создать проект, сделать в нем модель с функцией валидации логина (почты) и пароля:
-    логин должен быть корректной почтой,
-    пароль – не меньше 6 символов,
-        содержать как минимум одну цифру, одну букву в нижнем регистре и одну – в верхнем.
+ 2) В чем отличия скрама от канбана? Написать минимум 3.
+ //MARK: см. ScrumVsKanban.md
+ 
+ 3) Описать процесс работы по скраму.
+ //MARK: см. ScrumProcess.md
+ 
+ 4) Прочитать статью про тестирование.
+ https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial
+ 
+ 5) Создать проект, сделать в нем модель с функцией валидации логина (почты) и пароля:
+ логин должен быть корректной почтой,
+ пароль – не меньше 6 символов,
+ содержать как минимум одну цифру, одну букву в нижнем регистре и одну – в верхнем.
  
  При ошибке должна возвращать ошибку (если есть) или успех.
  
@@ -27,12 +26,12 @@ https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial
  При нажатии на кнопку в случае ошибки должна показываться надпись с текстом ошибки, в случае успеха – показываться следующий экран с поздравлением.
  
  Сделать следующие тесты:
-        1) корректность работы функции проверки логина и пароля (не менее 8 проверок).
-        2) корректность обработки неправильных данных в интерфейсе (UI тесты), не менее 3 сценариев.
-        3) корректность обработки правильных данных в интерфейсе.
-
-6) Интегрировать проект с любым CI/CD сервисом (например Bitrise).
-*/
+ 1) корректность работы функции проверки логина и пароля (не менее 8 проверок).
+ 2) корректность обработки неправильных данных в интерфейсе (UI тесты), не менее 3 сценариев.
+ 3) корректность обработки правильных данных в интерфейсе.
+ 
+ 6) Интегрировать проект с любым CI/CD сервисом (например Bitrise).
+ */
 
 class ViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
@@ -49,17 +48,17 @@ class ViewController: UIViewController {
         sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
         
         /*
-        guard let email = sender.text else { return }
-        if email.count < 3 {
-            message.text?.removeAll()
-        } else {
-            if validateEmail(candidate: email) {
-                message.text = "success"
-            } else {
-                message.text = "error"
-            }
-        }
-        */
+         guard let email = sender.text else { return }
+         if email.count < 3 {
+         message.text?.removeAll()
+         } else {
+         if validateEmail(candidate: email) {
+         message.text = "success"
+         } else {
+         message.text = "error"
+         }
+         }
+         */
     }
     
     @IBAction func passEdit(_ sender: UITextField) {
@@ -70,16 +69,16 @@ class ViewController: UIViewController {
         loginButtonEnabled()
         
         /*
-        guard let pass = sender.text else { return }
-        if pass.count > 0 {
-            if validatePassword(candidate: pass) {
-                message.text = "success"
-            } else {
-                message.text = "Enter min 6 sym include 1 upper, 1 lowercase character and 1 num"
-            }
-        } else {
-            message.text?.removeAll()
-        }
+         guard let pass = sender.text else { return }
+         if pass.count > 0 {
+         if validatePassword(candidate: pass) {
+         message.text = "success"
+         } else {
+         message.text = "Enter min 6 sym include 1 upper, 1 lowercase character and 1 num"
+         }
+         } else {
+         message.text?.removeAll()
+         }
          */
     }
     
@@ -95,7 +94,7 @@ class ViewController: UIViewController {
                     
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let secondVC = storyboard.instantiateViewController(identifier: "SecondViewController")
-
+                    
                     show(secondVC, sender: self)
                     
                 } else {

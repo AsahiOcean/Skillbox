@@ -83,11 +83,11 @@ class ViewController: UIViewController {
         player.actionAtItemEnd = .none
             
         NotificationCenter.default.addObserver(self,
-        selector: #selector(self.Repeater(snitch:)),
+        selector: #selector(self.Repeater(_:)),
         name: .AVPlayerItemDidPlayToEndTime,
         object: player.currentItem)
     }
-    @objc func Repeater(snitch: Notification) {
+    @objc func Repeater(_ snitch: Notification) {
         let X: AVPlayerItem = snitch.object as! AVPlayerItem
         X.seek(to: .zero) { _ in }
     }

@@ -290,7 +290,7 @@ extension Comparable {
 extension Sequence where Element: AdditiveArithmetic {
     // https://developer.apple.com/documentation/swift/additivearithmetic
     func sum() -> Element {
-        return reduce(.zero, +)
+        return reduce(0, +)
     }
 }
 let IntArray = (0...10) // 55

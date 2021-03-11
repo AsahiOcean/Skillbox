@@ -1,13 +1,11 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 /*
-Реализуйте класс linked list, работающий только со строками. Сделайте в нем функцию поиска строки.
-Реализуйте класс для бинарного дерева поиска, работающее только со строками. Сделайте в нем функцию поиска.
-Реализуйте класс для графа со станциями метро, где ребра хранят в себе длительность переезда между двумя станциями. Сделайте в нем поиск пути (любым способом) с одной станции на другую.
-Реализуйте функцию сортировки массива еще двумя способами, кроме рассказанных на уроке.
-*/
+ Реализуйте класс linked list, работающий только со строками. Сделайте в нем функцию поиска строки.
+ Реализуйте класс для бинарного дерева поиска, работающее только со строками. Сделайте в нем функцию поиска.
+ Реализуйте класс для графа со станциями метро, где ребра хранят в себе длительность переезда между двумя станциями. Сделайте в нем поиск пути (любым способом) с одной станции на другую.
+ Реализуйте функцию сортировки массива еще двумя способами, кроме рассказанных на уроке.
+ */
 //MARK: -- 1) Реализуйте класс linked list, работающий только со строками. Сделайте в нем функцию поиска строки.
 
 //MARK: Linked List - это ЛИНЕЙНАЯ последовательность(структура) "узлов", где каждый из которых может содержать значение(я) и ссылки на следующие и/или предыдущие узлы
@@ -19,7 +17,7 @@ class LinkedListNode<T> {
     var prev: LinkedListNode<T>?
     
     init(_ value: T) {
-        self.key = value
+        key = value
     }
 }
 
@@ -71,15 +69,15 @@ class LinkedList<T: Equatable> {
     func insert(_ value: T) {
         if node0?.key == nil {
             node0?.key = value
-      } else {
-        var ex = node0
+        } else {
+            var ex = node0
             while ex?.next != nil {
-            ex = ex?.next!
+                ex = ex?.next!
+            }
+            let new = Node(value)
+            new.key = value
+            ex?.next = new
         }
-        let new = Node(value)
-        new.key = value
-        ex?.next = new
-      }
     }
     
     func search(_ query: T?) -> Bool {
@@ -94,12 +92,12 @@ class LinkedList<T: Equatable> {
 }
 
 let list = LinkedList<String>()
-list.add("q")       // ⟵┐
+list.add("q")       // ⟵
 list.count          // 1 │
 list.add("w")       //   │
 list.count          // 2 │
 list.add("e")       //   │
-list.add("r")       //   │  //  ⟵┐
+list.add("r")       //   │  //  ⟵
 list.first?.key     // q ┘  //    │
 list.add("t")               //    │
 list.insert("x")            //    │
@@ -133,37 +131,37 @@ class BinaryTree<String> {
     init(value: String,
          left: BinaryTree? = nil,
          right: BinaryTree? = nil) {
-         self.head = value
-         self.left = left
-         self.right = right
+        head = value
+        self.left = left
+        self.right = right
     }
 }
 
 class BinaryTreeString<String: Comparable & CustomStringConvertible> {
     
     var searchPath: [String] = []
-
+    
     var head: BinaryTree<String>?
     
     func node(_ value: String) {
         let node = BinaryTree(value: value)
-        if let head = self.head {
-            self.nextNode(head, node)
+        if let head = head {
+            nextNode(head, node)
         } else {
-            self.head = node
+            head = node
         }
     }
     
     func nextNode(_ value: BinaryTree<String>, _ node: BinaryTree<String>) {
         if value.head > node.head {
             if let left = value.left {
-                self.nextNode(left, node)
+                nextNode(left, node)
             } else {
                 value.left = node
             }
         } else {
             if let right = value.right {
-                self.nextNode(right, node)
+                nextNode(right, node)
             } else {
                 value.right = node
             }
@@ -171,33 +169,33 @@ class BinaryTreeString<String: Comparable & CustomStringConvertible> {
     }
 }
 extension BinaryTreeString {
-// Если задано дерево с различными элементами, прямой или обратный обход вместе с центрированным обходом достаточны для описания дерева
+    // Если задано дерево с различными элементами, прямой или обратный обход вместе с центрированным обходом достаточны для описания дерева
     func traversal() {
         print("\nПрямой (preorder) обход дерева [ корень -> левый узел -> правый узел ]")
-        self.preorder(self.head); print("|| F, B, A, D, C, E, G, I, H. -> bit.ly/2TMSs6t")
+        preorder(head); print("|| F, B, A, D, C, E, G, I, H. -> bit.ly/2TMSs6t")
         print("\nЦентрированный или симметричный (inorder) обход дерева [A,B->...Z] [ левый узел -> корень -> правый узел ]")
-        self.inorder(self.head); print("|| A, B, C, D, E, F, G, H, I. -> bit.ly/2X6coU0")
+        inorder(head); print("|| A, B, C, D, E, F, G, H, I. -> bit.ly/2X6coU0")
         print("\nОбратный (posnodeBrder) обход дерева [ левый узел -> правый узел -> корень ]")
-        self.posorder(self.head); print("|| A, C, E, D, B, H, I, G, F. -> bit.ly/3ccck9o")
+        posorder(head); print("|| A, C, E, D, B, H, I, G, F. -> bit.ly/3ccck9o")
         print() // \n
     }
-
+    
     //MARK: Прямой обход (NLR): [ корень -> левый узел -> правый узел ]
     func preorder(_ root: BinaryTree<String>?) {
         guard let _ = root else { return }
         if root.debugDescription != "nil" { // Проверяю, не является ли текущий узел пустым или nil
             print("\(root!.head)", terminator: " ") // Вывод данных корня (или текущего узла)
-            self.preorder(root?.left) // Обходим левое поддерево рекурсивно, вызвав функцию прямого обхода
-            self.preorder(root?.right) // Обходим правое поддерево рекурсивно, вызвав функцию прямого обхода
+            preorder(root?.left) // Обходим левое поддерево рекурсивно, вызвав функцию прямого обхода
+            preorder(root?.right) // Обходим правое поддерево рекурсивно, вызвав функцию прямого обхода
         }
     }
     
     //MARK: Центрированный или симметричный обход (LNR): [ левый узел -> корень -> правый узел ]
     func inorder(_ root: BinaryTree<String>?) {
         if root.debugDescription != "nil" { // Проверяю, не является ли текущий узел пустым или nil
-            self.inorder(root?.left) // Обходим левое поддерево рекурсивно, вызвав функцию центрированного обхода
+            inorder(root?.left) // Обходим левое поддерево рекурсивно, вызвав функцию центрированного обхода
             print("\(root!.head)", terminator: " ") // Вывод данных корня (или текущего узла)
-            self.inorder(root?.right) // Обходим правое поддерево рекурсивно, вызвав функцию центрированного обхода
+            inorder(root?.right) // Обходим правое поддерево рекурсивно, вызвав функцию центрированного обхода
             //MARK: P.S. В двоичном дереве поиска центрированный обход извлекает данные в отсортированном порядке
         }
     }
@@ -205,16 +203,16 @@ extension BinaryTreeString {
     //MARK: Обратный обход (LRN): [ левый узел -> правый узел -> корень ]
     func posorder(_ root: BinaryTree<String>?) {
         if root.debugDescription != "nil" { // Проверяю, не является ли текущий узел пустым или nil
-        self.posorder(root?.left) // Обходим левое поддерево рекурсивно, вызвав функцию обратного обхода
-        self.posorder(root?.right) // Обходим правое поддерево рекурсивно, вызвав функцию обратного обхода
-        print("\(root!.head)", terminator: " ") // Вывод данных корня (или текущего узла)
+            posorder(root?.left) // Обходим левое поддерево рекурсивно, вызвав функцию обратного обхода
+            posorder(root?.right) // Обходим правое поддерево рекурсивно, вызвав функцию обратного обхода
+            print("\(root!.head)", terminator: " ") // Вывод данных корня (или текущего узла)
         }
     }
 }
 extension BinaryTreeString {
-
+    
     func search(_ query: String) {
-        self.finder(self.head, query)
+        finder(head, query)
     }
     
     private func finder(_ head: BinaryTree<String>?, _ query: String) {
@@ -224,16 +222,16 @@ extension BinaryTreeString {
             return
         }
         
-        self.searchPath.append(root.head)
-        print("\(self.searchPath) узел '\(root.head)' -> Ищу: '\(query)'")
+        searchPath.append(root.head)
+        print("\(searchPath) узел '\(root.head)' -> Ищу: '\(query)'")
         
         if query > root.head {
-            self.finder(root.right, query)
+            finder(root.right, query)
         } else if query < root.head {
-            self.finder(root.left, query)
+            finder(root.left, query)
         } else {
             print("= = = Узел '\(root.head)' найден = = =\n") // SUCCESS
-            self.searchPath.removeAll()
+            searchPath.removeAll()
         }
     }
 }
@@ -286,47 +284,47 @@ tree.search("N")
 
 //MARK: Материал с урока
 /*
-        class TreeNode<T,U> {
-            var value: T?
-             
-            var left: TreeNode<T,U>?
-            var right: TreeNode<T,U>?
-             
-            init(value: T) {
-                self.value = value
-            }
-        }
-
-        let nodeBp = TreeNode(value: 8)
-        let left = TreeNode(value: 3)
-        let rigth = TreeNode(value: 10)
-        nodeBp.left = left
-        nodeBp.right = rigth
-*/
+ class TreeNode<T,U> {
+ var value: T?
+ 
+ var left: TreeNode<T,U>?
+ var right: TreeNode<T,U>?
+ 
+ init(value: T) {
+ value = value
+ }
+ }
+ 
+ let nodeBp = TreeNode(value: 8)
+ let left = TreeNode(value: 3)
+ let rigth = TreeNode(value: 10)
+ nodeBp.left = left
+ nodeBp.right = rigth
+ */
 
 //MARK: -- Реализуйте класс для графа со станциями метро, где ребра хранят в себе длительность переезда между двумя станциями. Сделайте в нем поиск пути (любым способом) с одной станции на другую.
 
-// MARK: Вот материал из урока и задача ^
+// MARK: Материал из урока и задача ^
 /*
-class Edge<T, U> {
+ class Edge<T, U> {
     var value: U
     var node: Node<T,U>
-    
-    init(value: U, node: Node<T,U>) {
-        self.value = value
-        self.node = node
-    }
-}
-class Node<T, U> {
-    var value: T
-    var edges: [Edge<T,U>]
-    
-    init(value: T, edges: [Edge<T,U>]) {
-        self.value = value
-        self.edges = edges
-    }
-}
-*/
+ 
+     init(value: U, node: Node<T,U>) {
+         value = value
+         node = node
+     }
+ }
+ class Node<T, U> {
+     var value: T
+     var edges: [Edge<T,U>]
+ 
+     init(value: T, edges: [Edge<T,U>]) {
+         value = value
+         edges = edges
+     }
+ }
+ */
 
 //MARK: -- Алгоритм Дейкстры | Dijkstra's algorithm
 
@@ -336,10 +334,10 @@ class DijkstraNode<T: Equatable & Hashable>: Equatable, Hashable {
     var visited: Bool = false
     var weight: Double = Double(Int.max) // расстояние до узла (по умолчанию: прибл. бесконечность)
     var prev: DijkstraNode<T>? // предыдущий(previous) узел
-
+    
     init(_ value: T) { self.value = value }
     
-    var hashValue: Int { get { self.value.hashValue } }
+    var hashValue: Int { get { value.hashValue } }
     func hash(into hasher: inout Hasher) { }
 }
 
@@ -353,18 +351,18 @@ class DijkstraEdge<T: Equatable & Hashable>: Equatable, Hashable {
     var to: DijkstraNode<T>
     var timeStr: String?
     var weight: Double
-  
+    
     //MARK: [A] <- - weight - -> [B]
     init(from: DijkstraNode<T>, to: DijkstraNode<T>, weight: Double) {
         self.weight = weight
         self.from = from
         self.to = to
         from.edges.append(self)
-        self.timeStr = traveltime(weight)
+        timeStr = traveltime(weight)
     }
-
+    
     var hashValue: Int {
-        get { "\(self.from.value) -> \(self.to.value)".hashValue }
+        get { "\(from.value) -> \(to.value)".hashValue }
     }
     func hash(into hasher: inout Hasher) { }
 }
@@ -379,9 +377,9 @@ class DijkstraGraph<T: Hashable & Equatable> {
     var nodes: [DijkstraNode<T>]
     
     init(nodes: [DijkstraNode<T>]) { self.nodes = nodes }
-  
+    
     static func path(graph: DijkstraGraph<T>, from: DijkstraNode<T>, to: DijkstraNode<T>) {
-
+        
         var unvisited = Set<DijkstraNode<T>>(graph.nodes) // Сет для не посещенных узлов
         
         from.weight = 0.0 // Указать, что узел будет началом/нулевой километр/froming point
@@ -391,32 +389,32 @@ class DijkstraGraph<T: Hashable & Equatable> {
         
         // Вычислить расстояние до самого последнего узла
         while (to.visited == false) {
-          
-        for edge in current.edges.filter({ edge -> Bool in
-            return edge.to.visited == false
-          }) {
-            // Предположительное расстояние между текущим узлом и его соседом
-            let tempDist = current.weight + edge.weight
-                    
-            if edge.to.weight > tempDist {
-               edge.to.weight = tempDist
-               edge.to.prev = current
+            
+            for edge in current.edges.filter({ edge -> Bool in
+                return edge.to.visited == false
+            }) {
+                // Предположительное расстояние между текущим узлом и его соседом
+                let tempDist = current.weight + edge.weight
+                
+                if edge.to.weight > tempDist {
+                    edge.to.weight = tempDist
+                    edge.to.prev = current
+                }
             }
-          }
-          
-          current.visited = true // Помечаю, что узел посещен
-          
-          unvisited.remove(current) // Удаляю узел из непосещенных узлов
-          
-          if let new = unvisited.sorted(by: { (A, B) -> Bool in
-            A.weight < B.weight
-          }).first {
-            current = new
-          } else { break }
+            
+            current.visited = true // Помечаю, что узел посещен
+            
+            unvisited.remove(current) // Удаляю узел из непосещенных узлов
+            
+            if let new = unvisited.sorted(by: { (A, B) -> Bool in
+                A.weight < B.weight
+            }).first {
+                current = new
+            } else { break }
         }
         DijkstraGraph.printPath(node: to)
-  }
-  
+    }
+    
     static func printPath(node: DijkstraNode<T>) {
         if let previous = node.prev {
             DijkstraGraph.printPath(node: previous)
@@ -477,7 +475,7 @@ class BFSQueue<T> { //MARK: == Linked List
     var current: BFSNode<T>?
     
     var last: BFSNode<T>? {
-        if var node = self.current {
+        if var node = current {
             while let next = node.neighbor { node = next }
             return node
         } else {
@@ -486,7 +484,7 @@ class BFSQueue<T> { //MARK: == Linked List
     }
     
     var count: Int {
-        if var node = self.current {
+        if var node = current {
             var count: Int = 1
             while let next = node.neighbor {
                 count += 1
@@ -498,20 +496,20 @@ class BFSQueue<T> { //MARK: == Linked List
         }
     }
     
-    var isEmpty: Bool { self.current == nil }
-        
+    var isEmpty: Bool { current == nil }
+    
     func append(_ node: T) {
         let node = BFSNode<T>(node)
         if let prev = last {
             prev.neighbor = node
         } else {
-            self.current = node
+            current = node
         }
     }
     
     func removeFirst() -> T? {
-        let first = self.current
-        self.current = self.current?.neighbor
+        let first = current
+        current = current?.neighbor
         return first?.current
     }
 }
@@ -519,24 +517,24 @@ class BFSQueue<T> { //MARK: == Linked List
 struct Node<T>: CustomStringConvertible, Hashable where T: Hashable {
     let value: T
     let index: Int
-    var description: String { "\(self.value)" }
+    var description: String { "\(value)" }
 }
 
 struct QueueBFS<T> {
     var queue = BFSQueue<T>()
-    var isEmpty: Bool { self.queue.isEmpty }
-    mutating func enqueue(_ node: T) { self.queue.append(node) }
-    mutating func dequeue() -> T? { self.queue.removeFirst() }
+    var isEmpty: Bool { queue.isEmpty }
+    mutating func enqueue(_ node: T) { queue.append(node) }
+    mutating func dequeue() -> T? { queue.removeFirst() }
 }
 
 struct BFSEdge<T>: CustomStringConvertible, Hashable where T: Hashable {
     let from: Node<T> // --╮
-                     //    |<-╮
+    //                     |<-╮
     let to: Node<T> // <---╯  | weight
     let weight: Double? // ---╯
     let time: String // ---╯ Date(timeIntervalSinceNow:(weight * 60.0)) // weight * 60min
     
-    var description: String { "«\(self.from)» -[\(self.time)]-> «\(self.to)»" }
+    var description: String { "«\(from)» -[\(time)]-> «\(to)»" }
 }
 
 class EdgeList<T> where T: Hashable {
@@ -548,7 +546,7 @@ class EdgeList<T> where T: Hashable {
     }
     
     func append(_ edge: BFSEdge<T>) {
-        self.edges.append(edge)
+        edges.append(edge)
     }
 }
 
@@ -562,15 +560,15 @@ enum Visited<Element: Hashable> {
 }
 
 class BFS<T> where T: Hashable {
-    
+
     var edgeList: [EdgeList<T>] = []
-    private var effort = 0.0 // энергозатратность <---------------╮
-                             //                                   |
-    func directed(from: Node<T>, to: Node<T>, weight: Double?){ //|
-        if from.index < edgeList.count {                        //|
-            self.effort += weight! // <---------------------------╯
+    private var effort = 0.0 // энергозатратность <-----------------╮
+                                                                //  |
+    func directed(from: Node<T>, to: Node<T>, weight: Double?){ //  |
+        if from.index < edgeList.count {                        //  |
+            effort += weight! // <----------------------------------╯
             let edge = BFSEdge<T>(from: from, to: to, weight: weight, time: traveltime(effort))
-            self.edgeList[from.index].append(edge)
+            edgeList[from.index].append(edge)
         } else {
             return
         }
@@ -579,13 +577,13 @@ class BFS<T> where T: Hashable {
     func undirected(nodes: (Node<T>, Node<T>), weight: Double?) {
         let (from, to) = nodes
         if from.index < edgeList.count && to.index < edgeList.count {
-            self.directed(from: from, to: to, weight: weight)
-            self.directed(from: to, to: from, weight: weight)
+            directed(from: from, to: to, weight: weight)
+            directed(from: to, to: from, weight: weight)
         } else {
             return
         }
     }
-
+    
     func breadthFirstSearch(from: Node<Element>, to: Node<Element>) -> [BFSEdge<Element>] {
         
         var queue: QueueBFS<Node<Element>> = QueueBFS()
@@ -598,18 +596,18 @@ class BFS<T> where T: Hashable {
                 var route: [BFSEdge<Element>] = []
                 var node = to
                 while let visit = visits[node],
-                    case .edge(let edge) = visit {
-                          route = [edge] + route
-                          node = edge.from
-                    }
+                      case .edge(let edge) = visit {
+                    route = [edge] + route
+                    node = edge.from
+                }
                 return route
             }
             let neightbourEdges = edgesFrom(visited)
             
             for edge in neightbourEdges {
                 if visits[edge.to] == nil {
-                   queue.enqueue(edge.to)
-                   visits[edge.to] = .edge(edge)
+                    queue.enqueue(edge.to)
+                    visits[edge.to] = .edge(edge)
                 }
             }
         }
@@ -621,14 +619,12 @@ extension BFS: BFSGraph {
     
     func node(_ value: T) -> Node<T> {
         
-        let nodes = edgeList.filter {
-            $0.node.value == value
-        }
+        let nodes: [EdgeList<T>] = edgeList.filter { $0.node.value == value }
         
         if nodes.count == 0 {
             let node = Node<T>(value: value, index: edgeList.count)
             let newEdge = EdgeList<T>(node)
-            self.edgeList.append(newEdge)
+            edgeList.append(newEdge)
             return node
         } else {
             return nodes.last!.node
@@ -640,20 +636,16 @@ extension BFS: BFSGraph {
     }
     
     func edgesFrom(_ node: Node<T>) -> [BFSEdge<T>] {
-        if node.index < edgeList.count {
-            return self.edgeList[node.index].edges
-        } else {
-            return []
-        }
+        node.index < edgeList.count ? edgeList[node.index].edges : []
     }
 }
 
 let BFSgraph = BFS<String>()
-var BFS_A = BFSgraph.node("A")
-var BFS_B = BFSgraph.node("B")
-var BFS_C = BFSgraph.node("C")
-var BFS_D = BFSgraph.node("D")
-var BFS_E = BFSgraph.node("E")
+let BFS_A = BFSgraph.node("A")
+let BFS_B = BFSgraph.node("B")
+let BFS_C = BFSgraph.node("C")
+let BFS_D = BFSgraph.node("D")
+let BFS_E = BFSgraph.node("E")
 
 BFSgraph.edge(from: BFS_A, to: BFS_B, weight: 3) //MARK:   (6)----→[A]←(3)→[B]
 BFSgraph.edge(from: BFS_A, to: BFS_C, weight: 5) //MARK:    |       ↑
@@ -670,39 +662,39 @@ struct DFSNode<T: Hashable>: Hashable, CustomStringConvertible {
     var value: T
     var weight: Double
     var time: String
-    var description: String { "\(self.value) \(self.time)" }
+    var description: String { "\(value) \(time)" }
 }
 
 class DFS<T: Hashable>: DFSGraph {
-  
+    
     var edgesDict: [DFSNode<T>: [DFSEdge<T>]] = [:]
     
     func directed(from: DFSNode<T>, to: DFSNode<T>, weight: Double?) {
         let edge = DFSEdge(from: from, to: to, weight: weight)
-        self.edgesDict[from]?.append(edge)
+        edgesDict[from]?.append(edge)
     }
     
     func undirected(nodes: (DFSNode<T>, DFSNode<T>), weight: Double?) {
         let (from, to) = nodes
-        self.directed(from: from, to: to, weight: weight)
-        self.directed(from: to, to: from, weight: weight)
+        directed(from: from, to: to, weight: weight)
+        directed(from: to, to: from, weight: weight)
     }
-  
+    
     func node(_ value: T, weight: Double) -> DFSNode<T> {
-        let node = DFSNode(value: value, weight: weight, time: traveltime(Double(self.edgesDict.count) + weight))
-
-        if self.edgesDict[node] == nil {
-            self.edgesDict[node] = []
+        let node = DFSNode(value: value, weight: weight, time: traveltime(Double(edgesDict.count) + weight))
+        
+        if edgesDict[node] == nil {
+            edgesDict[node] = []
         }
         return node
     }
-  
+    
     func edge(from: DFSNode<T>, to: DFSNode<T>, weight: Double? = 0) {
         undirected(nodes: (from, to), weight: weight)
     }
-  
+    
     func weight(from: DFSNode<T>, to: DFSNode<T>) -> Double? {
-        guard let edges = self.edgesDict[from] else { return nil }
+        guard let edges = edgesDict[from] else { return nil }
         for edge in edges {
             if edge.to == to {
                 edge.weight
@@ -710,9 +702,9 @@ class DFS<T: Hashable>: DFSGraph {
         }
         return nil
     }
-
+    
     func edges(from: DFSNode<T>) -> [DFSEdge<T>]? {
-        return self.edgesDict[from]
+        return edgesDict[from]
     }
 }
 
@@ -724,7 +716,7 @@ struct DFSEdge<T: Hashable> {
 
 protocol DFSGraph {
     associatedtype Element: Hashable
-  
+    
     func node(_ data: Element, weight: Double) -> DFSNode<Element>
     func edge(from: DFSNode<Element>, to: DFSNode<Element>, weight: Double?)
     func weight(from: DFSNode<Element>, to: DFSNode<Element>) -> Double?
@@ -733,14 +725,14 @@ protocol DFSGraph {
 
 struct DFSReturn<T>: CustomStringConvertible {
     var array: [T] = []
-    mutating func push(_ element: T) { self.array.append(element) }
-    mutating func peek() -> T? { self.array.last }
-    mutating func pop() -> T? { self.array.popLast() }
+    mutating func push(_ element: T) { array.append(element) }
+    mutating func peek() -> T? { array.last }
+    mutating func pop() -> T? { array.popLast() }
     
     var description: String {
         let top = "-----------\n"
         let bottom = "\n-----------\n"
-        return top + self.array.map{"\($0)"}.joined(separator: "\n") + bottom
+        return top + array.map{"\($0)"}.joined(separator: "\n") + bottom
     }
 }
 
@@ -750,26 +742,26 @@ func depthFirstSearch(graph: DFS<String>, from: DFSNode<String>, to: DFSNode<Str
     
     output.push(from)
     visited.insert(from)
-  
+    
     while let node = output.peek(), node != to {
         guard let neighbours = graph.edges(from: node), neighbours.count > 0 else {
             continue
-    }
-    
-    for edge in neighbours {
-        if !visited.contains(edge.to) {
-            visited.insert(edge.to)
-            output.push(edge.to)
-            print(output.description)
+        }
+        
+        for edge in neighbours {
+            if !visited.contains(edge.to) {
+                visited.insert(edge.to)
+                output.push(edge.to)
+                print(output.description)
                 if output.array.last == to {
                     print("Приехали! Finish!")
                     break
                 }
-            break
-          }
+                break
+            }
+        }
     }
-  }
-  return output
+    return output
 }
 
 let DFSgraph = DFS<String>()
@@ -790,7 +782,7 @@ DFSgraph.edge(from: DFS_B, to: DFS_D) //MARK:        ╰--[D]
 DFSgraph.edge(from: DFS_D, to: DFS_G) //MARK:          / |
 DFSgraph.edge(from: DFS_D, to: DFS_F) //MARK:       [G] [F]
 DFSgraph.edge(from: DFS_F, to: DFS_E) //MARK:            |
-                                      //MARK:           [E]
+//MARK:           [E]
 print("\n\nПоиск в глубину (DFS):")
 depthFirstSearch(graph: DFSgraph, from: DFS_S, to: DFS_G)
 
@@ -805,37 +797,37 @@ protocol AStarGraph {
 }
 
 class AStar<T: Hashable>: AStarGraph {
-
+    
     var edgesDict: [AStarNode<T>: [AStarEdge<T>]] = [:]
     var effort = 0.0
     
     func directed(from: AStarNode<T>, to: AStarNode<T>, weight: Double?) {
         let edge = AStarEdge(from: from, to: to, weight: weight)
-        self.edgesDict[from]?.append(edge)
-        self.effort = Double(edgesDict.count)
+        edgesDict[from]?.append(edge)
+        effort = Double(edgesDict.count)
     }
     
     func undirected(nodes: (AStarNode<T>, AStarNode<T>), weight: Double?) {
         let (from, to) = nodes
-        self.directed(from: from, to: to, weight: weight)
-        self.directed(from: to, to: from, weight: weight)
+        directed(from: from, to: to, weight: weight)
+        directed(from: to, to: from, weight: weight)
     }
     
     func node(_ value: T) -> AStarNode<T> {
         let node = AStarNode(value: value)
         
-        if self.edgesDict[node] == nil {
-            self.edgesDict[node] = []
+        if edgesDict[node] == nil {
+            edgesDict[node] = []
         }
         return node
     }
     
     func edge(from: AStarNode<T>, to: AStarNode<T>, weight: Double?) {
-        self.undirected(nodes: (from, to), weight: weight)
+        undirected(nodes: (from, to), weight: weight)
     }
-
+    
     func edges(from: AStarNode<T>) -> [AStarEdge<T>]? {
-        return self.edgesDict[from]
+        return edgesDict[from]
     }
 }
 
@@ -843,30 +835,30 @@ struct AStarEdge<T: Hashable>: Hashable {
     var from: AStarNode<T>
     var to: AStarNode<T>
     let weight: Double?
-
-// extension
+    
+    // extension
     var hashValue: Int {
-        "\(self.from)\(self.to)\(self.weight ?? 0)".hashValue
+        "\(from)\(to)\(weight ?? 0)".hashValue
     }
     static func ==(lhs: AStarEdge<T>, rhs: AStarEdge<T>) -> Bool {
-        lhs.self.from == rhs.self.from &&
-        lhs.self.to == rhs.self.to &&
-        lhs.self.weight == rhs.self.weight
+        lhs.from == rhs.from &&
+            lhs.to == rhs.to &&
+            lhs.weight == rhs.weight
     }
     func hash(into hasher: inout Hasher) { }
 }
 
 struct AStarNode<T: Hashable> : Hashable, CustomStringConvertible {
     var value: T
-
-// extension
-    var hashValue: Int { "\(self.value)".hashValue }
+    
+    // extension
+    var hashValue: Int { "\(value)".hashValue }
     static func ==(lhs: AStarNode, rhs: AStarNode) -> Bool {
-        lhs.self.value == rhs.self.value
+        lhs.value == rhs.value
     }
     func hash(into hasher: inout Hasher) { }
     var description: String {
-        return "\(self.value)" + " \(traveltime(1.0))"
+        return "\(value)" + " \(traveltime(1.0))"
     }
 }
 
@@ -882,7 +874,7 @@ func aStar<T>(from: AStarNode<T>, to: AStarNode<T>, graph: AStar<T>, heuristic: 
     
     visited.insert(from)
     stack.push(from)
-        
+    
     while let node = stack.peek(), node != to {
         guard let neighbours = graph.edges(from: node), neighbours.count > 0 else {
             continue //break
@@ -1019,39 +1011,39 @@ var BS = [7,1,9,5,2,0]
 BucketSort(list: &BS, max: BS.max()!) // [0, 1, 2, 5, 7, 9]
 
 func mergeSort<T: Comparable>(_ array: [T]) -> [T] {
-  guard array.count > 1 else { return array }
-  let midIndex = array.count / 2
-  let leftArr = mergeSort(Array(array[0..<midIndex]))
-  let rightArr = mergeSort(Array(array[midIndex..<array.count]))
-  return merge(lPile: leftArr, rPile: rightArr)
+    guard array.count > 1 else { return array }
+    let midIndex = array.count / 2
+    let leftArr = mergeSort(Array(array[0..<midIndex]))
+    let rightArr = mergeSort(Array(array[midIndex..<array.count]))
+    return merge(lPile: leftArr, rPile: rightArr)
 }
 func merge<T: Comparable>(lPile: [T], rPile: [T]) -> [T] {
-  var lIndex = 0
-  var rIndex = 0
-  var ordered = [T]()
-  if ordered.capacity < lPile.count + rPile.count {
-    ordered.reserveCapacity(lPile.count + rPile.count)
-  }
-
-  while true {
-    guard lIndex < lPile.endIndex else {
-      ordered.append(contentsOf: rPile[rIndex..<rPile.endIndex])
-      break
-    }
-    guard rIndex < rPile.endIndex else {
-      ordered.append(contentsOf: lPile[lIndex..<lPile.endIndex])
-      break
+    var lIndex = 0
+    var rIndex = 0
+    var ordered = [T]()
+    if ordered.capacity < lPile.count + rPile.count {
+        ordered.reserveCapacity(lPile.count + rPile.count)
     }
     
-    if lPile[lIndex] < rPile[rIndex] {
-      ordered.append(lPile[lIndex])
-      lIndex += 1
-    } else {
-      ordered.append(rPile[rIndex])
-      rIndex += 1
+    while true {
+        guard lIndex < lPile.endIndex else {
+            ordered.append(contentsOf: rPile[rIndex..<rPile.endIndex])
+            break
+        }
+        guard rIndex < rPile.endIndex else {
+            ordered.append(contentsOf: lPile[lIndex..<lPile.endIndex])
+            break
+        }
+        
+        if lPile[lIndex] < rPile[rIndex] {
+            ordered.append(lPile[lIndex])
+            lIndex += 1
+        } else {
+            ordered.append(rPile[rIndex])
+            rIndex += 1
+        }
     }
-  }
-  return ordered
+    return ordered
 }
 
 let array1 = [2, 1, 5, 4, 3]

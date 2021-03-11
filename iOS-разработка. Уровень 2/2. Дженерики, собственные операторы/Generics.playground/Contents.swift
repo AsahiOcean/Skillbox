@@ -1,6 +1,4 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 func swapTwoInts(_ a: inout Int, _ b: inout Int) {
     let temp = a
@@ -71,12 +69,12 @@ func findIndex<T: Equatable>(valueToFind: T, inArray: [T]) -> Int? {
     return nil
 }
 extension Array where Element: Equatable {
-     func findIndex(valueToFind: Element) -> Int? {
-         for (index,value) in enumerated() {
-             if value == valueToFind { return index }
-         }
-         return nil
-     }
+    func findIndex(valueToFind: Element) -> Int? {
+        for (index,value) in enumerated() {
+            if value == valueToFind { return index }
+        }
+        return nil
+    }
 }
 
 var intArray = [1,2,3,4,5,6]
