@@ -11,10 +11,10 @@ class UserDefaultsViewController: UIViewController {
     @IBOutlet weak var CoreDataSection: UIButton!
     
     @IBAction func NameEdit(_ sender: Any) {
-        UserDataPersistance.sharing.NameData = Name.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        UserDataPersistance.sharing.NameData = Name.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     @IBAction func SurnameEdit(_ sender: Any) {
-        UserDataPersistance.sharing.SurnameData = Surname.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        UserDataPersistance.sharing.SurnameData = Surname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     @IBAction func NameCleaner(_ sender: Any) {
         (Name.text, Surname.text) = (nil, nil)

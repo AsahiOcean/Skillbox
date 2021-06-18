@@ -89,7 +89,7 @@ extension WeatherViewController {
             // MARK: - Облачность
             func CloudFunc() -> String {
                 let string = "\(WeatherJSON.value(forKeyPath: "weather.description") ?? "Облачная аномалия")"
-                let result = string.components(separatedBy: ["(", ")", "\""]).joined().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                let result = string.components(separatedBy: ["(", ")", "\""]).joined().trimmingCharacters(in: .whitespacesAndNewlines)
                 return result
             }
             // MARK: - Давление

@@ -94,7 +94,7 @@ class ViewCoreDataForm: UIView {
     func TextGenerator() {
         AF.request("https://fish-text.ru/get?format=html&number=2").response { response in
             if let data = response.data, let utf8 = String(data: data, encoding: .utf8) {
-                self.TaskText.text = utf8.components(separatedBy: ["<", ">", "p", "/"]).joined().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                self.TaskText.text = utf8.components(separatedBy: ["<", ">", "p", "/"]).joined().trimmingCharacters(in: .whitespacesAndNewlines)
             } else {
                 SVProgressHUD.showError(withStatus: "Помните...")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {

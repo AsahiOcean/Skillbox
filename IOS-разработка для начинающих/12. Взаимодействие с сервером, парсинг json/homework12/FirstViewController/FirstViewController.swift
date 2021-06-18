@@ -107,7 +107,7 @@ class FirstViewController: UIViewController, WeathermanDelegate {
                 let string = "\(WeatherJSON.value(forKeyPath: "weather.description") ?? "Облачная аномалия")"
                 // облачность криво парсится, пришлось чистить
                 // удаляем символы и newline
-                let result = string.components(separatedBy: ["(", ")", "\""]).joined().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                let result = string.components(separatedBy: ["(", ")", "\""]).joined().trimmingCharacters(in: .whitespacesAndNewlines)
                 return result
             }
             // MARK: - Давление
