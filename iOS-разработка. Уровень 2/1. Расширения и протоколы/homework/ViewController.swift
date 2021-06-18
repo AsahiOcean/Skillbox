@@ -34,9 +34,9 @@ class ViewController: UIViewController, StepProtocol {
      b. CGRect, которая возвращает площадь этого CGRect’а
      c. UIView, которое анимированно её скрывает (делает alpha = 0)
      d. протокола Comparable, на вход получает еще два параметра того же типа: первое ограничивает минимальное значение, второе – максимальное; возвращает текущее значение. ограниченное этими двумя параметрами. Пример использования:
-     7.bound(minValue: 10, maxValue: 21) -> 10
-     7.bound(minValue: 3, maxValue: 6) -> 6
-     7.bound(minValue: 3, maxValue: 10) -> 7
+     7.bound(min: 10, max: 21) -> 10
+     7.bound(min: 3, max: 6) -> 6
+     7.bound(min: 3, max: 10) -> 7
      e. Array, который содержит элементы типа Int: функцию для подсчета суммы всех элементов
      */
     
@@ -94,9 +94,9 @@ class ViewController: UIViewController, StepProtocol {
         Square.alpha0()
         self.view.addSubview(Square)
         
-        print(number.qwerty(minValue: 10, maxValue: 21))
-        print(number.qwerty(minValue: 3, maxValue: 6))
-        print(number.qwerty(minValue: 3, maxValue: 10))
+        print(number.minMax(min: 10, max: 21))
+        print(number.minMax(min: 3, max: 6))
+        print(number.minMax(min: 3, max: 10))
         print("\n")
         print(IntArray.sum())
         print("\n")
@@ -277,13 +277,13 @@ let essence = UIView()
 
 let number = 7
 extension Comparable {
-    func qwerty(minValue: Self, maxValue: Self) -> Self {
-        if (self < minValue) {
-            return minValue //MARK: 7.bound(minValue: 10, maxValue: 21) -> 10
-        } else if (self > maxValue) {
-            return maxValue //MARK: 7.bound(minValue: 3, maxValue: 6) -> 6
+    func minMax(min: Self, max: Self) -> Self {
+        if (self < min) {
+            return min //MARK: 7.bound(min: 10, max: 21) -> 10
+        } else if (self > max) {
+            return max //MARK: 7.bound(min: 3, max: 6) -> 6
         }
-        return self //MARK: 7.bound(minValue: 3, maxValue: 10) -> 7
+        return self //MARK: 7.bound(min: 3, max: 10) -> 7
     }
 }
 //MARK: e. Array, который содержит элементы типа Int: функцию для подсчета суммы всех элементов

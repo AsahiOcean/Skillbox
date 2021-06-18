@@ -1,6 +1,4 @@
 import UIKit
-// Skillbox
-// Скиллбокс
 
 // MARK: -- прочитайте статью про утечку памяти:
 //https://hackernoon.com/swift-avoiding-memory-leaks-by-examples-f901883d96e5
