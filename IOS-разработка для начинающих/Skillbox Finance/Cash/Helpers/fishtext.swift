@@ -6,7 +6,7 @@ import SwiftyJSON
 func fishtext(tf: UITextView) {
     AF.request("https://fish-text.ru/get?format=html&number=3").response { response in
         if let data = response.data, let utf8 = String(data: data, encoding: .utf8) {
-            tf.text = utf8.components(separatedBy: ["<", ">", "p", "/"]).joined().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            tf.text = utf8.components(separatedBy: ["<", ">", "p", "/"]).joined().trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
 }
@@ -15,18 +15,18 @@ func NewsArray() {
     AF.request("https://fish-text.ru/get?format=html&number=3").response { response in
         if let data = response.data,
            let utf8 = String(data: data, encoding: .utf8) {
-            TextArray.append(utf8.components(separatedBy: ["<", ">", "p", "/"]).joined().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines))
+            TextArray.append(utf8.components(separatedBy: ["<", ">", "p", "/"]).joined().trimmingCharacters(in: .whitespacesAndNewlines))
         }
     }
     
     AF.request("https://fish-text.ru/get?format=html&number=1").response { response in
         if let data = response.data,
            let utf8 = String(data: data, encoding: .utf8) {
-            EventText.append(utf8.components(separatedBy: ["<", ">", "p", "/"]).joined().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines))
+            EventText.append(utf8.components(separatedBy: ["<", ">", "p", "/"]).joined().trimmingCharacters(in: .whitespacesAndNewlines))
         }
     }
-    print("«Новости» скачаны в TextArray")
-    print("«События» скачаны в EventText")
+    // print("«Новости» скачаны в TextArray")
+    // print("«События» скачаны в EventText")
 }
 
 /// Realm + JSON, https://blockchain.info/ru/ticker
