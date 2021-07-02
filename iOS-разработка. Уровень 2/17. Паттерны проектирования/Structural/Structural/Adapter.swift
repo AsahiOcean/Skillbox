@@ -28,8 +28,8 @@ class WeightDataAdapter: GraphData {
 /*
  Примечание из урока:
  "Чуть более изящная реализация, которая возможна за счет расширения классов и реализацией протоколов"
-*/
- protocol GraphDataProtocol {
+ */
+protocol GraphDataProtocol {
     func getPoints() -> [Double]
 }
 
