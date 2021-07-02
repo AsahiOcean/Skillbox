@@ -2,8 +2,7 @@ import UIKit
 import FacebookCore
 import FBSDKLoginKit
 import FacebookShare
-// Skillbox
-// Скиллбокс
+
 
 // Сделайте проект, в который добавите социальные сети с возможностью авторизации и шейринга через них: facebook
 // https://developers.facebook.com/docs/ios
