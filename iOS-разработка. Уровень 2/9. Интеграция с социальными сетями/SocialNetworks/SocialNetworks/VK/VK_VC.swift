@@ -8,10 +8,10 @@ class VK_VC: UIViewController {
     
     @IBOutlet weak var ImagePost: UIImageView!
     let picker = UIImagePickerController()
-
+    
     @IBOutlet weak var AddPostButton: UIButton!
     @IBAction func AddPostAction(_ sender: UIButton) {
-                
+        
         let shareDialog = VKShareDialogController()
         
         shareDialog.requestedScope = SCOPE
@@ -35,7 +35,7 @@ class VK_VC: UIViewController {
         // блок, отслеживающий завершение диалога
         shareDialog.completionHandler = { VKShareDialogController, result in
             if VKSdk.accessToken()?.accessToken != nil {
-            // https://vk.com/dev/wall.get
+                // https://vk.com/dev/wall.get
                 print("\n~ ~ ~ JSON всех постов на стене: ~ ~ ~")
                 print("https://api.vk.com/method/wall.get?&access_token=\(VKSdk.accessToken().accessToken!)&v=5.84")
             }
@@ -50,7 +50,7 @@ class VK_VC: UIViewController {
     let SCOPE = ["friends","email","wall","photos"]
     
     // "wall","photos" для публикации постов согласно описанию в requestedScopeself.
-        
+    
     @IBOutlet weak var VKLoginButton: UIButton!
     @IBAction func VKLogin(_ sender: UIButton) {
         VKSdk.wakeUpSession(SCOPE, complete: { state, error in
@@ -123,11 +123,11 @@ extension VK_VC: VKSdkDelegate, VKSdkUIDelegate, UIImagePickerControllerDelegate
             print("Пользователь отменил авторизацию или произошла ошибка")
         }
     }
-
+    
     func vkSdkUserAuthorizationFailed() {
         print("vkSdkUserAuthorizationFailed")
     }
-
+    
     func vkSdkShouldPresent(_ controller: UIViewController!) {
         guard controller != nil else {
             return print("Ошибка vkSdkShouldPresent")
@@ -136,10 +136,10 @@ extension VK_VC: VKSdkDelegate, VKSdkUIDelegate, UIImagePickerControllerDelegate
             print("Переход в окно авторизации")
         })
     }
-
+    
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
         print("vkSdkNeedCaptchaEnter")
-    let vc = VKCaptchaViewController.captchaControllerWithError(captchaError)
+        let vc = VKCaptchaViewController.captchaControllerWithError(captchaError)
         vc?.present(in: self)
     }
     
