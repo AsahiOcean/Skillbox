@@ -1,7 +1,6 @@
 import UIKit
 import GoogleSignIn
-// Skillbox
-// Скиллбокс
+
 // https://github.com/googlesamples/google-services/tree/bf40e8939ba75476c6b72aec68d13488acf97f1e/ios/signin
 
 class GoogleVC: UIViewController {
