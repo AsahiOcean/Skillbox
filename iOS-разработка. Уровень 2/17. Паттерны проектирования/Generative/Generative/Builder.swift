@@ -1,5 +1,5 @@
 import Foundation
-// Skillbox
+
 // Материал из урока
 // Порождающие паттерны проектирования: Строитель (Builder pattern)
 
@@ -10,7 +10,7 @@ class House {
 
 protocol HouseBuilder {
     var house: House { get }
-
+    
     func buildDoors(amount: Int)
     func buildWindows(amount: Int)
 }
@@ -33,7 +33,7 @@ class WoodHouseBuilder: HouseBuilder {
 
 class SuperLuxuryHouseBuilder: HouseBuilder {
     let house: House
-
+    
     init(house: House) {
         self.house = house
     }
