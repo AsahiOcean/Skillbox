@@ -1,5 +1,5 @@
 import Foundation
-// Skillbox
+
 // Материал из урока
 // Поведенческие паттерны проектирования: Команда (Command pattern)
 
