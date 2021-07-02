@@ -26,14 +26,14 @@ class GoogleVC: UIViewController {
         guard let username =         GIDSignIn.sharedInstance()?.currentUser?.profile.name  else { return }
         statusText.text = "Вы вошли как\n\(username)"
     }
-
+    
     @IBAction func didTapSignOut(_ sender: AnyObject) {
         // Помечает, что пользователь вышел из системы
         GIDSignIn.sharedInstance().signOut()
         statusText.text = "Signed out."
         toggleAuthUI()
     }
-
+    
     @IBAction func didTapDisconnect(_ sender: AnyObject) {
         // Отключает пользователя от приложения и отменяет предыдущую аутентификацию
         GIDSignIn.sharedInstance().disconnect()
@@ -41,27 +41,27 @@ class GoogleVC: UIViewController {
     }
     
     func toggleAuthUI() {
-    if let _ = GIDSignIn.sharedInstance()?.currentUser?.authentication {
-      signInButton.isHidden = true
-      signOutButton.isHidden = false
-      disconnectButton.isHidden = false
-    } else {
-      signInButton.isHidden = false
-      signOutButton.isHidden = true
-      disconnectButton.isHidden = true
-      statusText.text = "Google Sign in\niOS Demo"
+        if let _ = GIDSignIn.sharedInstance()?.currentUser?.authentication {
+            signInButton.isHidden = true
+            signOutButton.isHidden = false
+            disconnectButton.isHidden = false
+        } else {
+            signInButton.isHidden = false
+            signOutButton.isHidden = true
+            disconnectButton.isHidden = true
+            statusText.text = "Google Sign in\niOS Demo"
+        }
     }
-  }
-
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
-
+    
     deinit {
         NotificationCenter.default.removeObserver(self,
-            name: NSNotification.Name(rawValue: "ToggleAuthUINotification"), object: nil)
+                                                  name: NSNotification.Name(rawValue: "ToggleAuthUINotification"), object: nil)
     }
-
+    
     @objc func receiveToggleAuthUINotification(_ notification: NSNotification) {
         if notification.name.rawValue == "ToggleAuthUINotification" {
             if notification.userInfo != nil {
