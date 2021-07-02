@@ -47,7 +47,7 @@ class FacebookVC: UIViewController {
     
     let fbLoginButton = FBLoginButton()
     //let fbButton = FBButton() // простая кнопка
-        
+    
     // Share
     let shareDialog = ShareDialog()
     let linkContent = ShareLinkContent()
@@ -65,16 +65,16 @@ class FacebookVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         self.webView.uiDelegate = self
         self.webView.load(URLRequest(url: url))
         self.webView.scrollView.contentInset.top = -350
-           
+        
         // замена фото с собакой
         imageView.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(openPicker))
         imageView.addGestureRecognizer(tap)
-    
+        
         self.sendImageButton.layer.cornerRadius = 5
         self.photocard.layer.cornerRadius = 10
         
@@ -85,14 +85,14 @@ class FacebookVC: UIViewController {
         
         //MARK: -- ShareLinkContent
         linkContent.contentURL = url
-                
+        
         // MARK: -- ShareDialog
         shareDialog.delegate = self
         shareDialog.fromViewController = self
         shareDialog.mode = .web
         
         photo.isUserGenerated = true
-                
+        
         //MARK: -- FBLoginButton
         self.fbLoginButton.delegate = self
         self.LoginButton?.setTitle(nil, for: .normal)
@@ -111,7 +111,7 @@ class FacebookVC: UIViewController {
         self.view.addSubview(fbShareButton)
         
         if let token = AccessToken.current,
-            !token.isExpired {
+           !token.isExpired {
             // Действие после проверки авторизации Facebook
             self.getUserInfo()
         }
@@ -130,20 +130,20 @@ class FacebookVC: UIViewController {
         if (AccessToken.current != nil) {
             GraphRequest(graphPath: "me", parameters: [
                 "fields": "id,first_name,last_name,name,picture{url},relationship_status"
-            //MARK: Руководство: https://developers.facebook.com/docs/graph-api/explorer/
-            //MARK: Настройка запросов на доступ к данным: https://developers.facebook.com/tools/explorer
+                //MARK: Руководство: https://developers.facebook.com/docs/graph-api/explorer/
+                //MARK: Настройка запросов на доступ к данным: https://developers.facebook.com/tools/explorer
             ]).start(completionHandler: { connection, result, error in
                 //print("connection: \(connection!)")
                 if error == nil {
-                if let result = result {
-                    let get = result as! NSDictionary
-                    self.firstName.text = get["first_name"] as? String
-                    self.lastName.text = get["last_name"] as? String
-                    //MARK: URL фото профиля
-                    if let imageURL = ((get["picture"] as? [String: Any])? ["data"] as? [String: Any])? ["url"] as? String {
-                        self.userPhoto.load(url: imageURL)
+                    if let result = result {
+                        let get = result as! NSDictionary
+                        self.firstName.text = get["first_name"] as? String
+                        self.lastName.text = get["last_name"] as? String
+                        //MARK: URL фото профиля
+                        if let imageURL = ((get["picture"] as? [String: Any])? ["data"] as? [String: Any])? ["url"] as? String {
+                            self.userPhoto.load(url: imageURL)
+                        }
                     }
-                }
                 } else {
                     print("error: \(error!)")
                 }
@@ -156,7 +156,7 @@ extension FacebookVC: LoginButtonDelegate, SharingDelegate, WKUIDelegate, UIImag
         print("loginButtonDidLogOut")
     }
     
-//MARK: -- LoginButtonDelegate
+    //MARK: -- LoginButtonDelegate
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
         //print("loginButton")
         if result?.token?.userID != nil {
@@ -164,7 +164,7 @@ extension FacebookVC: LoginButtonDelegate, SharingDelegate, WKUIDelegate, UIImag
         }
     }
     
-//MARK: -- SharingDelegate
+    //MARK: -- SharingDelegate
     func sharer(_ sharer: Sharing, didCompleteWithResults results: [String : Any]) {
         if sharer.shareContent.pageID != nil {
             print("success")
@@ -178,7 +178,7 @@ extension FacebookVC: LoginButtonDelegate, SharingDelegate, WKUIDelegate, UIImag
         print("cancel")
     }
     
-//MARK: -- UIImagePickerController
+    //MARK: -- UIImagePickerController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
             self.imageView.image = image
