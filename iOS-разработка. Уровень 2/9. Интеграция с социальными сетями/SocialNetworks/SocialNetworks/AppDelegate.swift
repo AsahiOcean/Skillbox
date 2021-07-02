@@ -51,7 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Обратите внимание: если Вы уже используете Facebook SDK, и один из этих методов возвращает [FBSDKDelegate ...], Вы можете решить эту проблему следующим образом:
         ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
         
-        // - - - - - - - - - - - - - - - - - - - - - - - - -
         // Google
         GIDSignIn.sharedInstance().handle(url)
         
