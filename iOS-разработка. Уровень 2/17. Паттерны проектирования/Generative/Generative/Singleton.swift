@@ -6,13 +6,12 @@ import Foundation
 class API {
     static let shared = API()
     
-    private init() {
-        
-    }
-    
     func interact() {
         
     }
+    
+    fileprivate init() { }
+    
 }
 
 class test2 {
