@@ -1,5 +1,5 @@
 import Foundation
-// Skillbox
+
 // Материал из урока
 // Структурные паттерны проектирования: Адаптер (Adapter pattern)
 
@@ -25,8 +25,11 @@ class WeightDataAdapter: GraphData {
     }
 }
 
-// Из урока: "Чуть более изящная реализация, которая возможна за счет расширения классов и реализацией протоколов"
-protocol GraphDataProtocol {
+/*
+ Примечание из урока:
+ "Чуть более изящная реализация, которая возможна за счет расширения классов и реализацией протоколов"
+*/
+ protocol GraphDataProtocol {
     func getPoints() -> [Double]
 }
 
@@ -41,4 +44,3 @@ class Graphic {
         //draw
     }
 }
-

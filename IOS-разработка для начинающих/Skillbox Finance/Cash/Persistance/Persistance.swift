@@ -4,8 +4,9 @@ import RealmSwift
 class Persistance {
     static let shared = Persistance()
     private let realm = try! Realm()
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // MARK: UserInfo
+    
+    // MARK: - UserInfo -
+    
     func add(info: String){
         let info = UserInfo()
         try! realm.write
@@ -18,8 +19,9 @@ class Persistance {
         let info = realm.objects(UserInfo.self)[index]
         try! realm.write { realm.delete(info) }}
     
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // MARK: ProductObject
+    
+    // MARK: - ProductObject -
+    
     func saveProduct(item: ProductObject){
         try! realm.write { realm.add(item) }}
     
@@ -30,8 +32,9 @@ class Persistance {
         let item = realm.objects(ProductObject.self)[index]
         try! realm.write { realm.delete(item) }}
     
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // MARK: HistoryProduct
+    
+    // MARK: - HistoryProduct -
+    
     func saveHistoryProduct(item: HistoryProduct){
         try! realm.write { realm.add(item) }}
     
@@ -41,8 +44,9 @@ class Persistance {
     func removeHistoryProduct(index: Int){
         let item = realm.objects(HistoryProduct.self)[index]
         try! realm.write { realm.delete(item) }}
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    // MARK: BitCoinRate
+    
+    // MARK: - BitCoinRate -
+    
     func addBitCoinRate(){
         let rate = BitCoinObject()
         try! realm.write { realm.add(rate) } }
