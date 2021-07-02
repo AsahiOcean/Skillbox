@@ -64,9 +64,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
     // https://github.com/googlesamples/google-services/blob/bf40e8939ba75476c6b72aec68d13488acf97f1e/ios/signin/SignInExampleSwift/AppDelegate.swift
