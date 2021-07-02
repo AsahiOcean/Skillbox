@@ -3,17 +3,13 @@ import XCTest
 
 class BehavioralTests: XCTestCase {
 
-    override func setUpWithError() throws {
-    }
+    override func setUpWithError() throws {}
 
-    override func tearDownWithError() throws {
-    }
+    override func tearDownWithError() throws {}
 
-    func testExample() throws {
-    }
+    func testExample() throws {}
 
     func testPerformanceExample() throws {
-        self.measure {
-        }
+        self.measure {}
     }
 }
