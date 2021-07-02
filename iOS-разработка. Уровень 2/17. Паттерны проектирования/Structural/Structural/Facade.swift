@@ -1,5 +1,5 @@
 import Foundation
-// Skillbox
+
 // Материал из урока
 // Структурные паттерны проектирования: Фасад (Facade pattern)
 
