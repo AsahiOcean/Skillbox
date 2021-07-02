@@ -3,7 +3,6 @@ import FacebookCore
 import FBSDKLoginKit
 import FacebookShare
 
-
 // Сделайте проект, в который добавите социальные сети с возможностью авторизации и шейринга через них: facebook
 // https://developers.facebook.com/docs/ios
 
@@ -56,8 +55,7 @@ class FacebookVC: UIViewController {
     let photo = SharePhoto()
     
     let picker = UIImagePickerController()
-    @objc func openPicker()
-    {
+    @objc func openPicker() {
         present(picker, animated: true, completion: nil)
     }
     
