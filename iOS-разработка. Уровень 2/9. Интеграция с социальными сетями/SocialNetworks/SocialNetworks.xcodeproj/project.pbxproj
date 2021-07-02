@@ -13,10 +13,10 @@
 		FA57662A2490BC6B002E07E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5766282490BC6B002E07E5 /* Main.storyboard */; };
 		FA57662C2490BC6C002E07E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA57662B2490BC6C002E07E5 /* Assets.xcassets */; };
 		FA57662F2490BC6C002E07E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA57662D2490BC6C002E07E5 /* LaunchScreen.storyboard */; };
-		FA5766392490C046002E07E5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FA5766382490C046002E07E5 /* SwiftPackageProductDependency */; };
-		FA57663B2490C046002E07E5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FA57663A2490C046002E07E5 /* SwiftPackageProductDependency */; };
-		FA57663D2490C046002E07E5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FA57663C2490C046002E07E5 /* SwiftPackageProductDependency */; };
-		FA57663F2490C046002E07E5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FA57663E2490C046002E07E5 /* SwiftPackageProductDependency */; };
+		FA5766392490C046002E07E5 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = FA5766382490C046002E07E5 /* FacebookShare */; };
+		FA57663B2490C046002E07E5 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = FA57663A2490C046002E07E5 /* FacebookCore */; };
+		FA57663D2490C046002E07E5 /* FacebookGamingServices in Frameworks */ = {isa = PBXBuildFile; productRef = FA57663C2490C046002E07E5 /* FacebookGamingServices */; };
+		FA57663F2490C046002E07E5 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = FA57663E2490C046002E07E5 /* FacebookLogin */; };
 		FA5766412490C109002E07E5 /* FacebookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5766402490C109002E07E5 /* FacebookVC.swift */; };
 		FA5EF4D024939D8C00940EB4 /* VK_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5EF4CF24939D8C00940EB4 /* VK_VC.swift */; };
 		FA94BBF9249C0B70003DA4B7 /* TwitterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94BBF8249C0B70003DA4B7 /* TwitterVC.swift */; };
@@ -41,10 +41,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA57663F2490C046002E07E5 /* BuildFile in Frameworks */,
-				FA57663D2490C046002E07E5 /* BuildFile in Frameworks */,
-				FA5766392490C046002E07E5 /* BuildFile in Frameworks */,
-				FA57663B2490C046002E07E5 /* BuildFile in Frameworks */,
+				FA57663F2490C046002E07E5 /* FacebookLogin in Frameworks */,
+				FA57663D2490C046002E07E5 /* FacebookGamingServices in Frameworks */,
+				FA5766392490C046002E07E5 /* FacebookShare in Frameworks */,
+				FA57663B2490C046002E07E5 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,10 +133,10 @@
 			);
 			name = SocialNetworks;
 			packageProductDependencies = (
-				FA5766382490C046002E07E5 /* SwiftPackageProductDependency */,
-				FA57663A2490C046002E07E5 /* SwiftPackageProductDependency */,
-				FA57663C2490C046002E07E5 /* SwiftPackageProductDependency */,
-				FA57663E2490C046002E07E5 /* SwiftPackageProductDependency */,
+				FA5766382490C046002E07E5 /* FacebookShare */,
+				FA57663A2490C046002E07E5 /* FacebookCore */,
+				FA57663C2490C046002E07E5 /* FacebookGamingServices */,
+				FA57663E2490C046002E07E5 /* FacebookLogin */,
 			);
 			productName = SocialNetworks;
 			productReference = FA57661F2490BC6B002E07E5 /* SocialNetworks.app */;
@@ -167,7 +167,7 @@
 			);
 			mainGroup = FA5766162490BC6A002E07E5;
 			packageReferences = (
-				FA5766372490C046002E07E5 /* RemoteSwiftPackageReference */,
+				FA5766372490C046002E07E5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = FA5766202490BC6B002E07E5 /* Products */;
 			projectDirPath = "";
@@ -401,7 +401,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FA5766372490C046002E07E5 /* RemoteSwiftPackageReference */ = {
+		FA5766372490C046002E07E5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
 			requirement = {
@@ -412,24 +412,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FA5766382490C046002E07E5 /* SwiftPackageProductDependency */ = {
+		FA5766382490C046002E07E5 /* FacebookShare */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5766372490C046002E07E5 /* RemoteSwiftPackageReference */;
+			package = FA5766372490C046002E07E5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookShare;
 		};
-		FA57663A2490C046002E07E5 /* SwiftPackageProductDependency */ = {
+		FA57663A2490C046002E07E5 /* FacebookCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5766372490C046002E07E5 /* RemoteSwiftPackageReference */;
+			package = FA5766372490C046002E07E5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookCore;
 		};
-		FA57663C2490C046002E07E5 /* SwiftPackageProductDependency */ = {
+		FA57663C2490C046002E07E5 /* FacebookGamingServices */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5766372490C046002E07E5 /* RemoteSwiftPackageReference */;
+			package = FA5766372490C046002E07E5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookGamingServices;
 		};
-		FA57663E2490C046002E07E5 /* SwiftPackageProductDependency */ = {
+		FA57663E2490C046002E07E5 /* FacebookLogin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5766372490C046002E07E5 /* RemoteSwiftPackageReference */;
+			package = FA5766372490C046002E07E5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
