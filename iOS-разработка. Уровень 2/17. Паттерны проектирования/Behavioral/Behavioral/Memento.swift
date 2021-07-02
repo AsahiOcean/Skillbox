@@ -1,6 +1,6 @@
 import Foundation
 import UIKit
-// Skillbox
+
 // Материал из урока
 // Поведенческие паттерны проектирования: Хранитель/снимок (Memento pattern)
 
