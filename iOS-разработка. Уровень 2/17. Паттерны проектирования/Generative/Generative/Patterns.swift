@@ -1,5 +1,5 @@
 import Foundation
-// Skillbox
+
 // Материал из урока
 // Порождающие паттерны проектирования: Абстрактная фабрика (Abstract factory pattern)
 
