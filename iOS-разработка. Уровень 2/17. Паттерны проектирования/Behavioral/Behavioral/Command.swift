@@ -40,11 +40,11 @@ class DoorOperations {
     let door: Door
     private let openCommand = OpenDoorCommand()
     private let closeCommand = CloseDoorCommand()
-
+    
     // DoorCommandAlias
     private let openCommand2 = OpenCommand()
     private let closeCommand2 = CloseCommand()
-
+    
     init(door: Door) {
         self.door = door
     }
@@ -59,5 +59,3 @@ class DoorOperations {
         closeCommand2(door)
     }
 }
-
-
