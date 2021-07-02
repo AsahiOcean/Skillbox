@@ -3,8 +3,6 @@ import FBSDKCoreKit
 import VK_ios_sdk
 import TwitterKit
 import GoogleSignIn
-// Skillbox
-// Скиллбокс
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
