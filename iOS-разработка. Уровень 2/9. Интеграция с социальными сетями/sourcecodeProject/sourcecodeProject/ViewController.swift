@@ -1,9 +1,7 @@
 import UIKit
 import CryptoSwift
-// Skillbox
-// Скиллбокс
 
-// CryptoSwift был скачан с github и импортирован в проект
+// CryptoSwift скачан с github и импортирован в проект
 
 class ViewController: UIViewController {
     
