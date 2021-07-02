@@ -1,18 +1,17 @@
 import Foundation
-// Skillbox
+
 // Материал из урока
 // Порождающие паттерны проектирования: Одиночка (Singleton pattern)
 
 class API {
     static let shared = API()
     
-    private init() {
-        
-    }
-    
     func interact() {
         
     }
+    
+    fileprivate init() { }
+    
 }
 
 class test2 {
