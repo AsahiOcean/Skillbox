@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         TWTRTwitter.sharedInstance().start(withConsumerKey: "1", consumerSecret: "1")
         
         // https://developers.google.com/identity/sign-in/ios/sign-in?ver=swift
-        GIDSignIn.sharedInstance().clientID = "158503143784-odp0siedppluff3cbv13qgsfk7scb4ju.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = "******.apps.googleusercontent.com"
         GIDSignIn.sharedInstance()?.delegate = self
         
         return true
