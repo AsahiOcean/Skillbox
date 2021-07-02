@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         TWTRTwitter.sharedInstance().start(withConsumerKey: "1", consumerSecret: "1")
         
         // https://developers.google.com/identity/sign-in/ios/sign-in?ver=swift
-        GIDSignIn.sharedInstance().clientID = "158503143784-odp0siedppluff3cbv13qgsfk7scb4ju.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = "******.apps.googleusercontent.com"
         GIDSignIn.sharedInstance()?.delegate = self
         
         return true
@@ -51,7 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Обратите внимание: если Вы уже используете Facebook SDK, и один из этих методов возвращает [FBSDKDelegate ...], Вы можете решить эту проблему следующим образом:
         ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
         
-        // - - - - - - - - - - - - - - - - - - - - - - - - -
         // Google
         GIDSignIn.sharedInstance().handle(url)
         
@@ -61,8 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     // MARK: UISceneSession Lifecycle
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
     
