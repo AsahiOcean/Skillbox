@@ -22,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GMSMapViewDelegate {
          */
         YMKMapKit.setApiKey("")
         
-        // Язык карты
-        YMKMapKit.setLocale("ru_RU")
+        YMKMapKit.setLocale("ru_RU") // Язык карты
         
         return true
     }
