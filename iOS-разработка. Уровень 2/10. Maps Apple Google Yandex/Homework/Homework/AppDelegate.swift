@@ -2,8 +2,6 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import YandexMapKit
-// Skillbox
-// Скиллбокс
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GMSMapViewDelegate {
